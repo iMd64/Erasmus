@@ -1,0 +1,137 @@
+/* Interaction states for the standalone page. Load after the preserved styles. */
+.site-menu [hidden],
+#sol-menu [hidden] {
+  display: none !important;
+}
+
+.site-menu .site-submenu-toggle,
+.site-menu .site-menu-toggle,
+#sol-menu .site-sidebar-toggle {
+  min-width: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.site-menu > ul > li > .site-submenu-toggle {
+  display: block;
+  padding: 0.3em 0.8em;
+  background: transparent;
+  color: rgb(6, 29, 53);
+  font-size: 10.5pt;
+  font-weight: 600;
+  line-height: inherit;
+  text-transform: uppercase;
+}
+
+.site-menu > ul > li:hover > .site-submenu-toggle,
+.site-menu > ul > li.site-submenu-open > .site-submenu-toggle {
+  background: #0a325b;
+  color: #fff;
+}
+
+.site-menu > ul > .site-submenu-open > ul {
+  display: block;
+}
+
+.site-menu > ul > li > ul > li {
+  width: calc(100% / var(--menu-columns, 5));
+}
+
+.site-menu > ul > li > ul.normal-sub > li {
+  width: 100%;
+}
+
+.site-menu > ul > .site-menu-linked-parent > a,
+.site-menu > ul > .site-menu-linked-parent > .site-submenu-toggle {
+  display: inline-block;
+}
+
+.site-menu .site-menu-toggle {
+  display: none;
+  background: #0a325b;
+  color: #fff;
+  padding: 10px 14px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.site-menu button:focus-visible,
+#sol-menu button:focus-visible,
+.footercarousel-container:focus-visible,
+#a11yPanel button:focus-visible,
+#a11yFab:focus-visible {
+  outline: 3px solid #e6a92c;
+  outline-offset: -3px;
+}
+
+#sol-menu .site-sidebar-parent {
+  position: relative;
+}
+
+#sol-menu .site-sidebar-parent > a {
+  padding-right: 40px;
+}
+
+#sol-menu .site-sidebar-toggle {
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+#sol-menu .site-sidebar-toggle:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+#a11yPanel .a11y-item:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1000px) {
+  .site-menu .site-menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .site-menu > ul.site-navigation-open {
+    display: block;
+    max-height: 80vh;
+    overflow-y: auto;
+    background: #e5e5e5;
+  }
+
+  .site-menu > ul > li > .site-submenu-toggle {
+    width: 100%;
+    padding: 1.5em;
+    text-align: left;
+  }
+
+  .site-menu > ul > .site-menu-linked-parent > a {
+    width: calc(100% - 44px);
+  }
+
+  .site-menu > ul > .site-menu-linked-parent > .site-submenu-toggle {
+    width: 44px;
+    padding: 1.5em 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footercarousel-track,
+  .footercarousel-item img,
+  .a11y-fab,
+  .a11y-panel {
+    transition: none !important;
+  }
+}

@@ -1,0 +1,175 @@
+/* Shared layout overrides from the saved university page. */
+p#IEP {
+  font-size: 7pt;
+  background: #f5f6f8;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 20px;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 1000px) {
+  .row {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  .row > DIV {
+    padding: 0px !important;
+  }
+  .menu-container {
+    width: 100%;
+    float: right;
+    background: none;
+    margin-top: -50px;
+  }
+  .menu > ul {
+    display: none;
+    margin-top: 10px;
+  }
+  .logo-text {
+    color: #F8F8F8;
+    font-size: 10pt !important;
+    ;
+    font-weight: 600 !important;
+    text-decoration: none;
+    margin-top: 15px !important;
+    ;
+  }
+  .menu-top {
+    font-family: "PT Sans", 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    position: absolute;
+    background-color: #e5e5e5;
+    box-shadow: none;
+    right: 0px;
+    width: 100%;
+    border-bottom: 1px solid #0a325b;
+  }
+  .cd-logo img {
+    margin-top: 5px !important;
+    max-height: 40px !important;
+    max-width: 40px !important;
+    margin-right: 5px;
+    margin-left: 10px;
+    float: left;
+  }
+  div.search.full {
+    background-color: rgb(6, 29, 53);
+    height: 55px;
+    margin: 0%;
+    padding: 0px 5px;
+    border-radius: 0px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  }
+  #breadcrumbnavigation {
+    color: #000;
+    font-size: 11pt;
+    padding: 0;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+  }
+  #breadcrumbnavigation A:first-child {
+    color: #c74a10 !important;
+    cursor: pointer;
+    text-decoration: none;
+    border: solid 1px #c74a10;
+    padding: .5em 1em;
+    padding-right: 50px;
+    width: auto;
+  }
+  #breadcrumbnavigation-back {
+    z-index: 999;
+    border: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-height: 50px;
+    box-sizing: border-box;
+  }
+  .dropdown-menu .menu-item-text {
+    border: none !important;
+    font-weight: 100;
+    text-transform: capitalize;
+    font-size: 10pt !important;
+    padding-bottom: 5px !important;
+  }
+  .static.selected .menu-item-text {
+    font-weight: 600;
+    color: #283333;
+  }
+  .search.full input[type="text"] {
+    font-size: 11pt;
+    height: 50px;
+    padding: 14px 20px 8px 45px;
+    background-position: 10px 12px;
+  }
+  .sidebar-title.pd8.open > .dropdown-menu {
+    display: block;
+    width: 100%;
+  }
+  .dropdown-menu > li {
+    display: block;
+  }
+  .dropdown-menu {
+    padding: 20px;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    border-top: 1px solid #0a325b;
+    top: 40px;
+    border-bottom: 1px solid #0a325b;
+  }
+  .sidebar-title.pd8 > ul A {
+    font-size: 11pt;
+    border: none !important;
+  }
+  .sidebar-title.pd8 {
+    vertical-align: middle;
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+    color: #0a325b;
+    font-size: 10pt;
+    margin-top: 18px !important;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .sidebar-title.pd8.open #ctl00_sitelin2k {
+    background-color: #0a325b;
+    border-color: #0a325b;
+    color: #fff !important;
+    background-image: url('https://www.aydin.edu.tr/PublishingImages/Arrow_up.png');
+  }
+  .sidebar-title.pd8 #ctl00_sitelin2k {
+    background-image: url('https://www.aydin.edu.tr/PublishingImages/Arrow_bottom.png');
+    background-position: 97% 12px;
+    background-repeat: no-repeat;
+    background-size: 15px;
+  }
+  .container {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .bgGrey .container .row #sag-ana:not(#slider) {
+    margin-top: 0px !important;
+    padding-right: 15px;
+    border-radius: 0px !important;
+  }
+}
+
+#sol-menu span {
+  color: #f2f2f2 !important;
+  font-weight: 500 !important;
+  font-size: 13.5px !important;
+}
+
+.ms-WPBorder {
+  border: 0px !important;
+}
+
+#sol-menu .menu-item-text {
+  border: none !important;
+}
+
+#s4-workspace {
+  height: auto !important;
+}

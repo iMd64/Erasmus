@@ -1,0 +1,343 @@
+/* Initially hidden */
+#study-programs-site .initially-hidden {
+  display: none
+}
+
+/* University navigation */
+#study-programs-site .university-navigation {
+  z-index: 999
+}
+
+/* University apply link */
+#study-programs-site .university-apply-link {
+  background-color: #C62828;
+  color: #fff;
+}
+
+/* Language option */
+#study-programs-site .language-option {
+  display: inline-block;
+}
+
+/* Programs sidebar */
+#study-programs-site .programs-sidebar {
+  margin-bottom: 30px
+}
+
+/* Programs sidebar panel */
+#study-programs-site .programs-sidebar-panel {
+  padding-top: 1px;
+  background-color: #16476A!important;
+}
+
+/* Programs rich content */
+#study-programs-site .programs-rich-content {
+  display: inline
+}
+
+/* Programs page */
+#study-programs-site .programs-page {
+  font-family: "open sans", sans-serif;
+  background-color: #eef3f8;
+  padding: 20px;
+}
+
+/* Programs introduction */
+#study-programs-site .programs-introduction {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto 0px;
+  max-width: 1200px;
+}
+
+/* Introduction column */
+#study-programs-site .introduction-column {
+  vertical-align: top;
+  padding: 10px;
+}
+
+/* Hero photo frame */
+#study-programs-site .hero-photo-frame {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+/* Hero photo */
+#study-programs-site .hero-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Programs summary */
+#study-programs-site .programs-summary {
+  background-color: #ffffff;
+  border: 2px dashed #0a325b;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+/* Program description */
+#study-programs-site .program-description {
+  font-size: 1.5rem;
+  color: #333333;
+}
+
+/* Inline information link */
+#study-programs-site .inline-information-link {
+  color: #0078d7;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Volunteer panel */
+#study-programs-site .volunteer-panel {
+  background-color: #ffffff;
+  border: 2px dashed #0a325b;
+  border-radius: 12px;
+  padding: 10px;
+  height: 100%;
+}
+
+/* Volunteer heading */
+#study-programs-site .volunteer-heading {
+  color: #0a325b;
+  font-family: poppins, sans-serif;
+  font-size: 2rem;
+  text-decoration: underline;
+  text-align: center;
+  margin: 12px 0px;
+}
+
+/* Volunteer lead */
+#study-programs-site .volunteer-lead {
+  font-size: 1.6rem;
+  color: #333333;
+  text-align: justify;
+  margin-bottom: 8px;
+}
+
+/* Volunteer description */
+#study-programs-site .volunteer-description {
+  font-size: 1.5rem;
+  color: #333333;
+  text-align: justify;
+  margin-bottom: 8px;
+}
+
+/* Volunteer team heading */
+#study-programs-site .volunteer-team-heading {
+  font-size: 1.8rem;
+  color: #0a325b;
+  font-family: poppins, sans-serif;
+  font-weight: 600;
+  text-decoration: underline;
+  text-align: center;
+  margin: 12px 0px;
+}
+
+/* Contact email link */
+#study-programs-site .contact-email-link {
+  color: #0a325b;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Volunteer apply link */
+#study-programs-site .volunteer-apply-link {
+  display: inline-block;
+  background-color: #0a325b;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 6px;
+}
+
+/* Explore banner */
+#study-programs-site .explore-banner {
+  background-color: #0a325b;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 0px 0px 20px 25px;
+  max-width: 1180px;
+  margin: 40px auto 20px;
+}
+
+/* Explore heading */
+#study-programs-site .explore-heading {
+  font-size: 2.8rem;
+  margin: 0px;
+  font-family: poppins, sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+/* Program options */
+#study-programs-site .program-options {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0px auto 40px;
+  max-width: 1200px;
+}
+
+/* Program options column */
+#study-programs-site .program-options-column {
+  vertical-align: top;
+  padding: 10px;
+  width: 50%;
+}
+
+/* Program options panel */
+#study-programs-site .program-options-panel {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Program options heading */
+#study-programs-site .program-options-heading {
+  color: #004080;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: center;
+  border-bottom: 2px solid #0a325b;
+  padding-bottom: 6px;
+}
+
+/* Program card */
+#study-programs-site .program-card {
+  border-radius: 10px;
+  background: #f5f7fb;
+  border: 1px solid #dbe3f0;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+/* Program card photo frame */
+#study-programs-site .program-card-photo-frame {
+  width: 100%;
+  height: 155px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+/* Summer winter photo */
+#study-programs-site .summer-winter-photo {
+  width: 514px;
+  display: block;
+  height: 346px;
+}
+
+/* Program card title */
+#study-programs-site .program-card-title {
+  color: #004080;
+}
+
+/* Program description detail */
+#study-programs-site .program-description-detail {
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+/* Program information link */
+#study-programs-site .program-information-link {
+  background-color: #0a325b;
+  color: white;
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+/* Program card last */
+#study-programs-site .program-card-last {
+  border-radius: 10px;
+  background: #f5f7fb;
+  border: 1px solid #dbe3f0;
+  padding: 12px;
+}
+
+/* Language programs photo */
+#study-programs-site .language-programs-photo {
+  width: 568px;
+  display: block;
+}
+
+/* Incoming program description */
+#study-programs-site .incoming-program-description {
+  font-size: 1.4rem;
+  color: #333333;
+}
+
+/* Incoming program detail */
+#study-programs-site .incoming-program-detail {
+  font-size: 1.4rem;
+  text-align: justify;
+}
+
+/* Campus map */
+#study-programs-site .campus-map {
+  margin-top: 18px;
+}
+
+/* Campus map frame */
+#study-programs-site .campus-map-frame {
+  border: 0;
+}
+
+/* Partner track start */
+#study-programs-site .partner-track-start {
+  transition: transform 0.3s ease-out;
+  transform: translateX(0px);
+}
+
+/* Preserve the inline sidebar color over the inherited framework rule. */
+#study-programs-site .bgGrey .container .row #sol-menu.programs-sidebar-panel {
+  background-color: #16476a !important;
+}
+
+/* Keep the page readable on narrow screens without changing the desktop layout. */
+@media (max-width: 767px) {
+  #study-programs-site .programs-introduction > tbody > tr, #study-programs-site .program-options > tbody > tr {
+    display: block;
+  }
+  #study-programs-site .introduction-column, #study-programs-site .program-options-column {
+    display: block;
+    width: 100%;
+  }
+  #study-programs-site .programs-page {
+    padding: 10px;
+  }
+  #study-programs-site .programs-page img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* The original page had duplicate IDs for its search fields. */
+.search.mini input {
+  max-width: 100%;
+}
+
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 15px;
+  z-index: 11000;
+}
+
+.skip-link:focus {
+  top: 10px;
+  padding: 10px;
+  background: white;
+  color: #0a325b;
+}

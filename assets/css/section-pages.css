@@ -1,0 +1,395 @@
+/* Shared styles for the five saved section pages. */
+#study-programs-site .section-title-bar {
+  padding: 18px 20px;
+  background: #16476a;
+}
+
+#study-programs-site .section-title-bar h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 24px;
+  line-height: 1.35;
+}
+
+#study-programs-site .section-content {
+  padding: 24px;
+  background: #fff;
+  color: #333;
+  font: 15px/1.7 "Open Sans", Arial, sans-serif;
+  overflow-wrap: anywhere;
+}
+
+#study-programs-site .section-content p {
+  margin: 0 0 14px;
+}
+
+#study-programs-site .section-content h2 {
+  font-size: 22px;
+  line-height: 1.4;
+  margin: 0 0 16px;
+  color: #0a325b;
+}
+
+#study-programs-site .section-content h3 {
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 0 0 12px;
+  color: #0a325b;
+}
+
+#study-programs-site .section-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+#study-programs-site .section-content a {
+  color: #004080;
+  text-decoration: underline;
+}
+
+#study-programs-site .section-content a:hover {
+  color: #0078d7;
+}
+
+#study-programs-site #sol-menu a[aria-current="page"] {
+  background: #0d3450;
+  font-weight: bold;
+}
+
+#study-programs-site .section-content .source-note {
+  clear: both;
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid #dbe3f0;
+  color: #667483;
+  font-size: 13px;
+}
+
+/* Intro, application steps, and testimonials on Short Term Study Abroad. */
+.section-content .study-introduction, .section-content .faq-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.section-content .study-column {
+  min-width: 0;
+}
+
+.section-content .study-hero {
+  display: block;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.section-content .study-card {
+  border: 2px dashed #0a325b;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 20px;
+}
+
+.section-content .application-step {
+  background: #f5f7fb;
+  border-left: 6px solid #0a325b;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+}
+
+.section-content .application-step p:first-child {
+  color: #0a325b;
+  font-weight: bold;
+}
+
+#study-programs-site .section-content .section-button {
+  display: inline-block;
+  background: #0a325b;
+  color: #fff;
+  border-radius: 8px;
+  padding: 9px 14px;
+  margin: 6px 4px 6px 0;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.section-content .testimonials-banner {
+  padding: 24px 15px;
+  background: #0a325b;
+  text-align: center;
+  border-radius: 0 0 20px 25px;
+  margin: 32px 0 20px;
+}
+
+#study-programs-site .section-content .testimonials-banner h2 {
+  color: #fff;
+  margin: 0;
+}
+
+.section-content .testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.section-content .testimonial-card {
+  background: #f5f7fb;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.section-content .testimonial-portrait {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 16px;
+  border: 4px solid #e5f1ff;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#study-programs-site .section-content .testimonial-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section-content details {
+  border: 1px solid #dbe3f0;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background: #fff;
+}
+
+.section-content summary {
+  display: list-item;
+  cursor: pointer;
+  padding: 12px 15px;
+  color: #004080;
+  font-weight: bold;
+}
+
+.section-content summary:focus-visible {
+  outline: 3px solid #0078d7;
+  outline-offset: 2px;
+}
+
+.section-content details > div {
+  padding: 8px 16px 16px;
+}
+
+.section-content .section-notice {
+  border: 1px solid #bce8f1;
+  background: #d9edf7;
+  color: #245269;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.section-content .program-entry summary {
+  background: #f5f7fb;
+  border-radius: 8px;
+}
+
+.section-content .program-entry[open] summary {
+  border-radius: 8px 8px 0 0;
+  border-bottom: 1px solid #dbe3f0;
+}
+
+.section-content .program-entry-body p {
+  line-height: 1.65;
+}
+
+@media (max-width: 767px) {
+  #study-programs-site .section-content {
+    padding: 16px;
+  }
+  #study-programs-site .section-title-bar {
+    padding: 16px;
+  }
+  #study-programs-site .section-title-bar h1 {
+    font-size: 22px;
+  }
+  .section-content .study-introduction, .section-content .faq-contact-grid, .section-content .testimonials-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Content styles for outgoing students, language programs, and contact pages. */
+.section-content .outgoing-introduction {
+  margin: 0 0 28px;
+  color: #444;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.section-content .outgoing-program-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 30px;
+  margin-bottom: 20px;
+}
+
+.section-content .outgoing-program-card {
+  min-width: 0;
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  color: #333;
+  font-size: 14.6667px;
+  line-height: 1.45;
+}
+
+.section-content .outgoing-program-card-wide {
+  grid-column: 1 / -1;
+}
+
+.section-content .outgoing-program-card h2 {
+  margin: 0 0 10px;
+  color: #333;
+  font-size: 14.6667px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.section-content .outgoing-program-card p {
+  margin: 0 0 10px;
+}
+
+.section-content .section-action {
+  display: inline-block;
+  max-width: 100%;
+  padding: 6px 12px;
+  border: 1px solid #2e6da4;
+  border-radius: 4px;
+  background: #337ab7;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.4286;
+  text-align: center;
+  text-decoration: none;
+}
+
+.section-content .section-action:hover, .section-content .section-action:focus-visible {
+  border-color: #204d74;
+  background: #286090;
+  color: #fff;
+}
+
+.section-content .student-experience-photo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.section-content .student-testimonial {
+  margin: 0 0 20px;
+  padding: 15px;
+  border: 1px solid #bce8f1;
+  border-radius: 4px;
+  background: #d9edf7;
+  color: #31708f;
+  font-size: 14.6667px;
+  line-height: 1.45;
+}
+
+.section-content .student-testimonial p {
+  margin: 0;
+}
+
+.section-content .student-testimonial footer {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.section-content .student-testimonial footer::before {
+  content: none;
+}
+
+.section-content .language-course-heading {
+  margin: 0 0 10px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.section-content .language-course-posters img {
+  display: block;
+  width: 504px;
+  max-width: calc(100% - 10px);
+  height: auto;
+  margin: 5px;
+}
+
+.section-content .contact-staff {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  color: #5a5a5a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.section-content .contact-person {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.section-content .contact-portrait {
+  display: block;
+  width: 300px;
+  max-width: calc(100% - 10px);
+  height: auto;
+  margin: 5px 5px 16px;
+}
+
+.section-content .contact-person h2 {
+  margin: 0 0 10px;
+  color: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: inherit;
+}
+
+.section-content .contact-person p {
+  margin: 0 0 10px;
+}
+
+.section-content .contact-address {
+  margin-top: 24px;
+  color: #5a5a5a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.section-content .contact-address h2 {
+  margin: 0 0 10px;
+  color: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: inherit;
+}
+
+.section-content .contact-address p {
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .section-content .outgoing-program-cards, .section-content .contact-staff {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+#study-programs-site .section-content .section-action {
+  color: #fff;
+  text-decoration: none;
+}
