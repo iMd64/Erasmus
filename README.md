@@ -149,83 +149,758 @@ Copy the HTML block below and paste it into the designated content area of the u
 </div>
 ```
 
-## 2. CSS Styles (Reset/Base overrides)
+## 2. CSS Styles (Homepage)
 
-The following styles ensure consistent rendering and remove default browser margins/paddings before applying the custom theme. Add these to the site's stylesheet, or include them within a `<style>` block in the `<head>` of the target page.
+The following styles ensure proper rendering for the homepage components. Add these to the site's stylesheet, or include them within a `<style>` block in the `<head>` of the target page.
 
 ```css
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-div#ctl00_PlaceHolderSearchArea_SmallSearchInputBox1_csr_sboxdiv {
-  border: none;
+/* Homepage only. Shared header, navigation, and other pages keep their styles. */
+/* Local variable fonts: regular, semibold, and bold work without internet. */
+@font-face {
+  font-family: "IAU Open Sans";
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("../fonts/open-sans-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
-input#ctl00_PlaceHolderSearchArea_SmallSearchInputBox1_csr_sbox {
-  width: 165vh;
-  height: 100px;
-  font-size: 15pt;
-  color: #fff;
-  text-shadow: none;
+@font-face {
+  font-family: "IAU Open Sans";
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("../fonts/open-sans-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-a#ctl00_PlaceHolderSearchArea_SmallSearchInputBox1_csr_SearchLink {
-  display: none;
+#study-programs-site .bgGrey .container .row #sag-ana.home-content {
+  padding: 0 !important;
+  background: #f8f9fb !important;
+  border-radius: 18px !important;
+  box-shadow: none;
+  overflow: hidden;
 }
 
-a.cd-search-trigger.cd-text-replace.search-form-visible {
-  display: none;
+#study-programs-site .home-programs {
+  --home-navy: #103653;
+  --home-ink: #182e40;
+  --home-muted: #536474;
+  --home-gold: #e9bc6c;
+  /* One type scale across the hero, program directory, and volunteer panel. */
+  --home-font: "IAU Open Sans", "Segoe UI", Arial, sans-serif;
+  --home-title-size: 40px;
+  --home-section-size: 28px;
+  --home-card-size: 20px;
+  --home-body-size: 16px;
+  --home-action-size: 14px;
+  --home-small-size: 13px;
+  --home-label-size: 12px;
+  color: var(--home-ink);
+  font-family: var(--home-font);
+  font-size: var(--home-body-size);
+  font-weight: 400;
+  line-height: 1.65;
+  text-align: left;
+  overflow-wrap: break-word;
 }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-caption, tbody, tfoot, thead, tr, th,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+.home-programs *, .home-programs *::before, .home-programs *::after {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+#study-programs-site .home-programs p {
+  margin: 0 0 18px;
+}
+
+#study-programs-site .home-programs strong {
+  font-weight: 600;
+}
+
+#study-programs-site .home-programs h1, #study-programs-site .home-programs h2, #study-programs-site .home-programs h3 {
   margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+  color: var(--home-navy);
+  font-family: var(--home-font);
+  font-weight: 700;
+  text-wrap: balance;
 }
 
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section, main {
+#study-programs-site .home-programs a {
+  color: var(--home-navy);
+}
+
+#study-programs-site .home-programs a:focus-visible, #study-programs-site .home-programs summary:focus-visible {
+  outline: 3px solid #b67b22;
+  outline-offset: 5px;
+  border-radius: 4px;
+}
+
+.home-programs section, .home-programs #home-options {
+  scroll-margin-top: 30px;
+}
+
+.home-programs img {
   display: block;
+  max-width: 100%;
 }
 
-body {
-  line-height: 1;
+/* University introduction: restrained headings and a readable text measure. */
+.home-hero {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  background: #f5f1e9;
 }
 
-ol, ul {
+.home-hero-copy {
+  padding: 42px 30px 42px 36px;
+}
+
+#study-programs-site .home-programs .home-eyebrow {
+  margin-bottom: 17px;
+  color: #536477;
+  font-size: var(--home-label-size);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+}
+
+#study-programs-site .home-programs h1 {
+  margin-bottom: 22px;
+  font-family: var(--home-font);
+  font-size: var(--home-title-size);
+  line-height: 1.2;
+  letter-spacing: -.025em;
+}
+
+.home-programs .home-heading-accent {
+  color: #245b7c;
+}
+
+#study-programs-site .home-programs .home-lead {
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.home-hero-copy > p:not(.home-eyebrow):not(.home-lead) {
+  color: var(--home-muted);
+  font-size: var(--home-body-size);
+}
+
+.home-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px 20px;
+  margin-top: 26px;
+}
+
+#study-programs-site .home-programs .home-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 48px;
+  padding: 12px 18px;
+  background: var(--home-navy);
+  color: #fff;
+  border-radius: 7px;
+  font-size: var(--home-action-size);
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: background-color .2s;
+}
+
+#study-programs-site .home-programs .home-button:hover {
+  background: #215878;
+}
+
+.home-button > span, .home-text-link > span {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#study-programs-site .home-programs .home-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  font-size: var(--home-action-size);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.home-hero-visual {
+  position: relative;
+  min-width: 0;
+  min-height: 410px;
+  margin: 0;
+}
+
+#study-programs-site .home-programs .hero-photo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  object-position: 52% center;
+  border-radius: 0;
+}
+
+.home-hero-visual figcaption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 16px;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--home-navy);
+  font-size: var(--home-small-size);
+  font-weight: 600;
+  box-shadow: 0 4px 20px #152b4320;
+}
+
+.home-photo-mark {
+  font-size: 26px;
+  color: #926128;
+}
+
+/* Three clear routes, with comfortable pointer and touch targets. */
+.home-pathways {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 0 22px;
+  background: #fff;
+  border-bottom: 1px solid #e1e6eb;
+}
+
+.home-pathways a {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+  padding: 23px 14px;
+  text-decoration: none;
+}
+
+.home-pathways a + a {
+  border-left: 1px solid #e1e6eb;
+}
+
+.home-pathways a:hover {
+  background: #f8f9fb;
+}
+
+.home-path-number {
+  color: #8b6330;
+  font-size: var(--home-small-size);
+}
+
+.home-pathways strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.home-pathways small {
+  display: block;
+  color: var(--home-muted);
+  font-size: var(--home-small-size);
+}
+
+.home-pathways a > span:last-child {
+  margin-left: auto;
+  font-size: 20px;
+}
+
+/* Outgoing study cards. */
+.home-opportunities {
+  padding: 44px 36px;
+}
+
+.home-section + .home-section {
+  margin-top: 48px;
+}
+
+.home-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 22px;
+  margin-bottom: 20px;
+}
+
+#study-programs-site .home-section-heading .home-eyebrow {
+  margin-bottom: 9px;
+}
+
+#study-programs-site .home-programs h2 {
+  font-size: var(--home-section-size);
+  line-height: 1.3;
+  letter-spacing: -.02em;
+}
+
+#study-programs-site .home-section-heading > p {
+  flex-shrink: 0;
+  margin: 0;
+  color: var(--home-muted);
+  font-size: var(--home-small-size);
+  line-height: 1.6;
+}
+
+#study-programs-site .home-programs .home-section-intro {
+  max-width: 72ch;
+  color: var(--home-muted);
+  font-size: var(--home-body-size);
+  margin-bottom: 25px;
+}
+
+.home-section-intro a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.home-outgoing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.home-study-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e0e6eb;
+  border-radius: 12px;
+}
+
+.home-card-image {
+  position: relative;
+  display: block;
+  aspect-ratio: 1.9;
+  overflow: hidden;
+}
+
+.home-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s;
+}
+
+.home-card-image:hover img {
+  transform: scale(1.035);
+}
+
+.home-card-image > span {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  padding: 5px 10px;
+  background: #fff;
+  border-radius: 4px;
+  color: var(--home-navy);
+  font-size: var(--home-label-size);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.home-card-copy {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 24px;
+}
+
+#study-programs-site .home-programs h3 {
+  font-size: var(--home-card-size);
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: -.01em;
+}
+
+#study-programs-site .home-card-copy p {
+  margin-top: 12px;
+  color: var(--home-muted);
+  font-size: var(--home-body-size);
+}
+
+#study-programs-site .home-programs .home-card-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  min-height: 48px;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid #e1e6eb;
+  font-size: var(--home-action-size);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.home-card-link span {
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.home-card-link:hover {
+  text-decoration: underline !important;
+  text-underline-offset: 4px;
+}
+
+/* Incoming programs: a concise seasonal directory. */
+.home-section-tag {
+  padding: 6px 10px;
+  border: 1px solid #cdd9df;
+  border-radius: 20px;
+  color: var(--home-muted);
+  font-size: var(--home-label-size);
+  white-space: nowrap;
+}
+
+.home-incoming-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 30px;
+  border-top: 1px solid #cdd9df;
+}
+
+.home-destination {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 0 17px;
+  border-bottom: 1px solid #cdd9df;
+}
+
+.home-season {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+  color: #6e5836;
+  font-size: var(--home-label-size);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+}
+
+#study-programs-site .home-destination p {
+  margin: 12px 0 14px;
+  color: var(--home-muted);
+  font-size: var(--home-body-size);
+}
+
+#study-programs-site .home-destination .home-card-link {
+  border-top: 0;
+}
+
+/* A dedicated volunteer invitation, separated from the program directory. */
+.home-volunteer {
+  margin: 0 22px 24px;
+  padding: 36px;
+  border-radius: 14px;
+  background: var(--home-navy);
+  color: #e2ebf2;
+}
+
+.home-volunteer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+}
+
+#study-programs-site .home-volunteer .home-eyebrow {
+  color: #efca87;
+}
+
+#study-programs-site .home-volunteer h2 {
+  color: #fff;
+  font-size: var(--home-section-size);
+}
+
+.home-volunteer .home-heading-accent {
+  color: #efca87;
+}
+
+#study-programs-site .home-volunteer .home-volunteer-intro {
+  margin: 22px 0 12px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.home-volunteer p {
+  font-size: var(--home-body-size);
+}
+
+.home-volunteer-benefits {
+  padding-left: 30px;
+  border-left: 1px solid #ffffff30;
+}
+
+#study-programs-site .home-volunteer .home-benefits-label {
+  color: #fff;
+  font-size: var(--home-body-size);
+  font-weight: 600;
+}
+
+.home-volunteer-benefits ul {
+  margin: 0 0 23px;
+  padding: 0;
   list-style: none;
 }
 
-blockquote, q {
-  quotes: none;
+.home-volunteer-benefits li {
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 23px;
+  font-size: var(--home-body-size);
+  line-height: 1.65;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
+.home-volunteer-benefits li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #efca87;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+#study-programs-site .home-volunteer .home-button-gold {
+  background: var(--home-gold);
+  color: #142f43;
+}
+
+#study-programs-site .home-volunteer .home-button-gold:hover {
+  background: #f5d699;
+}
+
+#study-programs-site .home-volunteer .home-volunteer-email {
+  display: block;
+  width: fit-content;
+  min-height: 44px;
+  padding-top: 14px;
+  color: #e2ebf2;
+  font-size: var(--home-action-size);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+}
+
+.home-volunteer-details {
+  margin-top: 28px;
+  border-top: 1px solid #ffffff30;
+}
+
+.home-volunteer-details summary {
+  display: list-item;
+  min-height: 48px;
+  padding-top: 19px;
+  color: #fff;
+  cursor: pointer;
+  font-size: var(--home-action-size);
+  font-weight: 600;
+}
+
+.home-volunteer-details > div {
+  padding-top: 18px;
+  columns: 2;
+  column-gap: 32px;
+}
+
+.home-volunteer-details p {
+  break-inside: avoid;
+}
+
+/* Tablet: keep the hierarchy while making room for the two-column cards. */
+@media (min-width: 1001px) and (max-width: 1200px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+  }
+  .home-hero-visual {
+    min-height: 300px;
+  }
+  .home-hero-copy {
+    padding: 32px;
+  }
+  .home-pathways {
+    padding: 0 8px;
+  }
+  .home-pathways a {
+    gap: 8px;
+    padding: 20px 10px;
+  }
+  .home-path-number {
+    display: none;
+  }
+  .home-opportunities {
+    padding: 34px 24px;
+  }
+  .home-section-heading {
+    display: block;
+  }
+  .home-section-heading > p {
+    display: none;
+  }
+  .home-section-tag {
+    display: inline-block;
+    margin-top: 14px;
+  }
+  .home-volunteer {
+    padding: 28px;
+  }
+  .home-volunteer-grid {
+    gap: 24px;
+  }
+  .home-volunteer-benefits {
+    padding-left: 24px;
+  }
+}
+
+/* Phones: one reading column, full-width photos, and no cramped controls. */
+@media (max-width: 700px) {
+  #study-programs-site .home-programs {
+    --home-title-size: 32px;
+    --home-section-size: 25px;
+  }
+  #study-programs-site .bgGrey .container .row #sag-ana.home-content {
+    border-radius: 12px !important;
+  }
+  .home-hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .home-hero-copy {
+    padding: 30px 22px;
+  }
+  #study-programs-site .home-hero-copy > p:not(.home-eyebrow):not(.home-lead), #study-programs-site .home-programs .home-section-intro, #study-programs-site .home-card-copy p, #study-programs-site .home-destination p {
+    font-size: 16px;
+  }
+  .home-volunteer p, .home-volunteer-benefits li {
+    font-size: var(--home-body-size);
+  }
+  #study-programs-site .home-programs .home-card-link {
+    font-size: 14px;
+  }
+  #study-programs-site .home-programs h1 {
+    font-size: var(--home-title-size);
+    letter-spacing: -.025em;
+  }
+  #study-programs-site .home-programs .home-lead {
+    font-size: 17px;
+  }
+  .home-actions {
+    gap: 8px 18px;
+    margin-top: 22px;
+  }
+  .home-hero-visual {
+    min-height: 280px;
+  }
+  .home-hero-visual figcaption {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+  }
+  .home-pathways {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0 22px;
+  }
+  .home-pathways a {
+    padding: 16px 0;
+  }
+  .home-pathways a + a {
+    border-left: 0;
+    border-top: 1px solid #e1e6eb;
+  }
+  .home-path-number {
+    min-width: 22px;
+  }
+  .home-pathways strong {
+    font-size: 15px;
+  }
+  .home-pathways small {
+    font-size: var(--home-small-size);
+  }
+  .home-opportunities {
+    padding: 34px 20px;
+  }
+  .home-section-heading {
+    display: block;
+    margin-bottom: 18px;
+  }
+  #study-programs-site .home-programs h2 {
+    font-size: var(--home-section-size);
+  }
+  .home-section-heading > p {
+    display: none;
+  }
+  .home-section-tag {
+    display: inline-block;
+    margin-top: 14px;
+  }
+  .home-outgoing-grid, .home-incoming-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .home-card-copy {
+    padding: 21px;
+  }
+  .home-card-image {
+    aspect-ratio: 1.6;
+  }
+  .home-section + .home-section {
+    margin-top: 38px;
+  }
+  .home-destination {
+    padding: 24px 0 14px;
+  }
+  .home-volunteer {
+    margin: 0 12px 16px;
+    padding: 26px 22px;
+  }
+  .home-volunteer-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+  #study-programs-site .home-volunteer h2 {
+    font-size: var(--home-section-size);
+  }
+  .home-volunteer-benefits {
+    padding: 20px 0 0;
+    border-left: 0;
+    border-top: 1px solid #ffffff30;
+  }
+  .home-volunteer-details > div {
+    columns: 1;
+  }
+}
+
+@media (max-width: 360px) {
+  #study-programs-site .home-programs {
+    --home-title-size: 30px;
+    --home-section-size: 24px;
+  }
+  .home-hero-copy {
+    padding: 26px 18px;
+  }
+  .home-opportunities {
+    padding: 30px 16px;
+  }
+  .home-card-copy {
+    padding: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-card-image img, .home-programs .home-button {
+    transition: none;
+  }
 }
 ```
