@@ -742,8 +742,3 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .home-card-image img, .home-programs .home-button {
-    transition: none;
-  }
-}
