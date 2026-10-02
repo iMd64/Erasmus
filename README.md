@@ -4,7 +4,7 @@ This guide contains the necessary HTML and CSS to integrate the Short Term Study
 
 ## 1. HTML Content
 
-Copy the HTML block below and paste it into the designated content area of the university website. This block contains the entire layout for the Short Term Study Programs, structured within the main wrapper (`<div id="sag-ana" class="home-content">`).
+Copy the HTML block below. When editing the university website, locate the existing main content wrapper—specifically the element `<div class="wpb_wrapper vc_custom_1461916946657" id="sag-ana">`. **Replace that entire `<div>` and all of its contents** with the new block provided here.
 
 ```html
 <div id="sag-ana" class="home-content">
