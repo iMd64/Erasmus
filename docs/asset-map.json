@@ -1,0 +1,31 @@
+{
+  "page": "index.html",
+  "original_url": "https://www.aydin.edu.tr/en-us/international/shortterm/Pages/index.aspx",
+  "image_names": {
+    "Aydin.png": "assets/images/branding/university-logo.png",
+    "logo_inverted.png": "assets/images/branding/university-logo-white.png",
+    "MainPhoto.jpg": "assets/images/programs/main-photo.jpg",
+    "dnm2.jpg": "assets/images/programs/summer-winter-programs.jpg",
+    "dnm1.jpg": "assets/images/programs/language-programs.jpg",
+    "favicon.ico": "assets/images/branding/favicon.ico",
+    "spcommon.png": "assets/vendor/images/sharepoint-sprite.png",
+    "1.png": "assets/images/partners/partner-01.png",
+    "2.png": "assets/images/partners/partner-02.png",
+    "3.png": "assets/images/partners/partner-03.png",
+    "4.png": "assets/images/partners/partner-04.png",
+    "5.png": "assets/images/partners/partner-05.png",
+    "6.png": "assets/images/partners/partner-06.png",
+    "7.png": "assets/images/partners/partner-07.png",
+    "8.png": "assets/images/partners/partner-08.png",
+    "9.png": "assets/images/partners/partner-09.png",
+    "10.png": "assets/images/partners/partner-10.png",
+    "11.png": "assets/images/partners/partner-11.png",
+    "12.png": "assets/images/partners/partner-12.png",
+    "13.png": "assets/images/partners/partner-13.png",
+    "14.png": "assets/images/partners/partner-14.png",
+    "15.png": "assets/images/partners/partner-15.png",
+    "16.png": "assets/images/partners/partner-16.png",
+    "17.png": "assets/images/partners/partner-17.png",
+    "18.png": "assets/images/partners/partner-18.png"
+  }
+}

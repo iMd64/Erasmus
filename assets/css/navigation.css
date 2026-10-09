@@ -68,6 +68,19 @@
   outline-offset: -3px;
 }
 
+/* Block links prevent an extra line beneath the outgoing link's nested spans. */
+#sol-menu #programs-menu a {
+  display: block;
+}
+
+/* Keep all top-level rows evenly spaced at desktop and phone sizes. */
+#sol-menu #programs-menu > li > a .menu-item-text,
+#sol-menu #programs-menu > li > button .menu-item-text {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  line-height: 20px;
+}
+
 #sol-menu .site-sidebar-parent {
   position: relative;
 }
@@ -78,7 +91,7 @@
 
 #sol-menu .site-sidebar-toggle {
   position: absolute;
-  top: 4px;
+  top: 6px;
   right: 5px;
   width: 32px;
   height: 32px;
@@ -91,6 +104,27 @@
 
 #sol-menu .site-sidebar-toggle:hover {
   background: rgba(255, 255, 255, 0.14);
+}
+
+/* The outgoing heading is one full-row disclosure button, not a page link. */
+#sol-menu .site-sidebar-toggle.site-sidebar-heading {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  min-height: 44px;
+  padding: 0;
+  text-align: left;
+}
+
+#sol-menu .site-sidebar-heading .site-sidebar-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 32px;
+  height: 32px;
 }
 
 #a11yPanel .a11y-item:disabled {

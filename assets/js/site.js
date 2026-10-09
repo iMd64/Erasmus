@@ -119,25 +119,20 @@
 
     sidebar.querySelectorAll("li").forEach((item, index) => {
       const submenu = child(item, "ul");
-      const link = child(item, "a");
-      if (!submenu || !link) return;
+      const toggle = child(item, "button.site-sidebar-toggle");
+      if (!submenu || !toggle) return;
       submenu.id ||= `section-submenu-${index + 1}`;
       item.classList.add("site-sidebar-parent");
 
-      const toggle = document.createElement("button");
-      toggle.type = "button";
-      toggle.className = "site-sidebar-toggle";
-      toggle.textContent = "▾";
-      toggle.setAttribute("aria-label", `${link.textContent.trim()} submenu`);
+      const arrow = toggle.querySelector(".site-sidebar-arrow");
       toggle.setAttribute("aria-controls", submenu.id);
       // The saved sidebar shows its child pages immediately.
       toggle.setAttribute("aria-expanded", "true");
-      link.after(toggle);
       toggle.addEventListener("click", () => {
         const open = toggle.getAttribute("aria-expanded") !== "true";
         toggle.setAttribute("aria-expanded", String(open));
         submenu.hidden = !open;
-        toggle.textContent = open ? "▾" : "▸";
+        if (arrow) arrow.textContent = open ? "▾" : "▸";
       });
     });
   }
