@@ -1586,3 +1586,681 @@ The following styles ensure proper rendering for the Short Term Study Abroad pag
 }
 ```
  
+
+
+## 5. HTML Content (Application Process: After Acceptance)
+
+Copy the HTML block below. When editing the university website for the Application Process page, locate the main content wrapper—specifically the element `<article class="acceptance-page" aria-labelledby="acceptance-title">` inside `<div id="sag-ana">` (or `<div id="sag-ana" class="acceptance-content">`). **Replace that entire `<article>` element and all of its contents** with the new block provided here.
+
+```html
+<article class="acceptance-page" aria-labelledby="acceptance-title">
+  <!-- After acceptance only. Styles and behavior live in assets/css and assets/js. -->
+  <header class="acceptance-intro">
+    <div class="acceptance-intro-copy">
+      <p class="acceptance-eyebrow">Application process · Outgoing students</p>
+      <h1 id="acceptance-title">Your next steps<br>after acceptance</h1>
+      <p class="acceptance-lead">Your host university has accepted you. Use this checklist
+        to prepare for your stay, make the most of your program, and complete the steps
+        when you return.</p>
+      <div class="acceptance-intro-actions">
+        <a class="acceptance-primary" href="#student-checklist">Start your checklist <span aria-hidden="true">↓</span></a>
+        <a href="#acceptance-help">Need help?</a>
+        <button type="button" class="acceptance-print" data-checklist-print hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 8V3h10v5M7 17H4V8h16v9h-3M7 14h10v7H7z"/><path d="M16 11h1"/></svg>
+          Print checklist</button>
+      </div>
+    </div>
+    <nav class="acceptance-stage-nav" aria-label="Checklist stages">
+      <details open>
+        <summary>Jump to a stage <span class="acceptance-nav-toggle" aria-hidden="true"></span></summary>
+        <ol>
+          <li><a href="#confirm-place" data-stage-link><span class="acceptance-nav-number" aria-hidden="true">01</span><span>Confirm your place<span class="acceptance-nav-status"></span></span><span class="acceptance-nav-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="#academic-approval" data-stage-link><span class="acceptance-nav-number" aria-hidden="true">02</span><span>Academic approval<span class="acceptance-nav-status"></span></span><span class="acceptance-nav-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="#prepare-travel" data-stage-link><span class="acceptance-nav-number" aria-hidden="true">03</span><span>Prepare for travel<span class="acceptance-nav-status"></span></span><span class="acceptance-nav-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="#before-departure" data-stage-link><span class="acceptance-nav-number" aria-hidden="true">04</span><span>Before departure<span class="acceptance-nav-status"></span></span><span class="acceptance-nav-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="#during-program" data-stage-link><span class="acceptance-nav-number" aria-hidden="true">05</span><span>During your program<span class="acceptance-nav-status"></span></span><span class="acceptance-nav-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="#after-return" data-stage-link><span class="acceptance-nav-number" aria-hidden="true">06</span><span>When you return<span class="acceptance-nav-status"></span></span><span class="acceptance-nav-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="#acceptance-help" data-stage-link><span class="acceptance-nav-number" aria-hidden="true">07</span><span>Help &amp; contacts<span class="acceptance-nav-status"></span></span><span class="acceptance-nav-arrow" aria-hidden="true">↗</span></a></li>
+        </ol>
+      </details>
+    </nav>
+  </header>
+
+  <section class="acceptance-checklist" id="student-checklist" aria-labelledby="checklist-title">
+    <div class="acceptance-checklist-heading">
+      <div>
+        <p class="acceptance-eyebrow">From confirmation to return</p>
+        <h2 id="checklist-title">One checklist. Seven stages.</h2>
+      </div>
+    </div>
+    <p class="acceptance-instructions">Tick each item when complete, or after confirming
+      it does not apply to your stay. Follow your host’s instructions and any requirements
+      confirmed by IAU.</p>
+    <div class="acceptance-progress-controls" id="checklist-controls" hidden>
+      <div class="acceptance-progress-heading">
+        <div><span class="acceptance-progress-label">Your progress</span>
+          <span class="acceptance-count" id="checklist-count" role="status" aria-live="polite" hidden>0 items complete</span></div>
+        <span class="acceptance-percentage" id="checklist-percentage" aria-hidden="true">0<span>%</span></span>
+      </div>
+      <progress id="checklist-progress" value="0" max="19" aria-label="Checklist progress"></progress>
+      <div class="acceptance-preferences">
+        <label class="acceptance-remember"><input type="checkbox" id="remember-checklist"> Remember progress on this browser</label>
+        <button type="button" class="acceptance-reset" id="reset-checklist">Reset checklist</button>
+      </div>
+      <p class="acceptance-storage-note" id="checklist-storage-note" role="status">Progress is kept for this visit. Nothing is submitted to IAU.</p>
+    </div>
+
+    <ol class="acceptance-stages">
+      <li class="acceptance-stage" id="confirm-place">
+        <span class="acceptance-stage-number" aria-hidden="true">01</span>
+        <div class="acceptance-stage-body">
+          <div class="acceptance-stage-heading">
+            <h3>Confirm your place</h3>
+            <span class="acceptance-stage-status" data-stage-status hidden></span>
+          </div>
+          <ul class="acceptance-tasks">
+            <li><input type="checkbox" id="accept-offer" data-checklist-item>
+              <label for="accept-offer"><strong>Accept the host university’s offer.</strong>
+                <span>Use the confirmation method in your offer and keep a copy of the acceptance.</span></label></li>
+            <li><input type="checkbox" id="read-welcome" data-checklist-item>
+              <label for="read-welcome"><strong>Read your welcome information.</strong>
+                <span>Review the host’s email, arrival instructions, and any actions they ask you to complete.</span></label></li>
+            <li><input type="checkbox" id="notify-iau" data-checklist-item>
+              <label for="notify-iau"><strong>Notify IAU where required.</strong>
+                <span>Share your acceptance with the relevant IAU office or coordinator if your program requires it.</span></label></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="acceptance-stage" id="academic-approval">
+        <span class="acceptance-stage-number" aria-hidden="true">02</span>
+        <div class="acceptance-stage-body">
+          <div class="acceptance-stage-heading">
+            <h3>Arrange academic approval</h3>
+            <span class="acceptance-stage-status" data-stage-status hidden></span>
+          </div>
+          <ul class="acceptance-tasks">
+            <li><input type="checkbox" id="agree-recognition" data-checklist-item>
+              <label for="agree-recognition"><strong>Discuss credit recognition before travelling.</strong>
+                <span>If you want the study to count toward your degree, contact your faculty coordinator
+                  and confirm the approval process. For Erasmus+ study mobility, the Learning Agreement
+                  must be approved by you, IAU, and the host before the exchange.</span></label></li>
+            <li><input type="checkbox" id="prepare-records" data-checklist-item>
+              <label for="prepare-records"><strong>Know which academic records to keep.</strong>
+                <span>Ask what your faculty needs: course descriptions, assessment information,
+                  a transcript, certificate, and attendance confirmation. Keep the written approval too.</span></label></li>
+          </ul>
+          <p class="acceptance-related-links"><a href="https://www.aydin.edu.tr/en-us/international/erasmus/Pages/koordinatorler-listesi.aspx">IAU Erasmus+ faculty coordinators</a>
+            <a href="https://erasmus-plus.ec.europa.eu/resources-and-tools/mobility-and-learning-agreements/learning-agreements">Official Learning Agreement guidance</a></p>
+        </div>
+      </li>
+
+      <li class="acceptance-stage" id="prepare-travel">
+        <span class="acceptance-stage-number" aria-hidden="true">03</span>
+        <div class="acceptance-stage-body">
+          <div class="acceptance-stage-heading">
+            <h3>Prepare for travel</h3>
+            <span class="acceptance-stage-status" data-stage-status hidden></span>
+          </div>
+          <ul class="acceptance-tasks">
+            <li><input type="checkbox" id="check-passport" data-checklist-item>
+              <label for="check-passport"><strong>Check your passport’s validity.</strong>
+                <span>Check the destination’s passport validity and blank-page requirements,
+                  including any country you transit through.</span></label></li>
+            <li><input type="checkbox" id="check-visa" data-checklist-item>
+              <label for="check-visa"><strong>Confirm the correct entry and visa arrangements.</strong>
+                <span>Use the destination’s official embassy, consulate, or immigration website.
+                  Requirements depend on your nationality, passport, purpose, and length of stay.</span></label></li>
+            <li><input type="checkbox" id="arrange-insurance" data-checklist-item>
+              <label for="arrange-insurance"><strong>Arrange travel health insurance.</strong>
+                <span>Check the host’s and destination’s requirements. Confirm cover for your full stay,
+                  planned activities, and emergency assistance, and save the insurer’s contact details.</span></label></li>
+            <li><input type="checkbox" id="arrange-stay" data-checklist-item>
+              <label for="arrange-stay"><strong>Confirm accommodation and travel.</strong>
+                <span>Use the host university’s arrangements or verified providers. Check the address,
+                  check-in instructions, and booking conditions before you commit.</span></label></li>
+          </ul>
+          <p class="acceptance-related-links"><a href="https://home-affairs.ec.europa.eu/policies/schengen/visa-policy/applying-schengen-visa_en">Official Schengen visa guidance</a>
+            <a href="https://www.mfa.gov.tr/turk-vatandaslarinin-tabi-oldugu-vize-uygulamalari.tr.mfa">Visa information for Turkish citizens (MFA, Turkish)</a></p>
+        </div>
+      </li>
+
+      <li class="acceptance-stage" id="before-departure">
+        <span class="acceptance-stage-number" aria-hidden="true">04</span>
+        <div class="acceptance-stage-body">
+          <div class="acceptance-stage-heading">
+            <h3>Get ready to depart</h3>
+            <span class="acceptance-stage-status" data-stage-status hidden></span>
+          </div>
+          <ul class="acceptance-tasks">
+            <li><input type="checkbox" id="save-contacts" data-checklist-item>
+              <label for="save-contacts"><strong>Save your support contacts.</strong>
+                <span>Keep the host’s program team, IAU office, accommodation contact, and local
+                  emergency number available on your phone and offline.</span></label></li>
+            <li><input type="checkbox" id="check-arrival" data-checklist-item>
+              <label for="check-arrival"><strong>Review arrival and orientation details.</strong>
+                <span>Know where to go, how to reach your accommodation, and who to contact if your
+                  arrival is delayed. Check the host’s emergency and out-of-hours information.</span></label></li>
+            <li><input type="checkbox" id="copy-documents" data-checklist-item>
+              <label for="copy-documents"><strong>Keep your documents accessible.</strong>
+                <span>Keep secure copies of your passport, visa if needed, insurance, acceptance letter,
+                  and bookings. Carry the originals required for travel.</span></label></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="acceptance-stage" id="during-program">
+        <span class="acceptance-stage-number" aria-hidden="true">05</span>
+        <div class="acceptance-stage-body">
+          <div class="acceptance-stage-heading">
+            <h3>During your program</h3>
+            <span class="acceptance-stage-status" data-stage-status hidden></span>
+          </div>
+          <ul class="acceptance-tasks">
+            <li><input type="checkbox" id="take-part" data-checklist-item>
+              <label for="take-part"><strong>Attend and participate.</strong>
+                <span>Follow the host’s timetable, attendance requirements, and agreed learning activities.</span></label></li>
+            <li><input type="checkbox" id="keep-evidence" data-checklist-item>
+              <label for="keep-evidence"><strong>Keep evidence of your participation.</strong>
+                <span>Retain attendance records and completed work. Ask the host how your certificate
+                  or transcript will be issued.</span></label></li>
+            <li><input type="checkbox" id="discuss-changes" data-checklist-item>
+              <label for="discuss-changes"><strong>Discuss changes before making them.</strong>
+                <span>If your dates, study plan, or arrangements change, contact the host and the
+                  relevant IAU office. Keep any revised approval in writing.</span></label></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="acceptance-stage" id="after-return">
+        <span class="acceptance-stage-number" aria-hidden="true">06</span>
+        <div class="acceptance-stage-body">
+          <div class="acceptance-stage-heading">
+            <h3>When you return</h3>
+            <span class="acceptance-stage-status" data-stage-status hidden></span>
+          </div>
+          <ul class="acceptance-tasks">
+            <li><input type="checkbox" id="collect-results" data-checklist-item>
+              <label for="collect-results"><strong>Collect your final documents.</strong>
+                <span>Obtain the certificate, transcript, or proof of participation relevant to your program.
+                  Check your name, dates, and recorded results.</span></label></li>
+            <li><input type="checkbox" id="submit-records" data-checklist-item>
+              <label for="submit-records"><strong>Complete academic recognition, if applicable.</strong>
+                <span>Submit the documents requested by your faculty or IAU office. For Erasmus+,
+                  complete the return requirements given by the Erasmus+ Office and confirm that
+                  successfully completed, agreed studies are recognised.</span></label></li>
+            <li><input type="checkbox" id="share-feedback" data-checklist-item>
+              <label for="share-feedback"><strong>Share your experience.</strong>
+                <span>Provide any requested feedback. If you would like to share a student story,
+                  ask the Short-Term Study Programs Office how to contribute.</span></label></li>
+          </ul>
+          <p class="acceptance-related-links"><a href="https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/studying-abroad">Erasmus+ study and recognition guidance</a></p>
+        </div>
+      </li>
+
+      <li class="acceptance-stage acceptance-help" id="acceptance-help">
+        <span class="acceptance-stage-number" aria-hidden="true">07</span>
+        <div class="acceptance-stage-body">
+          <div class="acceptance-stage-heading">
+            <h3>Need help? Stay in touch.</h3>
+            <span class="acceptance-stage-status" data-stage-status hidden></span>
+          </div>
+          <ul class="acceptance-tasks">
+            <li><input type="checkbox" id="know-support" data-checklist-item>
+              <label for="know-support"><strong>Know who to contact before making a change.</strong>
+                <span>Contact the host and the relevant IAU office before changing your dates, study plan,
+                  or participation. For Erasmus+ matters, include the Erasmus+ Office and your coordinator.</span></label></li>
+          </ul>
+          <div class="acceptance-office">
+            <div>
+              <h4>Short-Term Study Programs Office</h4>
+              <a class="acceptance-office-email" href="mailto:shortterm@aydin.edu.tr">shortterm@aydin.edu.tr</a>
+              <p>+90 444 1 428 · Extension 14914</p>
+              <a href="https://www.aydin.edu.tr/en-us/international/shortterm/Pages/Contact.aspx">Office team &amp; contact details <span aria-hidden="true">→</span></a>
+            </div>
+            <dl>
+              <div><dt>Office hours</dt><dd>Monday–Friday, 09:00–17:00<br>Istanbul time · Closed on official holidays</dd></div>
+              <div><dt>Visit us</dt><dd>J Block, 2nd floor<br>Istanbul Aydin University, Florya Campus</dd></div>
+            </dl>
+          </div>
+          <p class="acceptance-small">For an urgent emergency abroad, use the local emergency
+            services and your host’s emergency support.</p>
+        </div>
+      </li>
+    </ol>
+    <p class="acceptance-complete" id="checklist-complete" role="status" hidden>You’ve reviewed every item.
+      Confirm any outstanding requirements with your host and IAU, and keep this checklist with your records.</p>
+  </section>
+
+  <footer class="acceptance-sources">
+    <details>
+      <summary>Official guidance &amp; sources</summary>
+      <p>Use this official guidance alongside the instructions you receive from your host and IAU.</p>
+      <ul>
+        <li><a href="https://www.aydin.edu.tr/en-us/international/shortterm/Pages/Contact.aspx">IAU office contacts and location</a></li>
+        <li><a href="https://www.aydin.edu.tr/en-us/international/shortterm/outgoing/Pages/Short-Term-Study-Abroad.aspx">IAU published office email and hours</a></li>
+        <li><a href="https://erasmus-plus.ec.europa.eu/resources-and-tools/mobility-and-learning-agreements/learning-agreements">European Commission: Learning Agreements</a></li>
+        <li><a href="https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/studying-abroad">European Commission: Erasmus+ study and recognition</a></li>
+        <li><a href="https://home-affairs.ec.europa.eu/policies/schengen/visa-policy/applying-schengen-visa_en">European Commission: Schengen travel documents and insurance</a></li>
+        <li><a href="https://www.mfa.gov.tr/turk-vatandaslarinin-tabi-oldugu-vize-uygulamalari.tr.mfa">Türkiye Ministry of Foreign Affairs: visa information for Turkish citizens</a></li>
+      </ul>
+    </details>
+    <p>Guidance reviewed on 16 October 2026. Confirm current travel rules with the destination’s
+      authorities and current arrangements with the host and IAU.</p>
+  </footer>
+</article>
+```
+
+## 6. CSS Styles (Application Process: After Acceptance)
+
+The following styles ensure proper rendering for the Application Process checklist components, progress tracking, and print optimization. Add these to the site's stylesheet, or include them within a `<style>` block in the `<head>` of the target page.
+
+```css
+/* After-acceptance checklist. All rules are scoped to this page. */
+@font-face {
+  font-family: "IAU Open Sans";
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("../fonts/open-sans-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "IAU Open Sans";
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("../fonts/open-sans-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+#study-programs-site .bgGrey .container .row #sag-ana.acceptance-content {
+  padding: 0 !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  box-shadow: none;
+}
+
+#study-programs-site .acceptance-page {
+  --acceptance-ink: #182e40;
+  --acceptance-navy: #103653;
+  --acceptance-muted: #526575;
+  --acceptance-line: #dce4ea;
+  --acceptance-font: "IAU Open Sans", "Segoe UI", Arial, sans-serif;
+  color: var(--acceptance-ink);
+  font: 400 16px/1.7 var(--acceptance-font);
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.acceptance-page *, .acceptance-page *::before, .acceptance-page *::after {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+#study-programs-site .acceptance-page [hidden] { display: none !important; }
+.acceptance-page [id] { scroll-margin-top: 24px; }
+
+#study-programs-site .acceptance-page h1,
+#study-programs-site .acceptance-page h2,
+#study-programs-site .acceptance-page h3,
+#study-programs-site .acceptance-page h4 {
+  margin: 0;
+  color: var(--acceptance-navy);
+  font-family: var(--acceptance-font);
+  font-weight: 700;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+#study-programs-site .acceptance-page h1 { font-size: 36px; letter-spacing: -.025em; }
+#study-programs-site .acceptance-page h2 { font-size: 25px; letter-spacing: -.015em; }
+#study-programs-site .acceptance-page h3 { font-size: 21px; letter-spacing: -.01em; }
+#study-programs-site .acceptance-page h4 { font-size: 16px; }
+#study-programs-site .acceptance-page p { margin: 0 0 16px; }
+#study-programs-site .acceptance-page a { color: #164c70; text-decoration: underline; text-underline-offset: 4px; }
+#study-programs-site .acceptance-page a:hover { color: #276f99; }
+
+#study-programs-site .acceptance-page a:focus-visible,
+#study-programs-site .acceptance-page button:focus-visible,
+#study-programs-site .acceptance-page input:focus-visible,
+#study-programs-site .acceptance-page summary:focus-visible {
+  outline: 3px solid #397f9f;
+  outline-offset: 4px;
+}
+
+#study-programs-site .acceptance-page button {
+  min-width: 0;
+  min-height: 44px;
+  margin: 0;
+  padding: 8px 14px;
+  border: 1px solid #bbcbd7;
+  border-radius: 5px;
+  background: #fff;
+  color: var(--acceptance-navy);
+  font: 600 13px/1.5 var(--acceptance-font);
+  cursor: pointer;
+}
+
+#study-programs-site .acceptance-page button:hover { background: #eff4f7; }
+#study-programs-site .acceptance-page button:disabled { opacity: .5; cursor: default; }
+
+/* The introduction and stage index share one calm, open composition. */
+.acceptance-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  align-items: center;
+  gap: 44px;
+  padding: 42px 38px 40px;
+  border-top: 4px solid var(--acceptance-navy);
+  border-radius: 10px 10px 0 0;
+}
+.acceptance-intro-copy { min-width: 0; }
+#study-programs-site .acceptance-page .acceptance-eyebrow {
+  margin: 0 0 12px;
+  color: var(--acceptance-muted);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+}
+
+#study-programs-site .acceptance-page .acceptance-lead {
+  max-width: 68ch;
+  margin: 18px 0 0;
+  color: var(--acceptance-muted);
+  font-size: 16px;
+}
+
+.acceptance-intro-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  margin-top: 24px;
+}
+
+#study-programs-site .acceptance-page .acceptance-intro-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  min-height: 44px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#study-programs-site .acceptance-page .acceptance-primary {
+  min-height: 48px;
+  padding: 10px 18px;
+  border-radius: 5px;
+  background: var(--acceptance-navy);
+  color: #fff;
+  text-decoration: none;
+}
+
+#study-programs-site .acceptance-page .acceptance-primary:hover { background: #245b7c; }
+#study-programs-site .acceptance-page .acceptance-print {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding-inline: 0;
+  border-color: transparent;
+  font-size: 13px;
+}
+.acceptance-print svg { width: 18px; height: 18px; }
+
+.acceptance-stage-nav { padding-left: 26px; border-left: 1px solid var(--acceptance-line); }
+.acceptance-stage-nav summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  color: var(--acceptance-muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  list-style: none;
+  cursor: pointer;
+}
+.acceptance-stage-nav summary::-webkit-details-marker { display: none; }
+.acceptance-nav-toggle {
+  width: 7px;
+  height: 7px;
+  margin-right: 5px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+}
+.acceptance-stage-nav details[open] .acceptance-nav-toggle { transform: rotate(225deg); }
+.acceptance-stage-nav ol { margin: 4px 0 0; padding: 0; list-style: none; }
+#study-programs-site .acceptance-page .acceptance-stage-nav a {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) 12px;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 5px 4px;
+  border-radius: 4px;
+  color: var(--acceptance-navy);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+#study-programs-site .acceptance-page .acceptance-stage-nav a:hover { background: #edf3f6; }
+.acceptance-nav-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border: 1px solid #dce5eb;
+  border-radius: 50%;
+  color: #526575;
+  font-size: 10px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.acceptance-nav-arrow { color: #5c788a; font-size: 15px; }
+.acceptance-stage-nav .is-complete .acceptance-nav-number { border-color: #b9d4cc; background: #e9f4ef; color: #245f4d; }
+.acceptance-nav-status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* Progress is optional and local to the student's browser. */
+.acceptance-checklist { padding: 34px 38px 0; border-top: 1px solid var(--acceptance-line); }
+.acceptance-checklist-heading { display: flex; align-items: end; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap; }
+#study-programs-site .acceptance-page .acceptance-checklist-heading .acceptance-eyebrow { margin-bottom: 8px; }
+.acceptance-progress-controls { padding: 20px 24px 18px; border: 1px solid #dae5eb; border-radius: 8px; background: #f4f8fa; }
+.acceptance-progress-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 14px; }
+.acceptance-progress-label { display: block; margin-bottom: 3px; color: var(--acceptance-muted); font-size: 11px; font-weight: 600; }
+.acceptance-count { display: block; color: var(--acceptance-navy); font-size: 15px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.acceptance-percentage { color: var(--acceptance-navy); font-size: 28px; font-weight: 600; line-height: 1.2; font-variant-numeric: tabular-nums; }
+.acceptance-percentage > span { margin-left: 2px; font-size: 14px; }
+#study-programs-site .acceptance-page .acceptance-instructions { max-width: 78ch; margin: 14px 0 18px; color: var(--acceptance-muted); font-size: 14px; }
+
+.acceptance-page progress {
+  display: block;
+  width: 100%;
+  height: 7px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 5px;
+  background: #e5ecf0;
+  color: #287366;
+  appearance: none;
+}
+
+.acceptance-page progress::-webkit-progress-bar { background: #e5ecf0; }
+.acceptance-page progress::-webkit-progress-value { background: #287366; }
+.acceptance-page progress::-moz-progress-bar { background: #287366; }
+.acceptance-preferences { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 18px; margin-top: 12px; }
+.acceptance-remember { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; margin: 0; color: var(--acceptance-muted); font-size: 13px; font-weight: 400; cursor: pointer; }
+.acceptance-page input[type="checkbox"] { flex-shrink: 0; width: 20px; height: 20px; margin: 0; accent-color: #16476a; cursor: pointer; }
+#study-programs-site .acceptance-page .acceptance-reset { border-color: transparent; padding-inline: 0; background: transparent; font-size: 12px; text-decoration: underline; text-underline-offset: 3px; }
+#study-programs-site .acceptance-page .acceptance-storage-note { margin: 2px 0 0; color: var(--acceptance-muted); font-size: 12px; }
+
+/* A continuous numbered guide, with quiet row feedback and stage completion. */
+.acceptance-stages { margin: 8px 0 0; padding: 0; list-style: none; }
+.acceptance-stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 20px;
+  padding: 32px 0;
+}
+.acceptance-stage:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: 76px;
+  bottom: -24px;
+  left: 17px;
+  width: 1px;
+  background: var(--acceptance-line);
+}
+.acceptance-stage-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #cbdbe4;
+  border-radius: 50%;
+  background: #f4f8fa;
+  color: #285776;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.acceptance-stage-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 14px; min-height: 36px; padding-bottom: 14px; border-bottom: 1px solid var(--acceptance-line); }
+.acceptance-stage-status { padding: 3px 9px; border-radius: 4px; background: #f1f4f6; color: #526575; font-size: 11px; font-weight: 600; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.acceptance-stage.is-complete .acceptance-stage-number,
+.acceptance-stage.is-complete .acceptance-stage-status { border-color: #b9d4cc; background: #e9f4ef; color: #245f4d; }
+.acceptance-stage:target .acceptance-stage-heading { border-bottom-color: #7595aa; }
+.acceptance-tasks { margin: 6px 0 0; padding: 0; list-style: none; }
+.acceptance-tasks > li { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 14px; padding: 15px 12px; border-bottom: 1px solid #edf1f4; border-radius: 4px; }
+.acceptance-tasks > li:last-child { border-bottom-color: transparent; }
+.acceptance-tasks > li:hover, .acceptance-tasks > li:focus-within { background: #f6f9fb; }
+.acceptance-tasks > li:has(input:checked) { background: #f1f7f4; border-bottom-color: #e0ece6; }
+.acceptance-page .acceptance-tasks input { margin-top: 3px; }
+.acceptance-tasks label { display: block; min-height: 44px; margin: 0; cursor: pointer; }
+.acceptance-tasks strong { display: block; color: var(--acceptance-ink); font-size: 16px; font-weight: 600; line-height: 1.6; }
+.acceptance-tasks label > span { display: block; max-width: 80ch; margin-top: 4px; color: var(--acceptance-muted); font-size: 15px; line-height: 1.7; }
+.acceptance-tasks input:checked + label strong { color: #296647; }
+.acceptance-tasks input:checked + label { opacity: 1; }
+#study-programs-site .acceptance-page .acceptance-related-links { display: flex; flex-wrap: wrap; gap: 4px 24px; margin: 8px 0 0 46px; }
+.acceptance-related-links a { display: inline-flex; align-items: center; min-height: 44px; font-size: 12px; line-height: 1.7; }
+
+/* Office details belong to the final checklist stage. */
+.acceptance-office { display: grid; grid-template-columns: 1.1fr 1fr; gap: 28px; padding: 24px; margin-top: 16px; border: 1px solid var(--acceptance-line); border-radius: 6px; background: #f7f9fa; }
+#study-programs-site .acceptance-page .acceptance-office h4 { margin: 0 0 12px; }
+.acceptance-office a { display: inline-block; min-height: 34px; font-size: 13px; }
+#study-programs-site .acceptance-page .acceptance-office-email { font-size: 15px; font-weight: 600; overflow-wrap: anywhere; }
+#study-programs-site .acceptance-page .acceptance-office p { margin: 4px 0 10px; color: var(--acceptance-muted); font-size: 13px; }
+.acceptance-office dl { margin: 0; }
+.acceptance-office dl > div + div { margin-top: 14px; }
+.acceptance-office dt { color: var(--acceptance-navy); font-size: 13px; font-weight: 600; }
+.acceptance-office dd { margin: 4px 0 0; color: var(--acceptance-muted); font-size: 13px; line-height: 1.7; }
+#study-programs-site .acceptance-page .acceptance-small { margin: 8px 0 0; color: var(--acceptance-muted); font-size: 12px; }
+#study-programs-site .acceptance-page .acceptance-complete { margin: 0 0 28px; padding: 18px 20px; border: 1px solid #bcd6c7; border-radius: 5px; background: #f1f8f4; color: #245c3c; font-size: 14px; }
+
+.acceptance-sources { padding: 22px 38px; border-top: 1px solid var(--acceptance-line); border-radius: 0 0 10px 10px; background: #f7f9fa; }
+.acceptance-sources summary { min-height: 44px; padding: 10px 0; color: var(--acceptance-navy); font-size: 13px; font-weight: 600; cursor: pointer; }
+.acceptance-sources ul { margin: 0 0 16px; padding-left: 20px; font-size: 12px; }
+.acceptance-sources li { padding: 5px 0; }
+#study-programs-site .acceptance-page .acceptance-sources p { max-width: 90ch; margin: 10px 0 0; color: var(--acceptance-muted); font-size: 12px; line-height: 1.7; }
+#study-programs-site .acceptance-page .acceptance-sources details p { margin-bottom: 10px; }
+
+@media (max-width: 1199px) {
+  .acceptance-intro { grid-template-columns: minmax(0, 1fr) 220px; gap: 24px; padding: 34px 28px 30px; }
+  .acceptance-stage-nav { padding-left: 18px; }
+  #study-programs-site .acceptance-page h1 { font-size: 32px; }
+  .acceptance-checklist { padding: 28px 28px 0; }
+  .acceptance-stage { gap: 16px; }
+  .acceptance-sources { padding: 20px 28px; }
+}
+
+@media (max-width: 991px) {
+  .acceptance-intro { grid-template-columns: 1fr; gap: 24px; }
+  .acceptance-stage-nav { padding: 10px 0 0; border-left: 0; border-top: 1px solid var(--acceptance-line); }
+  .acceptance-stage-nav ol { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+}
+
+@media (max-width: 767px) {
+  #study-programs-site .acceptance-page h1 { font-size: 30px; }
+  #study-programs-site .acceptance-page h2 { font-size: 23px; }
+  #study-programs-site .acceptance-page h3 { font-size: 20px; }
+  .acceptance-intro { padding: 28px 22px 18px; gap: 20px; }
+  .acceptance-intro-actions { gap: 8px 20px; }
+  #study-programs-site .acceptance-page .acceptance-print { margin-left: 0; }
+  .acceptance-checklist { padding: 26px 22px 0; }
+  .acceptance-stage-nav ol { grid-template-columns: 1fr; }
+  #study-programs-site .acceptance-page .acceptance-stage-nav a { font-size: 13px; }
+  .acceptance-progress-controls { padding: 16px; }
+  .acceptance-count { font-size: 13px; }
+  .acceptance-percentage { font-size: 24px; }
+  .acceptance-preferences { gap: 0 12px; }
+  .acceptance-remember { font-size: 12px; }
+  .acceptance-stage { grid-template-columns: 1fr; gap: 12px; padding: 28px 0; }
+  .acceptance-stage:not(:last-child)::before { display: none; }
+  .acceptance-stage-number { width: 32px; height: 32px; font-size: 11px; }
+  .acceptance-stage-heading { padding-bottom: 12px; }
+  .acceptance-tasks > li { gap: 12px; padding: 14px 4px; }
+  .acceptance-tasks strong { font-size: 15px; }
+  .acceptance-tasks label > span { font-size: 14px; }
+  .acceptance-office { grid-template-columns: 1fr; gap: 22px; padding: 18px; }
+  .acceptance-sources { padding: 20px 22px; }
+  #study-programs-site .acceptance-page .acceptance-related-links { margin-left: 0; }
+}
+
+@media (max-width: 359px) {
+  #study-programs-site .acceptance-page h1 { font-size: 28px; }
+  .acceptance-intro, .acceptance-checklist, .acceptance-sources { padding-inline: 18px; }
+}
+
+/* Print only the guide, preserving checked boxes and the full support details. */
+@page { margin: 14mm; }
+@media print {
+  .cd-main-header, .university-navigation, .programs-sidebar,
+  body > .ms-WPBody, .a11y-fab, #a11yPanel, .skip-link,
+  .acceptance-intro-actions, .acceptance-progress-controls, .acceptance-count,
+  .acceptance-related-links, .acceptance-complete { display: none !important; }
+  .acceptance-stage-nav, .acceptance-stage-status { display: none !important; }
+  html, body, #s4-workspace, #s4-bodyContainer, #main-content,
+  #main-content .bgGrey, #main-content .container, #main-content .row,
+  #main-content .col-md-9, #sag-ana.acceptance-content {
+    width: auto !important; height: auto !important; min-height: 0 !important;
+    max-width: none !important; margin: 0 !important; padding: 0 !important;
+    overflow: visible !important; float: none !important; background: #fff !important;
+  }
+  #study-programs-site .acceptance-page { font-size: 10pt; }
+  #study-programs-site .acceptance-page h1 { font-size: 24pt; }
+  #study-programs-site .acceptance-page h2 { font-size: 16pt; }
+  #study-programs-site .acceptance-page h3 { font-size: 13pt; }
+  #study-programs-site .acceptance-page .acceptance-lead { font-size: 10pt; }
+  .acceptance-intro { display: block; padding: 0 0 16px; border: 0; }
+  .acceptance-checklist { padding: 16px 0 0; }
+  .acceptance-stages { margin-top: 16px; }
+  .acceptance-stage { display: block; padding: 16px 0; break-inside: avoid; }
+  .acceptance-stage::before { display: none; }
+  .acceptance-stage-number { display: block; width: auto; height: auto; margin-bottom: 6px; padding: 0; border: 0; background: none; font-size: 9pt; }
+  .acceptance-stage-heading { min-height: 0; padding: 0; border: 0; }
+  .acceptance-tasks { margin-top: 8px; }
+  .acceptance-tasks > li { padding: 5px 0; border: 0; break-inside: avoid; background: none !important; }
+  .acceptance-tasks strong { font-size: 10pt; }
+  .acceptance-tasks label > span { font-size: 9pt; }
+  .acceptance-page input[type="checkbox"] { width: 14px; height: 14px; print-color-adjust: exact; }
+  .acceptance-tasks input:checked + label { opacity: 1; }
+  .acceptance-office { display: grid; grid-template-columns: 1fr 1fr; padding: 12px 0 0; border: 0; border-top: 1px solid var(--acceptance-line); background: none; }
+  .acceptance-sources { padding: 16px 0; background: none; }
+  .acceptance-sources details { break-inside: avoid; }
+  #study-programs-site .acceptance-page a::after { content: none; }
+  .acceptance-sources summary { min-height: 0; padding: 4px 0; font-size: 9pt; }
+  .acceptance-sources ul { margin: 4px 0 8px; font-size: 8pt; line-height: 1.4; }
+  .acceptance-sources li { padding: 2px 0; }
+  #study-programs-site .acceptance-page .acceptance-sources p { margin: 6px 0 0; font-size: 8pt; line-height: 1.4; }
+  #study-programs-site .acceptance-page .acceptance-sources a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 7pt; overflow-wrap: anywhere; }
+}
+```
