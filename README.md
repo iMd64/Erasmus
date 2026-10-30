@@ -1,6 +1,17 @@
 # Integration Guide for Short Term Study Programs
 
-This guide contains the necessary HTML and CSS to integrate the Short Term Study Programs page content into the main university website structure. 
+This guide contains the necessary HTML and CSS to integrate the Short Term Study Programs page content into the main university website structure.
+
+## Table of Contents
+
+- [1. HTML Content (Homepage)](#1-html-content)
+- [2. CSS Styles (Homepage)](#2-css-styles-homepage)
+- [3. HTML Content (Short Term Study Abroad)](#3-html-content-short-term-study-abroad)
+- [4. CSS Styles (Short Term Study Abroad)](#4-css-styles-short-term-study-abroad)
+- [5. HTML Content (Application Process: After Acceptance)](#5-html-content-application-process-after-acceptance)
+- [6. CSS Styles (Application Process: After Acceptance)](#6-css-styles-application-process-after-acceptance)
+- [7. HTML Content (Frequently Asked Questions)](#7-html-content-frequently-asked-questions)
+- [8. CSS Styles (Frequently Asked Questions)](#8-css-styles-frequently-asked-questions)
 
 ## 1. HTML Content
 
@@ -2271,276 +2282,267 @@ Copy the HTML block below. When editing the university website for the Frequentl
 
 ```html
 <article class="faq-page" aria-labelledby="faq-title">
-                      <!-- General guidance only. Programme-specific details remain in the listings. -->
-                      <header class="faq-intro">
-                        <div>
-                          <p class="faq-eyebrow">Student guidance · Outgoing students</p>
-                          <h1 id="faq-title">Frequently asked<br>questions</h1>
-                        </div>
-                        <div class="faq-intro-copy">
-                          <p>From choosing a programme to preparing for departure,
-                            find clear answers to the questions students ask most.</p>
-                          <a href="#faq-support">Can’t find your answer? <span aria-hidden="true">↓</span></a>
-                        </div>
-                      </header>
-
-                      <nav class="faq-topics" aria-label="FAQ topics">
-                        <p class="faq-eyebrow">Find your topic</p>
-                        <ul>
-                          <li><a href="#understanding-programmes">Programme basics <span aria-hidden="true">03</span></a></li>
-                          <li><a href="#applying">Applying <span aria-hidden="true">04</span></a></li>
-                          <li><a href="#costs">Costs &amp; funding <span aria-hidden="true">03</span></a></li>
-                          <li><a href="#academic-travel">Credits &amp; travel <span aria-hidden="true">03</span></a></li>
-                          <li><a href="#updates-support">Updates &amp; support <span aria-hidden="true">02</span></a></li>
-                        </ul>
-                      </nav>
-
-                      <div class="faq-toolbar">
-                        <p>Choose a question to read its answer.</p>
-                        <button type="button" id="faq-toggle-all" aria-controls="faq-questions" aria-expanded="false" hidden>Expand all answers</button>
-                      </div>
-
-                      <div class="faq-questions" id="faq-questions">
-                        <section class="faq-group" id="understanding-programmes" aria-labelledby="basics-title">
-                          <header class="faq-group-heading">
-                            <span class="faq-section-number" aria-hidden="true">01</span>
-                            <h2 id="basics-title">Programme basics</h2>
-                            <p>Understand your options.</p>
-                          </header>
-                          <div class="faq-group-items">
-                            <details class="faq-item" id="what-is-short-term">
-                              <summary><h3>What is a short-term study abroad programme?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
-                              <div class="faq-answer">
-                                <p>A focused learning experience abroad, such as a summer or winter school,
-                                  an educational camp, or a language course. The subject, length, and learning
-                                  activities depend on the host programme.</p>
-                                <a href="short-term-study-abroad.html">Explore short-term study abroad <span aria-hidden="true">→</span></a>
-                              </div>
-                            </details>
-                            <details class="faq-item" id="programme-differences">
-                              <summary><h3>What is the difference between a summer/winter programme and a language programme?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
-                              <div class="faq-answer">
-                                <p>Summer and winter schools often centre on an academic subject or practical
-                                  project. Language programmes focus on developing language skills. Both may
-                                  include cultural activities, so compare the course content rather than the season alone.</p>
-                                <div class="faq-answer-links">
-                                  <a href="summer-winter-programs.html">See Summer &amp; Winter Programmes <span aria-hidden="true">→</span></a>
-                                  <a href="language-programs.html">See Language Programmes <span aria-hidden="true">→</span></a>
-                                </div>
-                              </div>
-                            </details>
-                            <details class="faq-item" id="is-it-erasmus">
-                              <summary><h3>Is every programme an Erasmus+ programme?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
-                              <div class="faq-answer">
-                                <p>No. A partner university’s short course is not automatically an Erasmus+
-                                  activity. Erasmus+ mobility has its own institutional arrangements and
-                                  selection process. Confirm the route with IAU before assuming that Erasmus+
-                                  funding or recognition rules apply.</p>
-                                <a href="short-term-study-abroad.html">Read about Erasmus+ and short-term options <span aria-hidden="true">→</span></a>
-                              </div>
-                            </details>
-                          </div>
-                        </section>
-
-                        <section class="faq-group" id="applying" aria-labelledby="applying-title">
-                          <header class="faq-group-heading">
-                            <span class="faq-section-number" aria-hidden="true">02</span>
-                            <h2 id="applying-title">Applying</h2>
-                            <p>Know your next step.</p>
-                          </header>
-                          <div class="faq-group-items">
-                            <details class="faq-item" id="eligibility">
-                              <summary><h3>How do I know whether I am eligible?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
-                              <div class="faq-answer">
-                                <p>Read the eligibility section in the programme listing, then check the host’s
-                                  current announcement. Requirements vary. Ask the listed contact if anything
-                                  is unclear before submitting an application.</p>
-                                <div class="faq-answer-links">
-                                  <a href="summer-winter-programs.html">Check Summer &amp; Winter Programmes <span aria-hidden="true">→</span></a>
-                                  <a href="language-programs.html">Check Language Programmes <span aria-hidden="true">→</span></a>
-                                </div>
-                              </div>
-                            </details>
-                            <details class="faq-item" id="application-route">
-                              <summary><h3>Do I apply through IAU or directly to the host university?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
-                              <div class="faq-answer">
-                                <p>Follow the route given in the programme announcement. Some opportunities
-                                  use a host application; others require IAU involvement. For Erasmus+,
-                                  contact the IAU Erasmus+ Office about its selection process.
-                                  If the route is unclear, ask before applying.</p>
-                                <div class="faq-answer-links">
-                                  <a href="summer-winter-programs.html">Find the programme’s application instructions <span aria-hidden="true">→</span></a>
-                                  <a href="contact.html">Ask the IAU office <span aria-hidden="true">→</span></a>
-                                </div>
-                              </div>
-                            </details>
-                            <details class="faq-item" id="missed-deadline">
-                              <summary><h3>What happens if I miss a deadline?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
-                              <div class="faq-answer">
-                                <p>Contact the host or the office named in the announcement to ask whether
-                                  applications are still being considered. Do not assume an extension or
-                                  late place is available. If the call is closed, look for another opportunity.</p>
-                                <a href="summer-winter-programs.html">Browse programme listings and host links <span aria-hidden="true">→</span></a>
-                              </div>
-                            </details>
-                            <details class="faq-item" id="withdrawal">
-                              <summary><h3>What should I do if I want to withdraw after applying?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
-                              <div class="faq-answer">
-                                <p>Write to the host and inform the relevant IAU office if it is involved.
-                                  Ask for written confirmation of the withdrawal and check the cancellation,
-                                  refund, and any grant-agreement terms that apply to you. Check travel and
-                                  accommodation bookings separately.</p>
-                                <a href="application-process.html#during-program">Read the guidance on changes after acceptance <span aria-hidden="true">→</span></a>
-                              </div>
-                            </details>
-                          </div>
-                        </section>
-
-                        <section class="faq-group" id="costs" aria-labelledby="costs-title">
-                          <header class="faq-group-heading">
-                            <span class="faq-section-number" aria-hidden="true">03</span>
-                            <h2 id="costs-title">Costs &amp; funding</h2>
-                            <p>Plan the whole experience.</p>
-                          </header>
-                          <div class="faq-group-items">
-                            <details class="faq-item" id="total-cost">
-                              <summary><h3>Where can I see the total programme cost?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
-                              <div class="faq-answer">
-                                <p>Start with the listing’s fee and the host’s current cost breakdown.
-                                  The advertised fee may not be your full budget: add any travel,
-                                  accommodation, meals, insurance, visa, and personal expenses that are
-                                  not covered. Ask the host about anything missing from the breakdown.</p>
-                                <div class="faq-answer-links">
-                                  <a href="summer-winter-programs.html">See programme fees and host details <span aria-hidden="true">→</span></a>
-                                  <a href="language-programs.html">See Language Programmes <span aria-hidden="true">→</span></a>
-                                </div>
-                              </div>
-                            </details>
-                            <details class="faq-item" id="included-excluded">
-                              <summary><h3>What do “included” and “excluded” costs mean?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
-                              <div class="faq-answer">
-                                <p>“Included” means covered by the stated programme fee. “Excluded” means
-                                  outside that fee and something you may need to budget for separately.
-                                  What is covered differs between programmes; use the host’s itemised
-                                  description rather than assuming a package includes everything.</p>
-                                <a href="summer-winter-programs.html">Check what each programme includes <span aria-hidden="true">→</span></a>
-                              </div>
-                            </details>
-                            <details class="faq-item" id="scholarships">
-                              <summary><h3>Are scholarships or discounts available?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
-                              <div class="faq-answer">
-                                <p>Some partner programmes offer support or reduced fees for IAU students.
-                                  Availability and conditions vary, so check the individual announcement.
-                                  A partner discount is separate from an Erasmus+ grant; neither should be
-                                  assumed until confirmed through the relevant process.</p>
-                                <a href="summer-winter-programs.html">Check the programme’s funding information <span aria-hidden="true">→</span></a>
-                              </div>
-                            </details>
-                          </div>
-                        </section>
-
-                        <section class="faq-group" id="academic-travel" aria-labelledby="academic-title">
-                          <header class="faq-group-heading">
-                            <span class="faq-section-number" aria-hidden="true">04</span>
-                            <h2 id="academic-title">Credits &amp; travel</h2>
-                            <p>Prepare with confidence.</p>
-                          </header>
-                          <div class="faq-group-items">
-                            <details class="faq-item" id="academic-credit">
-                              <summary><h3>Can I receive academic credit for a programme?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
-                              <div class="faq-answer">
-                                <p>Credit recognition needs to be agreed with your faculty. A certificate or
-                                  advertised ECTS value alone does not confirm that a partner course will
-                                  count towards your IAU degree. For Erasmus+ study, agree recognition in
-                                  the Learning Agreement before mobility and keep the required academic records.</p>
-                                <a href="application-process.html#academic-approval">Read the academic approval checklist <span aria-hidden="true">→</span></a>
-                              </div>
-                            </details>
-                            <details class="faq-item" id="ask-faculty">
-                              <summary><h3>Should I ask my faculty before applying?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
-                              <div class="faq-answer">
-                                <p>Yes, especially if you want academic credit or your plans could affect
-                                  classes or assessments at IAU. Share the course description and ask
-                                  your coordinator about approval and the records you will need.
-                                  Confirm recognition arrangements before committing.</p>
-                                <a href="application-process.html#academic-approval">See academic approval and coordinator guidance <span aria-hidden="true">→</span></a>
-                              </div>
-                            </details>
-                            <details class="faq-item" id="travel-documents">
-                              <summary><h3>Do I need a passport, visa, or travel insurance?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
-                              <div class="faq-answer">
-                                <p>Check the destination’s official entry rules for your nationality, travel
-                                  document, and length and purpose of stay, including any transit country.
-                                  Confirm insurance requirements with the host and destination authorities.
-                                  Acceptance by a university does not replace permission to enter a country.</p>
-                                <div class="faq-answer-links">
-                                  <a href="application-process.html#prepare-travel">Read After You Are Accepted: travel preparation <span aria-hidden="true">→</span></a>
-                                  <a href="https://home-affairs.ec.europa.eu/policies/schengen/visa-policy/applying-schengen-visa_en">Official Schengen visa guidance <span aria-hidden="true">↗</span></a>
-                                </div>
-                              </div>
-                            </details>
-                          </div>
-                        </section>
-
-                        <section class="faq-group" id="updates-support" aria-labelledby="updates-title">
-                          <header class="faq-group-heading">
-                            <span class="faq-section-number" aria-hidden="true">05</span>
-                            <h2 id="updates-title">Updates &amp; support</h2>
-                            <p>Stay informed and connected.</p>
-                          </header>
-                          <div class="faq-group-items">
-                            <details class="faq-item" id="list-updates">
-                              <summary><h3>How often does IAU update the programme lists?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
-                              <div class="faq-answer">
-                                <p>IAU states that it updates the summer/winter list as information arrives
-                                  from partner universities; it does not give a fixed timetable there.
-                                  Check the live listing and student announcements, and confirm current
-                                  details with the host. The saved listings in this folder do not refresh automatically.</p>
-                                <a href="https://www.aydin.edu.tr/en-us/international/shortterm/outgoing/Pages/programs.aspx">Check the live IAU programme list <span aria-hidden="true">↗</span></a>
-                              </div>
-                            </details>
-                            <details class="faq-item" id="who-to-contact">
-                              <summary><h3>Who should I contact if I cannot find an answer?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
-                              <div class="faq-answer">
-                                <p>Contact the Short-Term Study Programs Office with the programme name,
-                                  host university, and your question. Ask the host about its course or
-                                  booking terms, your faculty about academic recognition, and the IAU
-                                  Erasmus+ Office about Erasmus+ arrangements.</p>
-                                <a href="contact.html">Find the IAU office team and contact details <span aria-hidden="true">→</span></a>
-                              </div>
-                            </details>
-                          </div>
-                        </section>
-                      </div>
-
-                      <aside class="faq-support" id="faq-support" aria-labelledby="support-title">
-                        <div>
-                          <p class="faq-eyebrow">A little guidance goes a long way</p>
-                          <h2 id="support-title">Still have a question?</h2>
-                          <p>Tell the Short-Term Study Programs Office which programme you are
-                            considering and what you would like to clarify.</p>
-                        </div>
-                        <div class="faq-support-actions">
-                          <a class="faq-contact-button" href="contact.html">Contact the office <span aria-hidden="true">→</span></a>
-                          <a href="application-process.html">Already accepted? See your next steps</a>
-                        </div>
-                      </aside>
-
-                      <footer class="faq-sources">
-                        <details>
-                          <summary>Official guidance behind these answers</summary>
-                          <ul>
-                            <li><a href="https://www.aydin.edu.tr/en-us/international/shortterm/outgoing/Pages/Short-Term-Study-Abroad.aspx">IAU: short-term opportunities and application guidance</a></li>
-                            <li><a href="https://www.aydin.edu.tr/en-us/international/shortterm/outgoing/Pages/programs.aspx">IAU: summer/winter listings, fee breakdowns, and update notice</a></li>
-                            <li><a href="https://www.aydin.edu.tr/en-us/international/shortterm/outgoing/Pages/study-abroad-language-programs.aspx">IAU: language programmes</a></li>
-                            <li><a href="https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/studying-abroad">European Commission: Erasmus+ study, funding, and recognition</a></li>
-                            <li><a href="https://home-affairs.ec.europa.eu/policies/schengen/visa-policy/applying-schengen-visa_en">European Commission: official Schengen visa guidance</a></li>
-                          </ul>
-                        </details>
-                        <p>Guidance reviewed on 20 October 2026. For programme-specific requirements and
-                          arrangements, use the current host announcement and the relevant IAU office.</p>
-                      </footer>
-                    </article>
+  <!-- General guidance only. Programme-specific details remain in the listings. -->
+  <header class="faq-intro">
+    <div>
+      <p class="faq-eyebrow">Student guidance · Outgoing students</p>
+      <h1 id="faq-title">Frequently asked<br>questions</h1>
+    </div>
+    <div class="faq-intro-copy">
+      <p>From choosing a programme to preparing for departure,
+        find clear answers to the questions students ask most.</p>
+      <a href="#faq-support">Can’t find your answer? <span aria-hidden="true">↓</span></a>
+    </div>
+  </header>
+  <nav class="faq-topics" aria-label="FAQ topics">
+    <p class="faq-eyebrow">Find your topic</p>
+    <ul>
+      <li><a href="#understanding-programmes">Programme basics <span aria-hidden="true">03</span></a></li>
+      <li><a href="#applying">Applying <span aria-hidden="true">04</span></a></li>
+      <li><a href="#costs">Costs &amp; funding <span aria-hidden="true">03</span></a></li>
+      <li><a href="#academic-travel">Credits &amp; travel <span aria-hidden="true">03</span></a></li>
+      <li><a href="#updates-support">Updates &amp; support <span aria-hidden="true">02</span></a></li>
+    </ul>
+  </nav>
+  <div class="faq-toolbar">
+    <p>Choose a question to read its answer.</p>
+    <button type="button" id="faq-toggle-all" aria-controls="faq-questions" aria-expanded="false" hidden>Expand all answers</button>
+  </div>
+  <div class="faq-questions" id="faq-questions">
+    <section class="faq-group" id="understanding-programmes" aria-labelledby="basics-title">
+      <header class="faq-group-heading">
+        <span class="faq-section-number" aria-hidden="true">01</span>
+        <h2 id="basics-title">Programme basics</h2>
+        <p>Understand your options.</p>
+      </header>
+      <div class="faq-group-items">
+        <details class="faq-item" id="what-is-short-term">
+          <summary><h3>What is a short-term study abroad programme?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+          <div class="faq-answer">
+            <p>A focused learning experience abroad, such as a summer or winter school,
+              an educational camp, or a language course. The subject, length, and learning
+              activities depend on the host programme.</p>
+            <a href="short-term-study-abroad.html">Explore short-term study abroad <span aria-hidden="true">→</span></a>
+          </div>
+        </details>
+        <details class="faq-item" id="programme-differences">
+          <summary><h3>What is the difference between a summer/winter programme and a language programme?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+          <div class="faq-answer">
+            <p>Summer and winter schools often centre on an academic subject or practical
+              project. Language programmes focus on developing language skills. Both may
+              include cultural activities, so compare the course content rather than the season alone.</p>
+            <div class="faq-answer-links">
+              <a href="summer-winter-programs.html">See Summer &amp; Winter Programmes <span aria-hidden="true">→</span></a>
+              <a href="language-programs.html">See Language Programmes <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </details>
+        <details class="faq-item" id="is-it-erasmus">
+          <summary><h3>Is every programme an Erasmus+ programme?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+          <div class="faq-answer">
+            <p>No. A partner university’s short course is not automatically an Erasmus+
+              activity. Erasmus+ mobility has its own institutional arrangements and
+              selection process. Confirm the route with IAU before assuming that Erasmus+
+              funding or recognition rules apply.</p>
+            <a href="short-term-study-abroad.html">Read about Erasmus+ and short-term options <span aria-hidden="true">→</span></a>
+          </div>
+        </details>
+      </div>
+    </section>
+    <section class="faq-group" id="applying" aria-labelledby="applying-title">
+      <header class="faq-group-heading">
+        <span class="faq-section-number" aria-hidden="true">02</span>
+        <h2 id="applying-title">Applying</h2>
+        <p>Know your next step.</p>
+      </header>
+      <div class="faq-group-items">
+        <details class="faq-item" id="eligibility">
+          <summary><h3>How do I know whether I am eligible?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+          <div class="faq-answer">
+            <p>Read the eligibility section in the programme listing, then check the host’s
+              current announcement. Requirements vary. Ask the listed contact if anything
+              is unclear before submitting an application.</p>
+            <div class="faq-answer-links">
+              <a href="summer-winter-programs.html">Check Summer &amp; Winter Programmes <span aria-hidden="true">→</span></a>
+              <a href="language-programs.html">Check Language Programmes <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </details>
+        <details class="faq-item" id="application-route">
+          <summary><h3>Do I apply through IAU or directly to the host university?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+          <div class="faq-answer">
+            <p>Follow the route given in the programme announcement. Some opportunities
+              use a host application; others require IAU involvement. For Erasmus+,
+              contact the IAU Erasmus+ Office about its selection process.
+              If the route is unclear, ask before applying.</p>
+            <div class="faq-answer-links">
+              <a href="summer-winter-programs.html">Find the programme’s application instructions <span aria-hidden="true">→</span></a>
+              <a href="contact.html">Ask the IAU office <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </details>
+        <details class="faq-item" id="missed-deadline">
+          <summary><h3>What happens if I miss a deadline?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+          <div class="faq-answer">
+            <p>Contact the host or the office named in the announcement to ask whether
+              applications are still being considered. Do not assume an extension or
+              late place is available. If the call is closed, look for another opportunity.</p>
+            <a href="summer-winter-programs.html">Browse programme listings and host links <span aria-hidden="true">→</span></a>
+          </div>
+        </details>
+        <details class="faq-item" id="withdrawal">
+          <summary><h3>What should I do if I want to withdraw after applying?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+          <div class="faq-answer">
+            <p>Write to the host and inform the relevant IAU office if it is involved.
+              Ask for written confirmation of the withdrawal and check the cancellation,
+              refund, and any grant-agreement terms that apply to you. Check travel and
+              accommodation bookings separately.</p>
+            <a href="application-process.html#during-program">Read the guidance on changes after acceptance <span aria-hidden="true">→</span></a>
+          </div>
+        </details>
+      </div>
+    </section>
+    <section class="faq-group" id="costs" aria-labelledby="costs-title">
+      <header class="faq-group-heading">
+        <span class="faq-section-number" aria-hidden="true">03</span>
+        <h2 id="costs-title">Costs &amp; funding</h2>
+        <p>Plan the whole experience.</p>
+      </header>
+      <div class="faq-group-items">
+        <details class="faq-item" id="total-cost">
+          <summary><h3>Where can I see the total programme cost?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+          <div class="faq-answer">
+            <p>Start with the listing’s fee and the host’s current cost breakdown.
+              The advertised fee may not be your full budget: add any travel,
+              accommodation, meals, insurance, visa, and personal expenses that are
+              not covered. Ask the host about anything missing from the breakdown.</p>
+            <div class="faq-answer-links">
+              <a href="summer-winter-programs.html">See programme fees and host details <span aria-hidden="true">→</span></a>
+              <a href="language-programs.html">See Language Programmes <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </details>
+        <details class="faq-item" id="included-excluded">
+          <summary><h3>What do “included” and “excluded” costs mean?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+          <div class="faq-answer">
+            <p>“Included” means covered by the stated programme fee. “Excluded” means
+              outside that fee and something you may need to budget for separately.
+              What is covered differs between programmes; use the host’s itemised
+              description rather than assuming a package includes everything.</p>
+            <a href="summer-winter-programs.html">Check what each programme includes <span aria-hidden="true">→</span></a>
+          </div>
+        </details>
+        <details class="faq-item" id="scholarships">
+          <summary><h3>Are scholarships or discounts available?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+          <div class="faq-answer">
+            <p>Some partner programmes offer support or reduced fees for IAU students.
+              Availability and conditions vary, so check the individual announcement.
+              A partner discount is separate from an Erasmus+ grant; neither should be
+              assumed until confirmed through the relevant process.</p>
+            <a href="summer-winter-programs.html">Check the programme’s funding information <span aria-hidden="true">→</span></a>
+          </div>
+        </details>
+      </div>
+    </section>
+    <section class="faq-group" id="academic-travel" aria-labelledby="academic-title">
+      <header class="faq-group-heading">
+        <span class="faq-section-number" aria-hidden="true">04</span>
+        <h2 id="academic-title">Credits &amp; travel</h2>
+        <p>Prepare with confidence.</p>
+      </header>
+      <div class="faq-group-items">
+        <details class="faq-item" id="academic-credit">
+          <summary><h3>Can I receive academic credit for a programme?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+          <div class="faq-answer">
+            <p>Credit recognition needs to be agreed with your faculty. A certificate or
+              advertised ECTS value alone does not confirm that a partner course will
+              count towards your IAU degree. For Erasmus+ study, agree recognition in
+              the Learning Agreement before mobility and keep the required academic records.</p>
+            <a href="application-process.html#academic-approval">Read the academic approval checklist <span aria-hidden="true">→</span></a>
+          </div>
+        </details>
+        <details class="faq-item" id="ask-faculty">
+          <summary><h3>Should I ask my faculty before applying?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+          <div class="faq-answer">
+            <p>Yes, especially if you want academic credit or your plans could affect
+              classes or assessments at IAU. Share the course description and ask
+              your coordinator about approval and the records you will need.
+              Confirm recognition arrangements before committing.</p>
+            <a href="application-process.html#academic-approval">See academic approval and coordinator guidance <span aria-hidden="true">→</span></a>
+          </div>
+        </details>
+        <details class="faq-item" id="travel-documents">
+          <summary><h3>Do I need a passport, visa, or travel insurance?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+          <div class="faq-answer">
+            <p>Check the destination’s official entry rules for your nationality, travel
+              document, and length and purpose of stay, including any transit country.
+              Confirm insurance requirements with the host and destination authorities.
+              Acceptance by a university does not replace permission to enter a country.</p>
+            <div class="faq-answer-links">
+              <a href="application-process.html#prepare-travel">Read After You Are Accepted: travel preparation <span aria-hidden="true">→</span></a>
+              <a href="https://home-affairs.ec.europa.eu/policies/schengen/visa-policy/applying-schengen-visa_en">Official Schengen visa guidance <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+    <section class="faq-group" id="updates-support" aria-labelledby="updates-title">
+      <header class="faq-group-heading">
+        <span class="faq-section-number" aria-hidden="true">05</span>
+        <h2 id="updates-title">Updates &amp; support</h2>
+        <p>Stay informed and connected.</p>
+      </header>
+      <div class="faq-group-items">
+        <details class="faq-item" id="list-updates">
+          <summary><h3>How often does IAU update the programme lists?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+          <div class="faq-answer">
+            <p>IAU states that it updates the summer/winter list as information arrives
+              from partner universities; it does not give a fixed timetable there.
+              Check the live listing and student announcements, and confirm current
+              details with the host. The saved listings in this folder do not refresh automatically.</p>
+            <a href="https://www.aydin.edu.tr/en-us/international/shortterm/outgoing/Pages/programs.aspx">Check the live IAU programme list <span aria-hidden="true">↗</span></a>
+          </div>
+        </details>
+        <details class="faq-item" id="who-to-contact">
+          <summary><h3>Who should I contact if I cannot find an answer?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+          <div class="faq-answer">
+            <p>Contact the Short-Term Study Programs Office with the programme name,
+              host university, and your question. Ask the host about its course or
+              booking terms, your faculty about academic recognition, and the IAU
+              Erasmus+ Office about Erasmus+ arrangements.</p>
+            <a href="contact.html">Find the IAU office team and contact details <span aria-hidden="true">→</span></a>
+          </div>
+        </details>
+      </div>
+    </section>
+  </div>
+  <aside class="faq-support" id="faq-support" aria-labelledby="support-title">
+    <div>
+      <p class="faq-eyebrow">A little guidance goes a long way</p>
+      <h2 id="support-title">Still have a question?</h2>
+      <p>Tell the Short-Term Study Programs Office which programme you are
+        considering and what you would like to clarify.</p>
+    </div>
+    <div class="faq-support-actions">
+      <a class="faq-contact-button" href="contact.html">Contact the office <span aria-hidden="true">→</span></a>
+      <a href="application-process.html">Already accepted? See your next steps</a>
+    </div>
+  </aside>
+  <footer class="faq-sources">
+    <details>
+      <summary>Official guidance behind these answers</summary>
+      <ul>
+        <li><a href="https://www.aydin.edu.tr/en-us/international/shortterm/outgoing/Pages/Short-Term-Study-Abroad.aspx">IAU: short-term opportunities and application guidance</a></li>
+        <li><a href="https://www.aydin.edu.tr/en-us/international/shortterm/outgoing/Pages/programs.aspx">IAU: summer/winter listings, fee breakdowns, and update notice</a></li>
+        <li><a href="https://www.aydin.edu.tr/en-us/international/shortterm/outgoing/Pages/study-abroad-language-programs.aspx">IAU: language programmes</a></li>
+        <li><a href="https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/studying-abroad">European Commission: Erasmus+ study, funding, and recognition</a></li>
+        <li><a href="https://home-affairs.ec.europa.eu/policies/schengen/visa-policy/applying-schengen-visa_en">European Commission: official Schengen visa guidance</a></li>
+      </ul>
+    </details>
+    <p>Guidance reviewed on 20 October 2026. For programme-specific requirements and
+      arrangements, use the current host announcement and the relevant IAU office.</p>
+  </footer>
+</article>
 ```
 
 ## 8. CSS Styles (Frequently Asked Questions)
@@ -2782,5 +2784,5 @@ The following styles ensure proper rendering for the Frequently Asked Questions 
   #study-programs-site .faq-page a::after { content: none; }
   #study-programs-site .faq-page .faq-sources p { font-size: 8pt; }
 }
-
 ```
+
