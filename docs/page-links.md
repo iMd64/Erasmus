@@ -12,6 +12,7 @@ The other section pages retain links to their live sources.
 | Short Term Study Abroad | [short-term-study-abroad.html](../pages/short-term-study-abroad.html) | [University source](https://www.aydin.edu.tr/en-us/international/shortterm/outgoing/Pages/Short-Term-Study-Abroad.aspx) |
 | List of Summer & Winter Programs | [summer-winter-programs.html](../pages/summer-winter-programs.html) | [University source](https://www.aydin.edu.tr/en-us/international/shortterm/outgoing/Pages/programs.aspx) |
 | List of Study Abroad Language Programs | [language-programs.html](../pages/language-programs.html) | [University source](https://www.aydin.edu.tr/en-us/international/shortterm/outgoing/Pages/study-abroad-language-programs.aspx) |
+| Application Process: After Acceptance | [application-process.html](../pages/application-process.html) | Original checklist, with official IAU, European Commission, and Turkish MFA sources linked within the page; reviewed 16 October 2026 |
 | Contact | [contact.html](../pages/contact.html) | [University source](https://www.aydin.edu.tr/en-us/international/shortterm/Pages/Contact.aspx) |
 
 ## Online destinations
@@ -43,4 +44,4 @@ The guide explains the formats; it does not announce an open Erasmus+ call,
 guarantee grant funding, or confirm credit recognition for an individual course.
 
 Outgoing Students is a submenu button, not a separate page. Click its label or
-arrow to expand/collapse the three outgoing-program links.
+arrow to expand/collapse the four outgoing-program and guidance links.
