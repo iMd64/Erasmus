@@ -1,6 +1,6 @@
 # Page links
 
-The homepage and four section pages are stored locally. Local links below are
+The homepage and six section pages are stored locally. Local links below are
 relative to this documentation file. The four section pages were captured on
 **26 September 2026**. The study-abroad page was rewritten on **29 September 2026**
 and now links to official guidance for its Erasmus+ and partner-program content.
@@ -13,6 +13,7 @@ The other section pages retain links to their live sources.
 | List of Summer & Winter Programs | [summer-winter-programs.html](../pages/summer-winter-programs.html) | [University source](https://www.aydin.edu.tr/en-us/international/shortterm/outgoing/Pages/programs.aspx) |
 | List of Study Abroad Language Programs | [language-programs.html](../pages/language-programs.html) | [University source](https://www.aydin.edu.tr/en-us/international/shortterm/outgoing/Pages/study-abroad-language-programs.aspx) |
 | Application Process: After Acceptance | [application-process.html](../pages/application-process.html) | Original checklist, with official IAU, European Commission, and Turkish MFA sources linked within the page; reviewed 16 October 2026 |
+| Frequently Asked Questions | [faq.html](../pages/faq.html) | Fifteen general answers following the supplied outline, with official IAU and European Commission sources linked within the page; reviewed 20 October 2026 |
 | Contact | [contact.html](../pages/contact.html) | [University source](https://www.aydin.edu.tr/en-us/international/shortterm/Pages/Contact.aspx) |
 
 ## Online destinations
@@ -44,4 +45,4 @@ The guide explains the formats; it does not announce an open Erasmus+ call,
 guarantee grant funding, or confirm credit recognition for an individual course.
 
 Outgoing Students is a submenu button, not a separate page. Click its label or
-arrow to expand/collapse the four outgoing-program and guidance links.
+arrow to expand/collapse the five outgoing-program and guidance links.

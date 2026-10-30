@@ -2264,3 +2264,523 @@ The following styles ensure proper rendering for the Application Process checkli
   #study-programs-site .acceptance-page .acceptance-sources a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 7pt; overflow-wrap: anywhere; }
 }
 ```
+
+## 7. HTML Content (Frequently Asked Questions)
+
+Copy the HTML block below. When editing the university website for the Frequently Asked Questions (FAQ) page, locate the main content wrapper—specifically the element `<article class="faq-page" aria-labelledby="faq-title">` inside `<div id="sag-ana">` (or `<div id="sag-ana" class="faq-content">`). **Replace that entire `<article>` element and all of its contents** with the new block provided here.
+
+```html
+<article class="faq-page" aria-labelledby="faq-title">
+                      <!-- General guidance only. Programme-specific details remain in the listings. -->
+                      <header class="faq-intro">
+                        <div>
+                          <p class="faq-eyebrow">Student guidance · Outgoing students</p>
+                          <h1 id="faq-title">Frequently asked<br>questions</h1>
+                        </div>
+                        <div class="faq-intro-copy">
+                          <p>From choosing a programme to preparing for departure,
+                            find clear answers to the questions students ask most.</p>
+                          <a href="#faq-support">Can’t find your answer? <span aria-hidden="true">↓</span></a>
+                        </div>
+                      </header>
+
+                      <nav class="faq-topics" aria-label="FAQ topics">
+                        <p class="faq-eyebrow">Find your topic</p>
+                        <ul>
+                          <li><a href="#understanding-programmes">Programme basics <span aria-hidden="true">03</span></a></li>
+                          <li><a href="#applying">Applying <span aria-hidden="true">04</span></a></li>
+                          <li><a href="#costs">Costs &amp; funding <span aria-hidden="true">03</span></a></li>
+                          <li><a href="#academic-travel">Credits &amp; travel <span aria-hidden="true">03</span></a></li>
+                          <li><a href="#updates-support">Updates &amp; support <span aria-hidden="true">02</span></a></li>
+                        </ul>
+                      </nav>
+
+                      <div class="faq-toolbar">
+                        <p>Choose a question to read its answer.</p>
+                        <button type="button" id="faq-toggle-all" aria-controls="faq-questions" aria-expanded="false" hidden>Expand all answers</button>
+                      </div>
+
+                      <div class="faq-questions" id="faq-questions">
+                        <section class="faq-group" id="understanding-programmes" aria-labelledby="basics-title">
+                          <header class="faq-group-heading">
+                            <span class="faq-section-number" aria-hidden="true">01</span>
+                            <h2 id="basics-title">Programme basics</h2>
+                            <p>Understand your options.</p>
+                          </header>
+                          <div class="faq-group-items">
+                            <details class="faq-item" id="what-is-short-term">
+                              <summary><h3>What is a short-term study abroad programme?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+                              <div class="faq-answer">
+                                <p>A focused learning experience abroad, such as a summer or winter school,
+                                  an educational camp, or a language course. The subject, length, and learning
+                                  activities depend on the host programme.</p>
+                                <a href="short-term-study-abroad.html">Explore short-term study abroad <span aria-hidden="true">→</span></a>
+                              </div>
+                            </details>
+                            <details class="faq-item" id="programme-differences">
+                              <summary><h3>What is the difference between a summer/winter programme and a language programme?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+                              <div class="faq-answer">
+                                <p>Summer and winter schools often centre on an academic subject or practical
+                                  project. Language programmes focus on developing language skills. Both may
+                                  include cultural activities, so compare the course content rather than the season alone.</p>
+                                <div class="faq-answer-links">
+                                  <a href="summer-winter-programs.html">See Summer &amp; Winter Programmes <span aria-hidden="true">→</span></a>
+                                  <a href="language-programs.html">See Language Programmes <span aria-hidden="true">→</span></a>
+                                </div>
+                              </div>
+                            </details>
+                            <details class="faq-item" id="is-it-erasmus">
+                              <summary><h3>Is every programme an Erasmus+ programme?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+                              <div class="faq-answer">
+                                <p>No. A partner university’s short course is not automatically an Erasmus+
+                                  activity. Erasmus+ mobility has its own institutional arrangements and
+                                  selection process. Confirm the route with IAU before assuming that Erasmus+
+                                  funding or recognition rules apply.</p>
+                                <a href="short-term-study-abroad.html">Read about Erasmus+ and short-term options <span aria-hidden="true">→</span></a>
+                              </div>
+                            </details>
+                          </div>
+                        </section>
+
+                        <section class="faq-group" id="applying" aria-labelledby="applying-title">
+                          <header class="faq-group-heading">
+                            <span class="faq-section-number" aria-hidden="true">02</span>
+                            <h2 id="applying-title">Applying</h2>
+                            <p>Know your next step.</p>
+                          </header>
+                          <div class="faq-group-items">
+                            <details class="faq-item" id="eligibility">
+                              <summary><h3>How do I know whether I am eligible?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+                              <div class="faq-answer">
+                                <p>Read the eligibility section in the programme listing, then check the host’s
+                                  current announcement. Requirements vary. Ask the listed contact if anything
+                                  is unclear before submitting an application.</p>
+                                <div class="faq-answer-links">
+                                  <a href="summer-winter-programs.html">Check Summer &amp; Winter Programmes <span aria-hidden="true">→</span></a>
+                                  <a href="language-programs.html">Check Language Programmes <span aria-hidden="true">→</span></a>
+                                </div>
+                              </div>
+                            </details>
+                            <details class="faq-item" id="application-route">
+                              <summary><h3>Do I apply through IAU or directly to the host university?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+                              <div class="faq-answer">
+                                <p>Follow the route given in the programme announcement. Some opportunities
+                                  use a host application; others require IAU involvement. For Erasmus+,
+                                  contact the IAU Erasmus+ Office about its selection process.
+                                  If the route is unclear, ask before applying.</p>
+                                <div class="faq-answer-links">
+                                  <a href="summer-winter-programs.html">Find the programme’s application instructions <span aria-hidden="true">→</span></a>
+                                  <a href="contact.html">Ask the IAU office <span aria-hidden="true">→</span></a>
+                                </div>
+                              </div>
+                            </details>
+                            <details class="faq-item" id="missed-deadline">
+                              <summary><h3>What happens if I miss a deadline?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+                              <div class="faq-answer">
+                                <p>Contact the host or the office named in the announcement to ask whether
+                                  applications are still being considered. Do not assume an extension or
+                                  late place is available. If the call is closed, look for another opportunity.</p>
+                                <a href="summer-winter-programs.html">Browse programme listings and host links <span aria-hidden="true">→</span></a>
+                              </div>
+                            </details>
+                            <details class="faq-item" id="withdrawal">
+                              <summary><h3>What should I do if I want to withdraw after applying?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+                              <div class="faq-answer">
+                                <p>Write to the host and inform the relevant IAU office if it is involved.
+                                  Ask for written confirmation of the withdrawal and check the cancellation,
+                                  refund, and any grant-agreement terms that apply to you. Check travel and
+                                  accommodation bookings separately.</p>
+                                <a href="application-process.html#during-program">Read the guidance on changes after acceptance <span aria-hidden="true">→</span></a>
+                              </div>
+                            </details>
+                          </div>
+                        </section>
+
+                        <section class="faq-group" id="costs" aria-labelledby="costs-title">
+                          <header class="faq-group-heading">
+                            <span class="faq-section-number" aria-hidden="true">03</span>
+                            <h2 id="costs-title">Costs &amp; funding</h2>
+                            <p>Plan the whole experience.</p>
+                          </header>
+                          <div class="faq-group-items">
+                            <details class="faq-item" id="total-cost">
+                              <summary><h3>Where can I see the total programme cost?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+                              <div class="faq-answer">
+                                <p>Start with the listing’s fee and the host’s current cost breakdown.
+                                  The advertised fee may not be your full budget: add any travel,
+                                  accommodation, meals, insurance, visa, and personal expenses that are
+                                  not covered. Ask the host about anything missing from the breakdown.</p>
+                                <div class="faq-answer-links">
+                                  <a href="summer-winter-programs.html">See programme fees and host details <span aria-hidden="true">→</span></a>
+                                  <a href="language-programs.html">See Language Programmes <span aria-hidden="true">→</span></a>
+                                </div>
+                              </div>
+                            </details>
+                            <details class="faq-item" id="included-excluded">
+                              <summary><h3>What do “included” and “excluded” costs mean?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+                              <div class="faq-answer">
+                                <p>“Included” means covered by the stated programme fee. “Excluded” means
+                                  outside that fee and something you may need to budget for separately.
+                                  What is covered differs between programmes; use the host’s itemised
+                                  description rather than assuming a package includes everything.</p>
+                                <a href="summer-winter-programs.html">Check what each programme includes <span aria-hidden="true">→</span></a>
+                              </div>
+                            </details>
+                            <details class="faq-item" id="scholarships">
+                              <summary><h3>Are scholarships or discounts available?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+                              <div class="faq-answer">
+                                <p>Some partner programmes offer support or reduced fees for IAU students.
+                                  Availability and conditions vary, so check the individual announcement.
+                                  A partner discount is separate from an Erasmus+ grant; neither should be
+                                  assumed until confirmed through the relevant process.</p>
+                                <a href="summer-winter-programs.html">Check the programme’s funding information <span aria-hidden="true">→</span></a>
+                              </div>
+                            </details>
+                          </div>
+                        </section>
+
+                        <section class="faq-group" id="academic-travel" aria-labelledby="academic-title">
+                          <header class="faq-group-heading">
+                            <span class="faq-section-number" aria-hidden="true">04</span>
+                            <h2 id="academic-title">Credits &amp; travel</h2>
+                            <p>Prepare with confidence.</p>
+                          </header>
+                          <div class="faq-group-items">
+                            <details class="faq-item" id="academic-credit">
+                              <summary><h3>Can I receive academic credit for a programme?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+                              <div class="faq-answer">
+                                <p>Credit recognition needs to be agreed with your faculty. A certificate or
+                                  advertised ECTS value alone does not confirm that a partner course will
+                                  count towards your IAU degree. For Erasmus+ study, agree recognition in
+                                  the Learning Agreement before mobility and keep the required academic records.</p>
+                                <a href="application-process.html#academic-approval">Read the academic approval checklist <span aria-hidden="true">→</span></a>
+                              </div>
+                            </details>
+                            <details class="faq-item" id="ask-faculty">
+                              <summary><h3>Should I ask my faculty before applying?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+                              <div class="faq-answer">
+                                <p>Yes, especially if you want academic credit or your plans could affect
+                                  classes or assessments at IAU. Share the course description and ask
+                                  your coordinator about approval and the records you will need.
+                                  Confirm recognition arrangements before committing.</p>
+                                <a href="application-process.html#academic-approval">See academic approval and coordinator guidance <span aria-hidden="true">→</span></a>
+                              </div>
+                            </details>
+                            <details class="faq-item" id="travel-documents">
+                              <summary><h3>Do I need a passport, visa, or travel insurance?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+                              <div class="faq-answer">
+                                <p>Check the destination’s official entry rules for your nationality, travel
+                                  document, and length and purpose of stay, including any transit country.
+                                  Confirm insurance requirements with the host and destination authorities.
+                                  Acceptance by a university does not replace permission to enter a country.</p>
+                                <div class="faq-answer-links">
+                                  <a href="application-process.html#prepare-travel">Read After You Are Accepted: travel preparation <span aria-hidden="true">→</span></a>
+                                  <a href="https://home-affairs.ec.europa.eu/policies/schengen/visa-policy/applying-schengen-visa_en">Official Schengen visa guidance <span aria-hidden="true">↗</span></a>
+                                </div>
+                              </div>
+                            </details>
+                          </div>
+                        </section>
+
+                        <section class="faq-group" id="updates-support" aria-labelledby="updates-title">
+                          <header class="faq-group-heading">
+                            <span class="faq-section-number" aria-hidden="true">05</span>
+                            <h2 id="updates-title">Updates &amp; support</h2>
+                            <p>Stay informed and connected.</p>
+                          </header>
+                          <div class="faq-group-items">
+                            <details class="faq-item" id="list-updates">
+                              <summary><h3>How often does IAU update the programme lists?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+                              <div class="faq-answer">
+                                <p>IAU states that it updates the summer/winter list as information arrives
+                                  from partner universities; it does not give a fixed timetable there.
+                                  Check the live listing and student announcements, and confirm current
+                                  details with the host. The saved listings in this folder do not refresh automatically.</p>
+                                <a href="https://www.aydin.edu.tr/en-us/international/shortterm/outgoing/Pages/programs.aspx">Check the live IAU programme list <span aria-hidden="true">↗</span></a>
+                              </div>
+                            </details>
+                            <details class="faq-item" id="who-to-contact">
+                              <summary><h3>Who should I contact if I cannot find an answer?</h3><span class="faq-plus" aria-hidden="true"></span></summary>
+                              <div class="faq-answer">
+                                <p>Contact the Short-Term Study Programs Office with the programme name,
+                                  host university, and your question. Ask the host about its course or
+                                  booking terms, your faculty about academic recognition, and the IAU
+                                  Erasmus+ Office about Erasmus+ arrangements.</p>
+                                <a href="contact.html">Find the IAU office team and contact details <span aria-hidden="true">→</span></a>
+                              </div>
+                            </details>
+                          </div>
+                        </section>
+                      </div>
+
+                      <aside class="faq-support" id="faq-support" aria-labelledby="support-title">
+                        <div>
+                          <p class="faq-eyebrow">A little guidance goes a long way</p>
+                          <h2 id="support-title">Still have a question?</h2>
+                          <p>Tell the Short-Term Study Programs Office which programme you are
+                            considering and what you would like to clarify.</p>
+                        </div>
+                        <div class="faq-support-actions">
+                          <a class="faq-contact-button" href="contact.html">Contact the office <span aria-hidden="true">→</span></a>
+                          <a href="application-process.html">Already accepted? See your next steps</a>
+                        </div>
+                      </aside>
+
+                      <footer class="faq-sources">
+                        <details>
+                          <summary>Official guidance behind these answers</summary>
+                          <ul>
+                            <li><a href="https://www.aydin.edu.tr/en-us/international/shortterm/outgoing/Pages/Short-Term-Study-Abroad.aspx">IAU: short-term opportunities and application guidance</a></li>
+                            <li><a href="https://www.aydin.edu.tr/en-us/international/shortterm/outgoing/Pages/programs.aspx">IAU: summer/winter listings, fee breakdowns, and update notice</a></li>
+                            <li><a href="https://www.aydin.edu.tr/en-us/international/shortterm/outgoing/Pages/study-abroad-language-programs.aspx">IAU: language programmes</a></li>
+                            <li><a href="https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/studying-abroad">European Commission: Erasmus+ study, funding, and recognition</a></li>
+                            <li><a href="https://home-affairs.ec.europa.eu/policies/schengen/visa-policy/applying-schengen-visa_en">European Commission: official Schengen visa guidance</a></li>
+                          </ul>
+                        </details>
+                        <p>Guidance reviewed on 20 October 2026. For programme-specific requirements and
+                          arrangements, use the current host announcement and the relevant IAU office.</p>
+                      </footer>
+                    </article>
+```
+
+## 8. CSS Styles (Frequently Asked Questions)
+
+The following styles ensure proper rendering for the Frequently Asked Questions page, topic navigation pills, native disclosure items, responsive layouts, and dedicated `@media print` view. Add these to the site's stylesheet, or include them within a `<style>` block in the `<head>` of the target page.
+
+```css
+/* FAQ page: local typography, topic navigation, and accessible native disclosures. */
+@font-face {
+  font-family: "IAU FAQ Sans";
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("../fonts/open-sans-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "IAU FAQ Sans";
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("../fonts/open-sans-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+#study-programs-site .bgGrey .container .row #sag-ana.faq-content {
+  padding: 0 !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  box-shadow: none;
+}
+#study-programs-site .faq-page {
+  --faq-navy: #103653;
+  --faq-ink: #203747;
+  --faq-muted: #526575;
+  --faq-line: #dce5eb;
+  --faq-font: "IAU FAQ Sans", "Segoe UI", Arial, sans-serif;
+  color: var(--faq-ink);
+  font: 400 16px/1.7 var(--faq-font);
+  text-align: left;
+  overflow-wrap: break-word;
+}
+.faq-page *, .faq-page *::before, .faq-page *::after { box-sizing: border-box; font-family: inherit; }
+#study-programs-site .faq-page [hidden] { display: none !important; }
+.faq-page [id] { scroll-margin-top: 24px; }
+#study-programs-site .faq-page h1,
+#study-programs-site .faq-page h2,
+#study-programs-site .faq-page h3 {
+  margin: 0;
+  color: var(--faq-navy);
+  font-family: var(--faq-font);
+  font-weight: 700;
+  line-height: 1.35;
+}
+#study-programs-site .faq-page h1 { font-size: 36px; letter-spacing: -.025em; }
+#study-programs-site .faq-page h2 { font-size: 22px; letter-spacing: -.015em; }
+#study-programs-site .faq-page h3 { font-size: 16px; font-weight: 600; line-height: 1.6; }
+#study-programs-site .faq-page p { margin: 0; }
+#study-programs-site .faq-page a { color: #164c70; text-decoration: underline; text-underline-offset: 4px; }
+#study-programs-site .faq-page a:hover { color: #246d98; }
+#study-programs-site .faq-page :is(a, button, summary):focus-visible { outline: 3px solid #397f9f; outline-offset: 4px; }
+.faq-page summary { cursor: pointer; }
+
+/* Quiet institutional header; the introduction stays separate from the controls. */
+.faq-intro {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: center;
+  gap: 48px;
+  padding: 42px 38px 36px;
+  border-top: 4px solid var(--faq-navy);
+  border-radius: 10px 10px 0 0;
+}
+#study-programs-site .faq-page .faq-eyebrow {
+  margin: 0 0 12px;
+  color: var(--faq-muted);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+.faq-intro-copy { padding-left: 28px; border-left: 1px solid var(--faq-line); }
+#study-programs-site .faq-page .faq-intro-copy p { color: var(--faq-muted); font-size: 16px; }
+.faq-intro-copy a { display: inline-flex; align-items: center; gap: 14px; min-height: 44px; margin-top: 12px; font-size: 13px; font-weight: 600; }
+
+/* All topics are ordinary anchor links, so they work offline and without scripts. */
+.faq-topics { padding: 24px 38px; border-block: 1px solid var(--faq-line); background: #f6f9fb; }
+.faq-topics ul { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
+#study-programs-site .faq-page .faq-topics a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  min-height: 44px;
+  padding: 9px 13px;
+  border: 1px solid #cfdee7;
+  border-radius: 5px;
+  background: #fff;
+  color: var(--faq-navy);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+#study-programs-site .faq-page .faq-topics a:hover { border-color: #7e9fb4; background: #edf4f8; }
+.faq-topics a span { color: #607b8c; font-size: 10px; font-variant-numeric: tabular-nums; }
+.faq-toolbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px 16px; padding: 22px 38px 0; }
+#study-programs-site .faq-page .faq-toolbar p { color: var(--faq-muted); font-size: 12px; }
+#study-programs-site .faq-page button {
+  min-height: 44px;
+  margin: 0;
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
+  color: #164c70;
+  font: 600 12px/1.6 var(--faq-font);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+/* Category captions and question rows create a readable editorial hierarchy. */
+.faq-questions { padding: 0 38px; }
+.faq-group { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 34px; padding: 30px 0; }
+.faq-group + .faq-group { border-top: 1px solid var(--faq-line); }
+.faq-group-heading { padding-top: 12px; }
+.faq-section-number { display: block; margin-bottom: 12px; color: #38718b; font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; }
+#study-programs-site .faq-page .faq-group-heading p { margin-top: 10px; color: var(--faq-muted); font-size: 12px; line-height: 1.7; }
+.faq-group-items { min-width: 0; }
+.faq-item { margin: 0; border: 1px solid transparent; border-bottom-color: var(--faq-line); }
+.faq-item:last-child { border-bottom-color: transparent; }
+.faq-item summary { display: flex; align-items: center; justify-content: space-between; gap: 22px; min-height: 72px; padding: 20px 18px; list-style: none; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary:hover { background: #f5f8fa; border-radius: 5px; }
+.faq-plus { position: relative; flex: 0 0 28px; width: 28px; height: 28px; border-radius: 50%; background: #edf3f7; color: #285776; }
+.faq-plus::before, .faq-plus::after { content: ""; position: absolute; top: 13px; left: 8px; width: 12px; height: 1.5px; background: currentColor; }
+.faq-plus::after { transform: rotate(90deg); }
+.faq-item[open] { margin-block: 8px; border-color: #c9dbe5; border-radius: 6px; background: #f6f9fb; }
+.faq-item[open] summary { padding-bottom: 12px; }
+.faq-item[open] .faq-plus { color: #fff; background: var(--faq-navy); }
+.faq-item[open] .faq-plus::after { display: none; }
+.faq-item:target { border-color: #759aae; border-radius: 6px; }
+.faq-answer { padding: 0 68px 22px 18px; }
+#study-programs-site .faq-page .faq-answer p { max-width: 76ch; margin: 0 0 12px; color: var(--faq-muted); font-size: 15px; line-height: 1.8; }
+.faq-answer a { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-size: 13px; line-height: 1.6; }
+.faq-answer a span { flex-shrink: 0; }
+.faq-answer-links { display: flex; flex-wrap: wrap; gap: 2px 24px; }
+
+/* A useful next step, without repeating office details across pages. */
+.faq-support { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 32px; margin: 8px 38px 34px; padding: 28px; border: 1px solid #d6e3e9; border-radius: 7px; background: #f3f8fa; }
+#study-programs-site .faq-page .faq-support h2 { font-size: 24px; }
+#study-programs-site .faq-page .faq-support p:not(.faq-eyebrow) { margin-top: 12px; color: var(--faq-muted); font-size: 14px; }
+.faq-support-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.faq-support-actions > a { display: inline-flex; align-items: center; min-height: 44px; font-size: 12px; }
+#study-programs-site .faq-page .faq-contact-button { justify-content: space-between; gap: 24px; padding: 12px 18px; border-radius: 5px; background: var(--faq-navy); color: #fff; font-size: 14px; font-weight: 600; text-decoration: none; }
+#study-programs-site .faq-page .faq-contact-button:hover { background: #245b7c; }
+.faq-sources { padding: 22px 38px; border-top: 1px solid var(--faq-line); }
+.faq-sources summary { display: list-item; min-height: 44px; padding: 10px 0; color: var(--faq-navy); font-size: 12px; font-weight: 600; }
+.faq-sources ul { margin: 6px 0 16px; padding-left: 20px; font-size: 12px; }
+.faq-sources li { padding: 6px 0; }
+#study-programs-site .faq-page .faq-sources p { max-width: 90ch; margin-top: 8px; color: var(--faq-muted); font-size: 12px; }
+
+@media (max-width: 1199px) {
+  .faq-intro { gap: 28px; padding: 34px 28px; }
+  .faq-intro-copy { padding-left: 20px; }
+  #study-programs-site .faq-page h1 { font-size: 32px; }
+  .faq-topics, .faq-questions, .faq-toolbar, .faq-sources { padding-inline: 28px; }
+  .faq-group { grid-template-columns: 140px minmax(0, 1fr); gap: 22px; }
+  .faq-support { margin-inline: 28px; padding: 24px; gap: 24px; }
+}
+@media (max-width: 767px) {
+  .faq-intro { grid-template-columns: 1fr; gap: 20px; padding: 28px 22px 22px; }
+  #study-programs-site .faq-page h1 { font-size: 30px; }
+  .faq-intro-copy { padding: 0; border: 0; }
+  .faq-intro-copy a { margin-top: 8px; }
+  .faq-topics { padding: 22px; }
+  .faq-topics ul { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .faq-topics li:last-child { grid-column: 1 / -1; }
+  #study-programs-site .faq-page .faq-topics a { width: 100%; height: 100%; gap: 8px; padding: 9px 10px; font-size: 12px; }
+  .faq-toolbar { padding: 18px 22px 0; }
+  .faq-questions, .faq-sources { padding-inline: 22px; }
+  .faq-group { grid-template-columns: 1fr; gap: 14px; padding: 26px 0; }
+  .faq-group-heading { display: grid; grid-template-columns: 30px minmax(0, 1fr); align-items: baseline; gap: 3px 10px; padding-top: 0; }
+  .faq-section-number { grid-row: 1 / 3; margin: 0; }
+  #study-programs-site .faq-page .faq-group-heading h2 { font-size: 21px; }
+  #study-programs-site .faq-page .faq-group-heading p { grid-column: 2; margin-top: 3px; }
+  .faq-item summary { gap: 12px; padding: 16px 10px; }
+  #study-programs-site .faq-page h3 { font-size: 15px; }
+  .faq-plus { flex-basis: 24px; width: 24px; height: 24px; }
+  .faq-plus::before, .faq-plus::after { top: 11px; left: 6px; }
+  .faq-answer { padding: 0 12px 18px 10px; }
+  #study-programs-site .faq-page .faq-answer p { font-size: 14px; }
+  .faq-answer a { font-size: 12px; }
+  .faq-support { grid-template-columns: 1fr; gap: 20px; margin: 0 22px 28px; padding: 22px; }
+  #study-programs-site .faq-page .faq-support h2 { font-size: 22px; }
+}
+@media (max-width: 359px) {
+  .faq-intro, .faq-topics, .faq-questions, .faq-toolbar, .faq-sources { padding-inline: 18px; }
+  #study-programs-site .faq-page h1 { font-size: 28px; }
+  .faq-support { margin-inline: 18px; padding: 18px; }
+}
+
+/* Browser printing opens every answer; the script restores the previous state. */
+@page { margin: 14mm; }
+@media print {
+  .cd-main-header, .university-navigation, .programs-sidebar,
+  body > .ms-WPBody, .a11y-fab, #a11yPanel, .skip-link,
+  .faq-topics, .faq-toolbar, .faq-plus, .faq-intro-copy > a { display: none !important; }
+  html, body, #s4-workspace, #s4-bodyContainer, #main-content,
+  #main-content .bgGrey, #main-content .container, #main-content .row,
+  #main-content .col-md-9, #sag-ana.faq-content {
+    width: auto !important; height: auto !important; min-height: 0 !important;
+    max-width: none !important; margin: 0 !important; padding: 0 !important;
+    overflow: visible !important; float: none !important; background: #fff !important;
+  }
+  .faq-intro { display: block; padding: 0 0 16px; border: 0; }
+  .faq-intro-copy { margin-top: 12px; padding: 0; border: 0; }
+  #study-programs-site .faq-page h1 { font-size: 23pt; }
+  #study-programs-site .faq-page h2 { font-size: 15pt; }
+  #study-programs-site .faq-page h3 { font-size: 11pt; }
+  #study-programs-site .faq-page .faq-intro-copy p { font-size: 10pt; }
+  .faq-questions { padding: 0; }
+  .faq-group { display: block; padding: 18px 0 0; }
+  .faq-group-heading { display: block; padding: 0 0 8px; break-after: avoid; }
+  .faq-section-number, .faq-group-heading p { display: none; }
+  .faq-item, .faq-item[open] { margin: 0; border: 0; border-bottom: 1px solid #dce5eb; border-radius: 0; background: none; break-inside: avoid; }
+  .faq-item summary, .faq-item[open] summary { min-height: 0; padding: 10px 0 5px; }
+  .faq-item::details-content { display: block; content-visibility: visible; }
+  .faq-answer { padding: 0 0 8px; }
+  #study-programs-site .faq-page .faq-answer p { max-width: none; margin-bottom: 4px; font-size: 9pt; line-height: 1.5; }
+  .faq-answer a { min-height: 0; font-size: 8pt; }
+  .faq-support { margin: 18px 0 0; padding: 16px; break-inside: avoid; }
+  #study-programs-site .faq-page .faq-support h2 { font-size: 16pt; }
+  #study-programs-site .faq-page .faq-support p:not(.faq-eyebrow) { font-size: 9pt; }
+  .faq-sources { padding: 12px 0; break-inside: avoid; }
+  .faq-sources summary { min-height: 0; padding: 4px 0; font-size: 9pt; }
+  .faq-sources ul { margin: 4px 0 8px; font-size: 8pt; }
+  .faq-sources li { padding: 2px 0; }
+  #study-programs-site .faq-page a::after { content: none; }
+  #study-programs-site .faq-page .faq-sources p { font-size: 8pt; }
+}
+
+```
