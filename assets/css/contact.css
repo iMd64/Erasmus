@@ -1,0 +1,121 @@
+/* Contact directory. All typography and layout rules are local to this page. */
+@font-face {
+  font-family: "Office Open Sans";
+  src: url("../fonts/open-sans-latin.woff2") format("woff2");
+  font-weight: 300 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Office Open Sans";
+  src: url("../fonts/open-sans-latin-ext.woff2") format("woff2");
+  font-weight: 300 800;
+  font-display: swap;
+  unicode-range: U+0100-024F, U+1E00-1EFF;
+}
+
+#study-programs-site .bgGrey .container .row #sag-ana.office-page {
+  --ink: #123852;
+  --text: #465c6a;
+  --line: #d9e3e7;
+  --teal: #23635f;
+  --pad: clamp(20px, 3vw, 44px);
+  padding: 0 !important;
+  border-radius: 10px !important;
+  background: white !important;
+  color: var(--text);
+  font: 400 16px/1.65 "Office Open Sans", "Segoe UI", sans-serif;
+  text-align: left;
+  container-type: inline-size;
+}
+#sag-ana.office-page * { box-sizing: border-box; font-family: inherit; }
+#sag-ana.office-page :is(h1,h2,h3,p,address) { margin: 0; }
+#sag-ana.office-page :is(h1,h2,h3) { color: var(--ink); font-weight: 700; line-height: 1.22; letter-spacing: -.025em; }
+#sag-ana.office-page h1 { font-size: clamp(31px, 3vw, 40px); }
+#sag-ana.office-page h2 { font-size: 24px; }
+#sag-ana.office-page h3 { font-size: 19px; }
+#sag-ana.office-page a { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
+#sag-ana.office-page a:hover { color: var(--teal); }
+#sag-ana.office-page a:focus-visible { outline: 3px solid #27789b; outline-offset: 3px; }
+.office-page svg { width: 20px; height: 20px; flex: none; }
+
+/* Give the general inbox first priority; keep visiting details together. */
+.office-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  align-items: start;
+  gap: var(--pad);
+  padding: var(--pad);
+  border-top: 4px solid var(--ink);
+  border-radius: 10px 10px 0 0;
+}
+.office-welcome { padding-block: 10px; }
+#sag-ana.office-page .office-kicker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .085em;
+  text-transform: uppercase;
+}
+#sag-ana.office-page .office-lead { max-width: 52ch; margin: 15px 0 24px; font-size: 16px; line-height: 1.7; }
+.office-page .office-label { font-size: 13px; font-weight: 600; }
+.office-channel + .office-channel { margin-top: 18px; }
+#sag-ana.office-page a.office-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  min-height: 46px;
+  margin-top: 6px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+}
+#sag-ana.office-page a.office-email:hover { background: #205477; }
+.office-phone { display: inline-flex; align-items: center; min-height: 44px; font-size: 17px; font-weight: 600; }
+.office-extension { display: inline-block; margin-inline-start: 10px; font-size: 13px; }
+.office-visit { padding: clamp(20px, 2vw, 29px); background: #eff6f5; border: 1px solid #d3e3e0; border-radius: 8px; }
+#sag-ana.office-page .office-visit address { margin-top: 16px; font: inherit; font-size: 15px; }
+.office-visit address strong { color: var(--ink); }
+.office-map { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; font-size: 14px; font-weight: 600; }
+.office-hours { margin-top: 10px; padding-top: 15px; border-top: 1px solid #c9dcd8; }
+.office-hours > p + p { padding-top: 4px; font-size: 14px; }
+.office-hours strong { color: var(--ink); }
+
+/* Portraits stay beside the names at all but the narrowest widths. */
+.office-team { margin-inline: var(--pad); padding: 28px 0 30px; border-top: 1px solid var(--line); }
+.office-directory, .office-guides { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
+.office-directory { margin-top: 22px; }
+.office-person { display: grid; grid-template-columns: 80px minmax(0, 1fr); gap: 16px; align-items: center; }
+.office-person img { display: block; width: 80px; height: 80px; border-radius: 50%; object-fit: cover; }
+#sag-ana.office-page .office-person p { margin-top: 5px; font-size: 14px; line-height: 1.5; }
+.office-person a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; }
+.office-guides { margin-inline: var(--pad); padding-block: 16px; border-block: 1px solid var(--line); }
+#sag-ana.office-page .office-guides a { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 9px 12px; border-radius: 4px; text-decoration: none; }
+#sag-ana.office-page .office-guides a:hover { background: #f1f6f7; }
+.office-guides strong, .office-guides small { display: block; }
+.office-guides strong { font-size: 15px; }
+.office-guides small { margin-top: 2px; color: var(--text); font-size: 13px; }
+
+/* Respond to the content column, including when the site sidebar is visible. */
+@container (max-width: 730px) {
+  .office-intro { grid-template-columns: 1fr; gap: 22px; }
+  .office-welcome { padding: 0; }
+  .office-directory { grid-template-columns: 1fr; gap: 18px; }
+  .office-person + .office-person { border-top: 1px solid var(--line); padding-top: 18px; }
+}
+@container (max-width: 480px) {
+  .office-intro { padding-block: 26px; }
+  .office-extension { display: block; margin: -3px 0 0; }
+  .office-person { grid-template-columns: 58px minmax(0, 1fr); gap: 12px; }
+  .office-person img { width: 58px; height: 58px; }
+  .office-guides { grid-template-columns: 1fr; gap: 2px; }
+  #sag-ana.office-page .office-guides a { padding-inline: 0; }
+}
