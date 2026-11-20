@@ -14,6 +14,8 @@ This guide contains the necessary HTML and CSS to integrate the Short Term Study
 - [8. CSS Styles (Frequently Asked Questions)](#8-css-styles-frequently-asked-questions)
 - [9. HTML Content (Contact)](#9-html-content-contact)
 - [10. CSS Styles (Contact)](#10-css-styles-contact)
+- [11. HTML Content (Student Experiences)](#11-html-content-student-experiences)
+- [12. CSS Styles (Student Experiences)](#12-css-styles-student-experiences)
 
 ## 1. HTML Content
 
@@ -2980,3 +2982,541 @@ The following styles ensure proper rendering for the Contact page, container que
 }
 ```
 
+## 11. HTML Content (Student Experiences)
+
+Copy the HTML block below. When editing the university website for the Student Experiences page, locate the main content wrapper—specifically the element `<div id="sag-ana">` (or `<div class="wpb_wrapper vc_custom_1461916946657" id="sag-ana">`). **Replace that entire element and all of its contents** with the new block provided here:
+
+```html
+<div id="sag-ana" class="experience-content">
+  <article class="experience-page" aria-labelledby="experience-title">
+    <header class="experience-hero">
+      <div class="experience-hero-copy">
+        <h1 id="experience-title">Student<br>Experiences</h1>
+        <p>What is it like to study abroad for a few weeks? Explore life in and beyond the classroom, what students bring home, and what they wish they had known before leaving.</p>
+        <div class="experience-hero-actions">
+          <a class="experience-button" href="#experience-stories">Explore stories <span aria-hidden="true">↓</span></a>
+          <a href="#experience-share">Share your experience</a>
+        </div>
+      </div>
+      <img class="experience-hero-image" src="../assets/images/pages/student-experiences-hero.png" width="1122" height="1402" alt="Illustration of an open travel journal and map beside a train window" fetchpriority="high">
+    </header>
+
+    <section class="experience-stories" id="experience-stories" aria-labelledby="experience-stories-title">
+      <div class="experience-section-heading">
+        <h2 id="experience-stories-title">Stories from abroad</h2>
+        <p>These sample stories summarise first-hand accounts published by other universities. This collection will be replaced with stories from IAU students once the office has their written permission.</p>
+      </div>
+      <form class="experience-filters" id="experience-filters" hidden aria-label="Filter stories">
+        <label>Programme type
+          <select name="type">
+            <option value="">All programmes</option>
+            <option value="summer">Summer school</option>
+            <option value="winter">Winter school</option>
+            <option value="language">Language programme</option>
+          </select>
+        </label>
+        <label>Country
+          <select name="country"><option value="">All countries</option></select>
+        </label>
+        <button type="reset">Clear filters</button>
+      </form>
+      <p class="experience-result-count" id="experience-result-count" role="status" hidden></p>
+      <p class="experience-no-results" id="experience-no-results" hidden>No stories match this combination. Choose another country or programme type.</p>
+      <div class="experience-grid" id="experience-story-list">
+        <!-- Replace these sample cards with approved IAU stories. Keep the type and country attributes for filtering. -->
+        <article class="experience-card" data-story-type="summer" data-story-country="Netherlands" aria-labelledby="groningen-energy">
+          <header>
+            <p class="experience-card-meta"><span>Summer school</span> Netherlands</p>
+            <h3 id="groningen-energy">A week tackling the energy transition</h3>
+            <p class="experience-card-programme">University of Groningen · Energy Challenge</p>
+            <p class="experience-card-profile">Management and engineering · 2023</p>
+          </header>
+          <p class="experience-card-story">A master’s student worked through an energy simulation and visited a hydrogen research centre. Discussions with a small international group showed how law, economics and engineering shape the same energy decisions. The group kept debating the topic over dinner.</p>
+          <details class="experience-card-tip">
+            <summary>Practical tip</summary>
+            <p>Compare the organiser’s accommodation with nearby options and leave room for informal time with classmates.</p>
+          </details>
+          <!-- Original account: Rosenheim Technical University (https://international.th-rosenheim.de/wp-content/uploads/2023/10/GoAbroad-Report-Lisa-Geitner.pdf) -->
+        </article>
+        <article class="experience-card" data-story-type="language" data-story-country="Spain" aria-labelledby="granada-spanish">
+          <header>
+            <p class="experience-card-meta"><span>Language programme</span> Spain</p>
+            <h3 id="granada-spanish">The Spanish learned over dinner</h3>
+            <p class="experience-card-programme">University of Granada · Spanish Language Immersion</p>
+          </header>
+          <p class="experience-card-story">Morning classes gave a visiting student phrases to try at dinner with a host family. Conversations were difficult at first, but repeated practice with a flatmate and the host helped the student speak more confidently. Flamenco workshops and trips added a cultural dimension.</p>
+          <details class="experience-card-tip">
+            <summary>Practical tip</summary>
+            <p>If you stay with a host family, try using one expression from class at the dinner table each day.</p>
+          </details>
+          <!-- Original account: Ritsumeikan Asia Pacific University (https://en.apu.ac.jp/cle/news/article/?storyid=9) -->
+        </article>
+        <article class="experience-card" data-story-type="winter" data-story-country="Japan" aria-labelledby="osaka-winter">
+          <header>
+            <p class="experience-card-meta"><span>Winter school</span> Japan</p>
+            <h3 id="osaka-winter">Japanese lessons and a first tea ceremony</h3>
+            <p class="experience-card-programme">Kindai University · Winter School Japan</p>
+            <p class="experience-card-profile">Mechanical engineering · 2024</p>
+          </header>
+          <p class="experience-card-story">An engineering student spent three weeks learning Japanese in Osaka. Local students joined the lessons, and afternoons included martial arts, a tea ceremony and a trip to Kyoto. The experience helped the student feel capable of travelling independently afterwards.</p>
+          <details class="experience-card-tip">
+            <summary>Practical tip</summary>
+            <p>Learn to recognise hiragana and katakana before departure if you are new to Japanese.</p>
+          </details>
+          <!-- Original account: Clausthal University of Technology (https://www.presse.tu-clausthal.de/en/publications/tuc-studiblog/a-winter-school-in-japan) -->
+        </article>
+        <article class="experience-card" data-story-type="summer" data-story-country="Denmark" aria-labelledby="aarhus-social-science">
+          <header>
+            <p class="experience-card-meta"><span>Summer school</span> Denmark</p>
+            <h3 id="aarhus-social-science">A familiar subject from a different perspective</h3>
+            <p class="experience-card-programme">Aarhus University · AU Summer University</p>
+            <p class="experience-card-profile">Criminology and psychology · 2018</p>
+          </header>
+          <p class="experience-card-story">A student took a social science elective on youth, drugs and alcohol in Aarhus. The course showed how cultural attitudes can shape responses to the same issue. Staying within walking distance of campus also made it easy to meet other summer students.</p>
+          <details class="experience-card-tip">
+            <summary>Practical tip</summary>
+            <p>Look for a short elective that complements your degree and ask where participants usually stay.</p>
+          </details>
+          <!-- Original account: RMIT University (https://www.rmit.edu.au/students/careers-opportunities/study-overseas/stories/michelle-denmark) -->
+        </article>
+        <article class="experience-card" data-story-type="winter" data-story-country="South Korea" aria-labelledby="hanyang-making-friends">
+          <header>
+            <p class="experience-card-meta"><span>Winter school</span> South Korea</p>
+            <h3 id="hanyang-making-friends">A friendship that began at the airport</h3>
+            <p class="experience-card-programme">Hanyang University · Hanyang Winter School</p>
+            <p class="experience-card-profile">Commerce · 2024</p>
+          </header>
+          <p class="experience-card-story">A commerce student struck up a conversation during a shared airport pickup. Classes and orientation brought more opportunities to meet people, and the new group later explored cafés and joined a ski trip. Making friends came more naturally than the student had expected.</p>
+          <details class="experience-card-tip">
+            <summary>Practical tip</summary>
+            <p>Use small openings such as shared transport and orientation to start conversations.</p>
+          </details>
+          <!-- Original account: Deakin University (https://www.deakin.edu.au/students/study-support/study-abroad/student-testimonials/south-korea-dilia) -->
+        </article>
+        <article class="experience-card" data-story-type="summer" data-story-country="United Kingdom" aria-labelledby="birmingham-biomedicine">
+          <header>
+            <p class="experience-card-meta"><span>Summer school</span> United Kingdom</p>
+            <h3 id="birmingham-biomedicine">From the lab bench to the hospital bedside</h3>
+            <p class="experience-card-programme">University of Birmingham · Biomedicine summer school</p>
+            <p class="experience-card-profile">Biomedicine</p>
+          </header>
+          <p class="experience-card-story">A biomedicine student spent three weeks combining laboratory work with time exploring Birmingham. The lab sessions provided experience the student expected to use at home, while getting to know classmates from several countries gave everyday practice speaking English.</p>
+          <details class="experience-card-tip">
+            <summary>Practical tip</summary>
+            <p>Check how much time the timetable sets aside for hands-on work and group activities.</p>
+          </details>
+          <!-- Original account: University of Zurich (https://www.int.uzh.ch/en/out/short-programs/summer-winter-schools/testimonial.html) -->
+        </article>
+        <article class="experience-card" data-story-type="language" data-story-country="Germany" aria-labelledby="bonn-german">
+          <header>
+            <p class="experience-card-meta"><span>Language programme</span> Germany</p>
+            <h3 id="bonn-german">Finding the courage to speak German</h3>
+            <p class="experience-card-programme">Akademie für internationale Bildung · Summer in Bonn</p>
+            <p class="experience-card-profile">2023</p>
+          </header>
+          <p class="experience-card-story">A student placed in an advanced German class found that understanding the language came more easily than speaking it. Conversations with a host helped the student relax and participate more in class. By the end, speaking felt comfortable enough for independent travel.</p>
+          <details class="experience-card-tip">
+            <summary>Practical tip</summary>
+            <p>Give yourself time to settle into the level, and build low-pressure conversation practice into the day.</p>
+          </details>
+          <!-- Original account: Northwestern University (https://german.northwestern.edu/study-abroad/study-abroad-student-experiences.html) -->
+        </article>
+        <article class="experience-card" data-story-type="winter" data-story-country="South Korea" aria-labelledby="yonsei-credit">
+          <header>
+            <p class="experience-card-meta"><span>Winter school</span> South Korea</p>
+            <h3 id="yonsei-credit">Making winter break count toward a degree</h3>
+            <p class="experience-card-programme">Yonsei University · Winter at Yonsei</p>
+            <p class="experience-card-profile">Economics minor · 2025</p>
+          </header>
+          <p class="experience-card-story">A senior used a winter session to fit study abroad around the degree. The econometrics course was relevant to the student’s minor, but getting the home department to recognise the credit took time. Advance planning helped make the short visit manageable.</p>
+          <details class="experience-card-tip">
+            <summary>Practical tip</summary>
+            <p>Ask your own faculty about credit recognition early and keep a copy of the host’s syllabus.</p>
+          </details>
+          <!-- Original account: Rutgers Global (https://global.rutgers.edu/program-search/details/winter-yonsei-university-south-korea-usac) -->
+        </article>
+        <article class="experience-card" data-story-type="summer" data-story-country="South Korea" aria-labelledby="korea-seoul-summer">
+          <header>
+            <p class="experience-card-meta"><span>Summer school</span> South Korea</p>
+            <h3 id="korea-seoul-summer">Learning to get around Seoul independently</h3>
+            <p class="experience-card-programme">Korea University · Summer study abroad</p>
+            <p class="experience-card-profile">Psychology</p>
+          </header>
+          <p class="experience-card-story">A psychology student went to Seoul for six weeks and initially struggled with restaurants and public transport. Learning everyday Korean phrases made getting around easier. A visit to Gyeongbokgung Palace also introduced history the student had rarely encountered in classes at home.</p>
+          <details class="experience-card-tip">
+            <summary>Practical tip</summary>
+            <p>Practise basic phrases before you leave and ask the programme team how to contact them if you need help.</p>
+          </details>
+          <!-- Original account: University of Birmingham (https://intranet.birmingham.ac.uk/student/news/public/2026/jan-mar26/blog-my-experience-in-south-korea-was-life-changing.aspx) -->
+        </article>
+        <article class="experience-card" data-story-type="language" data-story-country="France" aria-labelledby="nice-french">
+          <header>
+            <p class="experience-card-meta"><span>Language programme</span> France</p>
+            <h3 id="nice-french">Building speaking confidence in Nice</h3>
+            <p class="experience-card-programme">Faculty-led French language and culture programme</p>
+            <p class="experience-card-profile">Accounting and French · 2011</p>
+          </header>
+          <p class="experience-card-story">A student spent six weeks living with a host family and taking French classes in Nice. Class trips offered a closer look at local history, while finding the right bus or ordering food meant using French outside the classroom. The student returned more willing to speak up in class.</p>
+          <details class="experience-card-tip">
+            <summary>Practical tip</summary>
+            <p>Make a habit of handling one everyday task in the language you are learning.</p>
+          </details>
+          <!-- Original account: Grand Valley State University (https://www.gvsu.edu/cms5/asset/cf458575-3062-47c0-aca2-c409ee4930f3/4a206084-216f-4bb5-9148-bb316452322c/waves_vol.1%282013%29.pdf) -->
+        </article>
+        <article class="experience-card" data-story-type="winter" data-story-country="Germany" aria-labelledby="tubingen-winter-buddy">
+          <header>
+            <p class="experience-card-meta"><span>Winter school</span> Germany</p>
+            <h3 id="tubingen-winter-buddy">Arriving alone and finding a group</h3>
+            <p class="experience-card-programme">University of Tübingen · International and European Studies Winter School</p>
+          </header>
+          <p class="experience-card-story">A student travelled alone to study a subject outside their major. A buddy group and an early castle outing eased the nerves. Back in class, discussion about how Germany remembers the Holocaust highlighted perspectives that were new to the student.</p>
+          <details class="experience-card-tip">
+            <summary>Practical tip</summary>
+            <p>Join the first buddy activity if one is offered. Meeting a few people early can make the rest of the programme feel less unfamiliar.</p>
+          </details>
+          <!-- Original account: University of Tübingen (https://uni-tuebingen.de/international/studierende-aus-dem-ausland/virtuelle-und-kurzzeit-programme/international-european-studies/alumni-voices/) -->
+        </article>
+        <article class="experience-card" data-story-type="summer" data-story-country="Germany" aria-labelledby="berlin-global-cities">
+          <header>
+            <p class="experience-card-meta"><span>Summer school</span> Germany</p>
+            <h3 id="berlin-global-cities">Seminar discussions and a city to explore</h3>
+            <p class="experience-card-programme">Humboldt University of Berlin · Global Cities seminar</p>
+            <p class="experience-card-profile">Educational science</p>
+          </header>
+          <p class="experience-card-story">A master’s student described seminar discussions shaped by a group with varied backgrounds. Outside class, a Spree boat trip and visits to German government buildings gave the student different ways to learn about Berlin alongside classmates.</p>
+          <details class="experience-card-tip">
+            <summary>Practical tip</summary>
+            <p>Check which excursions are included and allow time for the ones that connect with your interests.</p>
+          </details>
+          <!-- Original account: University of Zurich (https://www.int.uzh.ch/en/out/short-programs/summer-winter-schools/testimonial.html) -->
+        </article>
+        <article class="experience-card" data-story-type="language" data-story-country="China" aria-labelledby="shanghai-mandarin">
+          <header>
+            <p class="experience-card-meta"><span>Language programme</span> China</p>
+            <h3 id="shanghai-mandarin">Learning Mandarin and planning for arrival</h3>
+            <p class="experience-card-programme">Tongji University · Summer School</p>
+            <p class="experience-card-profile">Chinese language · 2024</p>
+          </header>
+          <p class="experience-card-story">A student found that conversation-heavy morning classes made everyday Mandarin easier to follow. Local student volunteers helped the group understand campus life. The first day proved harder because the group landed without mobile internet and had trouble arranging transport and paying for essentials.</p>
+          <details class="experience-card-tip">
+            <summary>Practical tip</summary>
+            <p>Save arrival directions offline and arrange mobile access and a backup payment method before departure.</p>
+          </details>
+          <!-- Original account: University of Cologne (https://www.uni-koeln.de/sites/international/aaa/92/92pdf/ChinaOffice/Download_Report_Tongji_Summer_School_2024.pdf) -->
+        </article>
+        <article class="experience-card" data-story-type="summer" data-story-country="United Kingdom" aria-labelledby="glasgow-history">
+          <header>
+            <p class="experience-card-meta"><span>Summer school</span> United Kingdom</p>
+            <h3 id="glasgow-history">Taking history beyond the classroom</h3>
+            <p class="experience-card-programme">University of Glasgow · History of Christianity in Scotland</p>
+            <p class="experience-card-profile">History and German studies</p>
+          </header>
+          <p class="experience-card-story">A history student alternated class days with free days and visited the Isle of Iona on a weekend trip. Conversations in Glasgow felt easier than the student had expected, and free summer festivals offered an accessible way to spend time in the city.</p>
+          <details class="experience-card-tip">
+            <summary>Practical tip</summary>
+            <p>Look up free local events and check whether excursions connect to the topics you will study.</p>
+          </details>
+          <!-- Original account: University of Zurich (https://www.int.uzh.ch/en/out/short-programs/summer-winter-schools/testimonial.html) -->
+        </article>
+        <article class="experience-card" data-story-type="winter" data-story-country="South Korea" aria-labelledby="hanyang-global-health">
+          <header>
+            <p class="experience-card-meta"><span>Winter school</span> South Korea</p>
+            <h3 id="hanyang-global-health">Public health through classmates’ perspectives</h3>
+            <p class="experience-card-programme">Hanyang University · Hanyang Winter School</p>
+          </header>
+          <p class="experience-card-story">A student interested in public health valued the cross-cultural discussions in class. Student ambassadors helped the visiting group get around Seoul and ran optional evening activities. The short format also made the trip possible around family responsibilities.</p>
+          <details class="experience-card-tip">
+            <summary>Practical tip</summary>
+            <p>Ask how long you would be away and what arrival and on-campus support is available.</p>
+          </details>
+          <!-- Original account: Deakin University (https://www.deakin.edu.au/students/study-support/study-abroad/student-testimonials/south-korea-belinda) -->
+        </article>
+        <article class="experience-card" data-story-type="language" data-story-country="Germany" aria-labelledby="braunschweig-german">
+          <header>
+            <p class="experience-card-meta"><span>Language programme</span> Germany</p>
+            <h3 id="braunschweig-german">Making room for German in an engineering degree</h3>
+            <p class="experience-card-programme">TU Braunschweig · Summer school</p>
+            <p class="experience-card-profile">Environmental engineering · 2024</p>
+          </header>
+          <p class="experience-card-story">An environmental engineering student spent two months in Braunschweig pursuing an interest in German. The student credited time with classmates from different countries, trips in the region and using the language day to day with making the summer valuable.</p>
+          <details class="experience-card-tip">
+            <summary>Practical tip</summary>
+            <p>If your degree schedule is crowded, check whether a summer course and home-university funding can make language study possible.</p>
+          </details>
+          <!-- Original account: Northwestern University (https://german.northwestern.edu/study-abroad/study-abroad-student-experiences.html) -->
+        </article>
+        <article class="experience-card" data-story-type="winter" data-story-country="Germany" aria-labelledby="berlin-winter-city">
+          <header>
+            <p class="experience-card-meta"><span>Winter school</span> Germany</p>
+            <h3 id="berlin-winter-city">Reading Berlin through its neighbourhoods</h3>
+            <p class="experience-card-programme">Humboldt University of Berlin · Winter University</p>
+            <p class="experience-card-profile">Commerce</p>
+          </header>
+          <p class="experience-card-story">A commerce student took an urban development course that paired lectures with neighbourhood visits and also explored historical museums. Speaking up in small English-language classes built confidence. The intensive schedule also made the student rethink how to organise study time.</p>
+          <details class="experience-card-tip">
+            <summary>Practical tip</summary>
+            <p>Set aside time to review your notes during an intensive course, especially if it includes frequent field visits.</p>
+          </details>
+          <!-- Original account: University of Queensland (https://employability.uq.edu.au/story/10369/tao-humboldt-winter-university) -->
+        </article>
+        <article class="experience-card" data-story-type="language" data-story-country="Costa Rica" aria-labelledby="heredia-spanish">
+          <header>
+            <p class="experience-card-meta"><span>Language programme</span> Costa Rica</p>
+            <h3 id="heredia-spanish">Catching the rhythm of everyday Spanish</h3>
+            <p class="experience-card-programme">USAC · Summer programme in Heredia</p>
+            <p class="experience-card-profile">Spanish and entrepreneurship · 2023</p>
+          </header>
+          <p class="experience-card-story">A student arrived in Costa Rica on a first overseas trip and found everyday Spanish hard to follow at first. Living with a host family provided a quieter place to settle in, while a group hike gave another way to connect with classmates. By the end, the student could follow and take part in conversations with less hesitation.</p>
+          <details class="experience-card-tip">
+            <summary>Practical tip</summary>
+            <p>Ask speakers to repeat themselves when needed. Notice how much easier familiar conversations become over time.</p>
+          </details>
+          <!-- Original account: University of Tennessee at Chattanooga (https://blog.utc.edu/center-global-education/2023/09/13/my-study-abroad-experience-in-costa-rica-2/) -->
+        </article>
+        <article class="experience-card" data-story-type="summer" data-story-country="United Kingdom" aria-labelledby="birmingham-heritage">
+          <header>
+            <p class="experience-card-meta"><span>Summer school</span> United Kingdom</p>
+            <h3 id="birmingham-heritage">Learning British heritage beyond campus</h3>
+            <p class="experience-card-programme">University of Birmingham · British Culture and Heritage</p>
+            <p class="experience-card-profile">English language and literature</p>
+          </header>
+          <p class="experience-card-story">A student combined campus lectures with guided visits to places such as Oxford, Cambridge and Liverpool. Staff and student ambassadors helped the group navigate the busy schedule. The mix of classroom teaching and travel made the subject easier to connect with places and people.</p>
+          <details class="experience-card-tip">
+            <summary>Practical tip</summary>
+            <p>Review the timetable and credit information, and ask which visits are included before budgeting.</p>
+          </details>
+          <!-- Original account: University of Zurich (https://www.int.uzh.ch/en/out/short-programs/summer-winter-schools/testimonial.html) -->
+        </article>
+        <article class="experience-card" data-story-type="winter" data-story-country="Germany" aria-labelledby="tubingen-graduate-study">
+          <header>
+            <p class="experience-card-meta"><span>Winter school</span> Germany</p>
+            <h3 id="tubingen-graduate-study">Trying a university before applying for graduate study</h3>
+            <p class="experience-card-programme">University of Tübingen · International and European Studies Winter School</p>
+          </header>
+          <p class="experience-card-story">A student used the winter school to see whether Tübingen might be a good place for graduate study. Courses on European politics and economics offered a sense of the academic environment. Exploring the region, practising German and getting to know the buddy network helped the student picture daily life there.</p>
+          <details class="experience-card-tip">
+            <summary>Practical tip</summary>
+            <p>If you are considering further study, use a short programme to ask current students what studying and living there is like.</p>
+          </details>
+          <!-- Original account: University of Tübingen (https://uni-tuebingen.de/international/studierende-aus-dem-ausland/virtuelle-und-kurzzeit-programme/international-european-studies/alumni-voices/) -->
+        </article>
+      </div>
+    </section>
+
+    <section class="experience-share" id="experience-share" aria-labelledby="experience-share-title">
+      <div class="experience-share-copy">
+        <h2 id="experience-share-title">Share your experience</h2>
+        <p>Have you participated in a short-term programme? Share what you learned with the Short-Term Study Abroad Office and help the next student prepare.</p>
+        <div class="experience-share-actions">
+          <a class="experience-button" href="mailto:shortterm@aydin.edu.tr?subject=Student%20experience%20submission">Email the office <span aria-hidden="true">↗</span></a>
+          <a href="contact.html">Office contact details</a>
+        </div>
+      </div>
+      <details class="experience-submission">
+        <summary>What to include</summary>
+        <ul>
+          <li>Your first name or initials, faculty or department, and graduation year if you want it shared.</li>
+          <li>The programme name, host university, country and year. Say whether it was a summer school, winter school or language programme.</li>
+          <li>In 150–250 words, describe your academic, cultural and social experience. Include one thing you wish you knew before going and what you took away.</li>
+          <li>Optional: one or two photos you have written permission to share.</li>
+        </ul>
+        <p>The office needs written permission before publishing your story, name, quotes or photos.</p>
+      </details>
+    </section>
+  </article>
+</div>
+
+```
+
+## 12. CSS Styles (Student Experiences)
+
+The following styles ensure proper rendering for the Student Experiences hero section, responsive story cards, programme type and country filter toolbar, and progressive enhancement states. Add these to the site's stylesheet, or include them within a `<style>` block in the `<head>` of the target page.
+
+```css
+@font-face {
+  font-family: "IAU Experience Sans";
+  src: url("../fonts/open-sans-latin.woff2") format("woff2");
+  font-weight: 300 800;
+  font-display: swap;
+}
+
+#study-programs-site .bgGrey .container .row #sag-ana.experience-content {
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none;
+}
+
+#study-programs-site .experience-page {
+  --ink: #152f43;
+  --navy: #102d43;
+  --muted: #4a6272;
+  --paper: #f8f5ee;
+  --gold: #efbd73;
+  --line: #dce5e9;
+  --space: clamp(22px, 3.1vw, 42px);
+  font: 400 16px/1.65 "IAU Experience Sans", "Segoe UI", sans-serif;
+  color: var(--ink);
+  overflow-wrap: break-word;
+  text-align: left;
+}
+
+.experience-page *, .experience-page *::before, .experience-page *::after { box-sizing: border-box; }
+.experience-page [id] { scroll-margin-top: 24px; }
+
+#study-programs-site .experience-page :is(h1, h2, h3, h4, p) {
+  margin: 0;
+  color: inherit;
+  font-family: inherit;
+}
+
+#study-programs-site .experience-page :is(h1, h2, h3) {
+  font-weight: 750;
+  letter-spacing: -.045em;
+  line-height: 1.09;
+}
+
+#study-programs-site .experience-page h1 { font-size: clamp(40px, 5.2vw, 70px); }
+#study-programs-site .experience-page h2 { font-size: clamp(30px, 3.3vw, 42px); }
+#study-programs-site .experience-page h3 { font-size: clamp(26px, 3vw, 38px); }
+#study-programs-site .experience-page h4 { font-size: 16px; font-weight: 750; line-height: 1.4; }
+#study-programs-site .experience-page a { color: #19516e; text-underline-offset: 4px; text-decoration: underline; }
+#study-programs-site .experience-page :is(a, summary):focus-visible { outline: 3px solid #b36c1f; outline-offset: 4px; }
+
+.experience-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.28fr) minmax(0, 1fr);
+  min-height: 386px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--navy);
+  color: #fff;
+}
+
+.experience-hero-copy { align-self: center; padding: var(--space); }
+#study-programs-site .experience-hero-copy p { margin-top: 20px; color: #e3edf2; max-width: 37ch; }
+.experience-hero-image { display: block; width: 100%; height: 100%; min-height: 0; object-fit: cover; object-position: center 61%; }
+.experience-hero-actions, .experience-share-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; margin-top: 22px; }
+#study-programs-site .experience-hero-actions a { color: #fff; font-weight: 650; }
+#study-programs-site .experience-page a.experience-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 46px;
+  padding: 9px 15px;
+  border-radius: 6px;
+  background: var(--gold);
+  color: #172b36;
+  font-size: 14px;
+  font-weight: 750;
+  text-decoration: none;
+}
+#study-programs-site .experience-page a.experience-button:hover { background: #ffcf8c; }
+
+.experience-stories { margin-block: clamp(36px, 5vw, 64px); }
+.experience-section-heading { max-width: 61ch; margin-bottom: 24px; }
+#study-programs-site .experience-section-heading p { margin-top: 12px; color: var(--muted); }
+
+.experience-share {
+  margin-bottom: 22px;
+  padding: var(--space);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #eaf2f6;
+}
+#study-programs-site .experience-share-copy p { margin-top: 12px; max-width: 62ch; color: var(--muted); }
+#study-programs-site .experience-share-actions > a { font-size: 14px; font-weight: 700; }
+#study-programs-site .experience-share-actions a.experience-button { background: var(--navy); color: #fff; }
+#study-programs-site .experience-share-actions a.experience-button:hover { background: #23516e; }
+.experience-submission { margin-top: 24px; border-top: 1px solid #cbdce5; }
+.experience-submission summary { cursor: pointer; padding-block: 12px; font-weight: 750; }
+.experience-submission ul { margin: 0 0 14px; padding-left: 22px; list-style: disc; }
+.experience-submission li + li { margin-top: 7px; }
+#study-programs-site .experience-submission p { color: var(--muted); font-size: 14px; }
+
+@media (max-width: 767px) {
+  .experience-hero { grid-template-columns: minmax(0, 1fr); min-height: 0; }
+  .experience-hero-image { height: clamp(190px, 54vw, 340px); object-position: center 70%; }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  #study-programs-site .experience-page h1 { font-size: clamp(38px, 5.5vw, 55px); }
+}
+.experience-submission summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.experience-submission summary::after {
+  content: "";
+  flex: 0 0 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+}
+.experience-submission[open] summary::after { transform: rotate(225deg); }
+
+/* Story collection and filters. */
+#study-programs-site .experience-page [hidden] { display: none !important; }
+
+.experience-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #f5f8fa;
+}
+.experience-filters label { flex: 1 1 175px; margin: 0; color: var(--ink); font-size: 14px; font-weight: 750; }
+.experience-filters select, .experience-filters button {
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid #a9bcc7;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+}
+.experience-filters select { display: block; width: 100%; margin-top: 5px; font-weight: 600; }
+.experience-filters button { cursor: pointer; font-size: 14px; font-weight: 750; }
+.experience-filters button:hover { background: #eaf2f6; }
+.experience-filters :is(select, button):focus-visible { outline: 3px solid #b36c1f; outline-offset: 3px; }
+
+#study-programs-site .experience-page .experience-result-count { margin: 14px 0; color: var(--muted); font-size: 14px; font-weight: 700; }
+#study-programs-site .experience-page .experience-no-results { padding: 22px; border-radius: 8px; background: #fff; }
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 16px;
+}
+.experience-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(17px, 2vw, 25px);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+}
+#study-programs-site .experience-card h3 { margin-top: 10px; font-size: clamp(23px, 2vw, 29px); line-height: 1.16; }
+#study-programs-site .experience-page .experience-card-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 10px; color: var(--muted); font-size: 13px; font-weight: 700; }
+.experience-card-meta span { padding: 3px 8px; border-radius: 4px; background: #f7ead6; color: #63420f; }
+.experience-card[data-story-type="winter"] .experience-card-meta span { background: #e8f1f8; color: #204c6e; }
+.experience-card[data-story-type="language"] .experience-card-meta span { background: #e8f2ea; color: #225643; }
+#study-programs-site .experience-page .experience-card-programme { margin-top: 10px; color: var(--ink); font-size: 14px; font-weight: 700; }
+#study-programs-site .experience-page .experience-card-profile { margin-top: 4px; color: var(--muted); font-size: 13px; }
+#study-programs-site .experience-page .experience-card-story { margin-top: 15px; font-size: 15px; line-height: 1.65; }
+
+.experience-card-tip { margin-top: 15px; border-radius: 7px; background: var(--paper); }
+.experience-card-tip summary { display: flex; justify-content: space-between; align-items: center; min-height: 44px; gap: 12px; padding: 8px 12px; cursor: pointer; font-size: 14px; font-weight: 750; }
+.experience-card-tip summary::after { content: ""; flex: 0 0 7px; height: 7px; border-right: 2px solid; border-bottom: 2px solid; transform: rotate(45deg); }
+#study-programs-site .experience-page .experience-card-tip summary:focus-visible { outline-offset: -3px; }
+.experience-card-tip[open] summary::after { transform: rotate(225deg); }
+#study-programs-site .experience-page .experience-card-tip p { padding: 0 12px 12px; font-size: 14px; }
+
+@media (max-width: 680px) {
+  .experience-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+```

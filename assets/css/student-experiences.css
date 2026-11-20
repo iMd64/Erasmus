@@ -1,0 +1,185 @@
+@font-face {
+  font-family: "IAU Experience Sans";
+  src: url("../fonts/open-sans-latin.woff2") format("woff2");
+  font-weight: 300 800;
+  font-display: swap;
+}
+
+#study-programs-site .bgGrey .container .row #sag-ana.experience-content {
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none;
+}
+
+#study-programs-site .experience-page {
+  --ink: #152f43;
+  --navy: #102d43;
+  --muted: #4a6272;
+  --paper: #f8f5ee;
+  --gold: #efbd73;
+  --line: #dce5e9;
+  --space: clamp(22px, 3.1vw, 42px);
+  font: 400 16px/1.65 "IAU Experience Sans", "Segoe UI", sans-serif;
+  color: var(--ink);
+  overflow-wrap: break-word;
+  text-align: left;
+}
+
+.experience-page *, .experience-page *::before, .experience-page *::after { box-sizing: border-box; }
+.experience-page [id] { scroll-margin-top: 24px; }
+
+#study-programs-site .experience-page :is(h1, h2, h3, h4, p) {
+  margin: 0;
+  color: inherit;
+  font-family: inherit;
+}
+
+#study-programs-site .experience-page :is(h1, h2, h3) {
+  font-weight: 750;
+  letter-spacing: -.045em;
+  line-height: 1.09;
+}
+
+#study-programs-site .experience-page h1 { font-size: clamp(40px, 5.2vw, 70px); }
+#study-programs-site .experience-page h2 { font-size: clamp(30px, 3.3vw, 42px); }
+#study-programs-site .experience-page h3 { font-size: clamp(26px, 3vw, 38px); }
+#study-programs-site .experience-page h4 { font-size: 16px; font-weight: 750; line-height: 1.4; }
+#study-programs-site .experience-page a { color: #19516e; text-underline-offset: 4px; text-decoration: underline; }
+#study-programs-site .experience-page :is(a, summary):focus-visible { outline: 3px solid #b36c1f; outline-offset: 4px; }
+
+.experience-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.28fr) minmax(0, 1fr);
+  min-height: 386px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--navy);
+  color: #fff;
+}
+
+.experience-hero-copy { align-self: center; padding: var(--space); }
+#study-programs-site .experience-hero-copy p { margin-top: 20px; color: #e3edf2; max-width: 37ch; }
+.experience-hero-image { display: block; width: 100%; height: 100%; min-height: 0; object-fit: cover; object-position: center 61%; }
+.experience-hero-actions, .experience-share-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; margin-top: 22px; }
+#study-programs-site .experience-hero-actions a { color: #fff; font-weight: 650; }
+#study-programs-site .experience-page a.experience-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 46px;
+  padding: 9px 15px;
+  border-radius: 6px;
+  background: var(--gold);
+  color: #172b36;
+  font-size: 14px;
+  font-weight: 750;
+  text-decoration: none;
+}
+#study-programs-site .experience-page a.experience-button:hover { background: #ffcf8c; }
+
+.experience-stories { margin-block: clamp(36px, 5vw, 64px); }
+.experience-section-heading { max-width: 61ch; margin-bottom: 24px; }
+#study-programs-site .experience-section-heading p { margin-top: 12px; color: var(--muted); }
+
+.experience-share {
+  margin-bottom: 22px;
+  padding: var(--space);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #eaf2f6;
+}
+#study-programs-site .experience-share-copy p { margin-top: 12px; max-width: 62ch; color: var(--muted); }
+#study-programs-site .experience-share-actions > a { font-size: 14px; font-weight: 700; }
+#study-programs-site .experience-share-actions a.experience-button { background: var(--navy); color: #fff; }
+#study-programs-site .experience-share-actions a.experience-button:hover { background: #23516e; }
+.experience-submission { margin-top: 24px; border-top: 1px solid #cbdce5; }
+.experience-submission summary { cursor: pointer; padding-block: 12px; font-weight: 750; }
+.experience-submission ul { margin: 0 0 14px; padding-left: 22px; list-style: disc; }
+.experience-submission li + li { margin-top: 7px; }
+#study-programs-site .experience-submission p { color: var(--muted); font-size: 14px; }
+
+@media (max-width: 767px) {
+  .experience-hero { grid-template-columns: minmax(0, 1fr); min-height: 0; }
+  .experience-hero-image { height: clamp(190px, 54vw, 340px); object-position: center 70%; }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  #study-programs-site .experience-page h1 { font-size: clamp(38px, 5.5vw, 55px); }
+}
+.experience-submission summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.experience-submission summary::after {
+  content: "";
+  flex: 0 0 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+}
+.experience-submission[open] summary::after { transform: rotate(225deg); }
+
+/* Story collection and filters. */
+#study-programs-site .experience-page [hidden] { display: none !important; }
+
+.experience-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #f5f8fa;
+}
+.experience-filters label { flex: 1 1 175px; margin: 0; color: var(--ink); font-size: 14px; font-weight: 750; }
+.experience-filters select, .experience-filters button {
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid #a9bcc7;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+}
+.experience-filters select { display: block; width: 100%; margin-top: 5px; font-weight: 600; }
+.experience-filters button { cursor: pointer; font-size: 14px; font-weight: 750; }
+.experience-filters button:hover { background: #eaf2f6; }
+.experience-filters :is(select, button):focus-visible { outline: 3px solid #b36c1f; outline-offset: 3px; }
+
+#study-programs-site .experience-page .experience-result-count { margin: 14px 0; color: var(--muted); font-size: 14px; font-weight: 700; }
+#study-programs-site .experience-page .experience-no-results { padding: 22px; border-radius: 8px; background: #fff; }
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 16px;
+}
+.experience-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(17px, 2vw, 25px);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+}
+#study-programs-site .experience-card h3 { margin-top: 10px; font-size: clamp(23px, 2vw, 29px); line-height: 1.16; }
+#study-programs-site .experience-page .experience-card-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 10px; color: var(--muted); font-size: 13px; font-weight: 700; }
+.experience-card-meta span { padding: 3px 8px; border-radius: 4px; background: #f7ead6; color: #63420f; }
+.experience-card[data-story-type="winter"] .experience-card-meta span { background: #e8f1f8; color: #204c6e; }
+.experience-card[data-story-type="language"] .experience-card-meta span { background: #e8f2ea; color: #225643; }
+#study-programs-site .experience-page .experience-card-programme { margin-top: 10px; color: var(--ink); font-size: 14px; font-weight: 700; }
+#study-programs-site .experience-page .experience-card-profile { margin-top: 4px; color: var(--muted); font-size: 13px; }
+#study-programs-site .experience-page .experience-card-story { margin-top: 15px; font-size: 15px; line-height: 1.65; }
+
+.experience-card-tip { margin-top: 15px; border-radius: 7px; background: var(--paper); }
+.experience-card-tip summary { display: flex; justify-content: space-between; align-items: center; min-height: 44px; gap: 12px; padding: 8px 12px; cursor: pointer; font-size: 14px; font-weight: 750; }
+.experience-card-tip summary::after { content: ""; flex: 0 0 7px; height: 7px; border-right: 2px solid; border-bottom: 2px solid; transform: rotate(45deg); }
+#study-programs-site .experience-page .experience-card-tip summary:focus-visible { outline-offset: -3px; }
+.experience-card-tip[open] summary::after { transform: rotate(225deg); }
+#study-programs-site .experience-page .experience-card-tip p { padding: 0 12px 12px; font-size: 14px; }
+
+@media (max-width: 680px) {
+  .experience-grid { grid-template-columns: minmax(0, 1fr); }
+}

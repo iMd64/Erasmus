@@ -14,6 +14,7 @@ The other section pages retain links to their live sources.
 | List of Study Abroad Language Programs | [language-programs.html](../pages/language-programs.html) | [University source](https://www.aydin.edu.tr/en-us/international/shortterm/outgoing/Pages/study-abroad-language-programs.aspx) |
 | Application Process: After Acceptance | [application-process.html](../pages/application-process.html) | Original checklist, with official IAU, European Commission, and Turkish MFA sources linked within the page; reviewed 16 October 2026 |
 | Frequently Asked Questions | [faq.html](../pages/faq.html) | Fifteen general answers following the supplied outline, with official IAU and European Commission sources linked within the page; reviewed 20 October 2026 |
+| Student Experiences | Local: `../pages/student-experiences.html` |
 | Contact | [contact.html](../pages/contact.html) | [University source](https://www.aydin.edu.tr/en-us/international/shortterm/Pages/Contact.aspx) |
 
 ## Online destinations
