@@ -16,6 +16,8 @@ This guide contains the necessary HTML and CSS to integrate the Short Term Study
 - [10. CSS Styles (Contact)](#10-css-styles-contact)
 - [11. HTML Content (Student Experiences)](#11-html-content-student-experiences)
 - [12. CSS Styles (Student Experiences)](#12-css-styles-student-experiences)
+- [13. HTML Content (Summer & Winter Programmes Directory)](#13-html-content-summer--winter-programmes-directory)
+- [14. CSS Styles (Summer & Winter Programmes Directory)](#14-css-styles-summer--winter-programmes-directory)
 
 ## 1. HTML Content
 
@@ -3518,5 +3520,959 @@ The following styles ensure proper rendering for the Student Experiences hero se
 @media (max-width: 680px) {
   .experience-grid { grid-template-columns: minmax(0, 1fr); }
 }
+
+```
+
+## 13. HTML Content (Summer & Winter Programmes Directory)
+
+Copy the HTML block below. When editing the university website for the List of Summer & Winter Programs page, locate the main content wrapper—specifically the element `<div id="sag-ana">` (or `<div class="wpb_wrapper vc_custom_1461916946657" id="sag-ana">`). **Replace that entire element and all of its contents** with the new block provided here:
+
+```html
+<div id="sag-ana" class="directory-content">
+<article class="programme-directory" aria-labelledby="directory-title">
+<header class="directory-hero">
+<div class="directory-hero-copy">
+<p class="directory-eyebrow">Study abroad · Programme directory</p>
+<h1 id="directory-title">Summer &amp;<br>Winter Programs</h1>
+<p>Find a course that takes your learning somewhere new. Explore subjects, destinations and what each programme includes.</p>
+<a class="directory-button" href="#directory-browse">Browse programmes</a>
+</div>
+<figure class="directory-hero-visual">
+<img src="../assets/images/programs/summer-winter-programs.jpg" width="1320" height="600" alt="Footprints across a snow-covered university campus at sunset" fetchpriority="high">
+<figcaption>Discover a different campus.</figcaption>
+</figure>
+</header>
+
+<section class="directory-browse" id="directory-browse" aria-labelledby="directory-browse-title">
+<div class="directory-heading">
+<div><h2 id="directory-browse-title">Find your programme</h2><p>Explore 13 countries, from engineering and business to languages and culture.</p></div>
+</div>
+<form class="directory-filters" id="directory-filters" hidden aria-label="Filter programmes">
+<label class="directory-search">Search programmes<input type="search" name="query" placeholder="Subject, university or keyword" autocomplete="off"></label>
+<label>Country<select name="country"><option value="">All countries</option><option>Brazil</option><option>Croatia</option><option>Czechia</option><option>Germany</option><option>Greece</option><option>Hungary</option><option>Indonesia</option><option>Latvia</option><option>Lithuania</option><option>Russia</option><option>South Korea</option><option>Spain</option><option>United Kingdom</option></select></label>
+<label>Programme type<select name="season"><option value="">All types</option><option value="summer">Summer school</option><option value="winter">Winter school</option><option value="short">Other short courses</option></select></label>
+<button type="reset" class="directory-reset">Clear filters</button>
+</form>
+<div class="directory-results-bar"><p id="directory-count" role="status">24 programmes</p><p>Open a programme for full details</p></div>
+<div class="directory-empty" id="directory-empty" hidden><h3>No programmes found</h3><p>Try another subject, country or programme type.</p><button type="button" id="directory-clear">Show all programmes</button></div>
+<div class="directory-grid">
+<details class="directory-card" id="program-01" data-country="Latvia" data-season="summer">
+<summary>
+<span class="directory-card-meta"><span class="directory-season summer">Summer school</span><span>Latvia</span></span>
+<span class="directory-university">TSI University of Applied Sciences</span>
+<h3>Career Launch in Networking</h3>
+<span class="directory-facts"><span><span class="directory-fact-label">Programme dates</span><span>29th of June- 17th of July, 2026</span></span><span><span class="directory-fact-label">Listed fee</span><span>1,350 EUR</span></span></span>
+<span class="directory-expand">View programme details <span class="directory-chevron" aria-hidden="true"></span></span>
+</summary>
+<div class="directory-card-body">
+          <p> <strong> TSI Summer School 2026</strong></p>
+          <p> <strong>Duration:</strong> 29th of June- 17th of July, 2026<br></p>
+          <p> <strong>Application Deadline:</strong> 25th of April, 2026</p>
+          <p> <strong>Available Course(s):</strong> Career Launch in Networking: Cisco Preparation
+            Course<br></p>
+          <p> <strong>ECTS Credits:</strong> 3.5 ECTS<br></p>
+          <p> <strong>Eligibility:</strong> All Departments<br></p>
+          <p> <strong>Scholarship(s):</strong> -<br></p>
+          <p> <strong>Program Fees:</strong> 1,350 EUR<br></p>
+          <p> <strong>What's Included and Excluded in Program Fees?</strong><br></p>
+          <p> <strong>Included:</strong> Tuition, Course Materials, Certificate of
+            Completion, and Socio-cultural Activities<br></p>
+          <p> <strong>Excluded:</strong> Airfares, Accommodation, Insurance, and Visa Fees
+            (if required)<br></p>
+          <p class="directory-host-link"><a href="https://tsi.lv/study/summer-school/" target="_blank" rel="noopener noreferrer">Host details and application</a></p>
+          <p class="directory-host-link"><a href="https://drive.google.com/file/d/1-qdYAdvjeAnnqgTUVldoQAMxIKK_BCea/view" target="_blank" rel="noopener noreferrer">View programme brochure</a></p>
+        
+</div>
+</details>
+<details class="directory-card" id="program-02" data-country="Latvia" data-season="summer">
+<summary>
+<span class="directory-card-meta"><span class="directory-season summer">Summer school</span><span>Latvia</span></span>
+<span class="directory-university">TSI University of Applied Sciences</span>
+<h3>Cyber-Physical Systems and Network Security</h3>
+<span class="directory-facts"><span><span class="directory-fact-label">Programme dates</span><span>29th of June- 25th of July, 2026</span></span><span><span class="directory-fact-label">Listed fee</span><span>1,050 EUR</span></span></span>
+<span class="directory-expand">View programme details <span class="directory-chevron" aria-hidden="true"></span></span>
+</summary>
+<div class="directory-card-body">
+          <p> <strong> TSI Summer School 2026</strong></p>
+          <p> <strong>Duration:</strong> 29th of June- 25th of July, 2026<br></p>
+          <p> <strong>Application Deadline:</strong> 25th of April, 2026</p>
+          <p> <strong>Available Course(s):</strong><br></p>
+          <p> - Cyber-Physical Systems</p>
+          <p> - IoT Networks</p>
+          <strong>- Network Security<br></strong>
+          <p> <strong>ECTS Credits:</strong> 4 ECTS<br></p>
+          <p> <strong>Eligibility:</strong> All Departments<br></p>
+          <p> <strong>Scholarship(s):</strong> -<br></p>
+          <p> <strong>Program Fees:</strong> 1,050 EUR<br></p>
+          <p> <strong>What's Included and Excluded in Program Fees?</strong><br></p>
+          <p> <strong>Included:</strong> Tuition, Course Materials, Certificate of
+            Completion, and Socio-cultural Activities<br></p>
+          <p> <strong>Excluded:</strong> Airfares, Accommodation, Insurance, and Visa Fees
+            (if required)<br></p>
+          <p class="directory-host-link"><a href="https://tsi.lv/study/summer-school/" target="_blank" rel="noopener noreferrer">Host details and application</a></p>
+          <p class="directory-host-link"><a href="https://drive.google.com/file/d/1-qdYAdvjeAnnqgTUVldoQAMxIKK_BCea/view" target="_blank" rel="noopener noreferrer">View programme brochure</a></p>
+        
+</div>
+</details>
+<details class="directory-card" id="program-03" data-country="Indonesia" data-season="summer">
+<summary>
+<span class="directory-card-meta"><span class="directory-season summer">Summer school</span><span>Indonesia</span></span>
+<span class="directory-university">Institut Teknologi Sepuluh Nopember (ITS)</span>
+<h3>CommTECH Camp Highlight</h3>
+<span class="directory-facts"><span><span class="directory-fact-label">Programme dates</span><span>Multiple sessions in 2026</span></span><span><span class="directory-fact-label">Listed fee</span><span>1,600 USD</span></span></span>
+<span class="directory-expand">View programme details <span class="directory-chevron" aria-hidden="true"></span></span>
+</summary>
+<div class="directory-card-body">
+          <p> <strong>CommTECH Camp Highlight 2026</strong></p>
+          <p> <strong>Duration:</strong><br></p>
+          <p> - For Stream 1: 20th - 31st of July, 2026</p>
+          <p> - For Stream 2: 27th August - 07th of September, 2026</p>
+          <p> <strong>Application Deadline:</strong></p>
+          <p> - For Stream 1: 19th of June, 2026</p>
+          <p> - For Stream 2: 19th of July, 2026</p>
+          <p> <strong>Available Course(s):</strong><br></p>
+          <p> <strong>- Stream 1:</strong> Creative Design</p>
+          <p> <strong>- Stream 2:</strong> Engineering Innovations</p>
+          <p> <strong>ECTS Credits:</strong> 3 ECTS<br></p>
+          <p> <strong>Eligibility:</strong> All Departments<br></p>
+          <p> <strong>Scholarship(s):</strong> Yes<br></p>
+          <p> <strong>Program Fees:</strong> 1,600 USD<br></p>
+          <p> <strong>What's Included and Excluded in Program Fees?</strong><br></p>
+          <p> <strong>Included:</strong> Tuition, Course Materials, Accommodation, Meals,
+            Local Transportation, Airport Pick-up and Drop-off, and Socio-cultural
+            Activities<br></p>
+          <p> <strong>Excluded:</strong> Airfares, Insurance, and Visa Fees (if
+            required)<br></p>
+          <p class="directory-host-link"><a href="https://www.its.ac.id/international/study-at-its/short-program/commtech-camp/commtech-camp-highlight/" target="_blank" rel="noopener noreferrer">Host details and application</a></p>
+          <p class="directory-host-link"><a href="https://drive.google.com/file/d/1zeMRRktR7OHrFpmTHzR_DpK7mKQRIoA_/view" target="_blank" rel="noopener noreferrer">View programme brochure</a></p>
+        
+</div>
+</details>
+<details class="directory-card" id="program-04" data-country="Germany" data-season="summer">
+<summary>
+<span class="directory-card-meta"><span class="directory-season summer">Summer school</span><span>Germany</span></span>
+<span class="directory-university">RWTH Aachen University</span>
+<h3>Automation, Robotics and Production</h3>
+<span class="directory-facts"><span><span class="directory-fact-label">Programme dates</span><span>05th- 25th of July, 2026</span></span><span><span class="directory-fact-label">Listed fee</span><span>3,350 EUR</span></span></span>
+<span class="directory-expand">View programme details <span class="directory-chevron" aria-hidden="true"></span></span>
+</summary>
+<div class="directory-card-body">
+          <p> <strong> RWTH Summer Schools 2026</strong></p>
+          <p> <strong>Duration:</strong> 05th- 25th of July, 2026<br></p>
+          <p> <strong>Application Deadline:</strong> 01st of April, 2026</p>
+          <p> <strong>Available Course(s):</strong> <br></p>
+          <p> <strong>- Automation and Simulation</strong></p>
+          <p> <strong>- Robotics and Innovation for Future Industries</strong></p>
+          <p> <strong>- Production Technology Meets Industry 4.0</strong></p>
+          <p> <strong>ECTS Credits:</strong> 4 ECTS<br></p>
+          <p> <strong>Eligibility:</strong> Mechanical Engineering, Mechatronics
+            Engineering, Electrical/Electronics Engineering, Industrial Engineering,
+            Computer Engineering, Automation/Control Engineering, Robotics-related
+            fields<br></p>
+          <p> <strong>Scholarship(s):</strong> -<br></p>
+          <p> <strong>Program Fees:</strong> 3,350 EUR<br></p>
+          <p> <strong>What's Included and Excluded in Program Fees?</strong><br></p>
+          <p> <strong>Included:</strong> Tuition, Course Materials, and Socio-cultural
+            Activities<br></p>
+          <p> <strong>Excluded:</strong> Airfares, Accommodation, Insurance, and Visa Fees
+            (if required)<br></p>
+          <p class="directory-host-link"><a href="https://forms.academy-rwth.de/short-term-programs/application-form/" target="_blank" rel="noopener noreferrer">View application page</a></p>
+          <p class="directory-host-link"><a href="https://www.academy.rwth-aachen.de/en/programs/short-courses?utm_source=mailing&amp;utm_medium=hochschule&amp;utm_campaign=summer-schools" target="_blank" rel="noopener noreferrer">Visit the host website</a></p>
+        
+</div>
+</details>
+<details class="directory-card" id="program-05" data-country="Germany" data-season="summer">
+<summary>
+<span class="directory-card-meta"><span class="directory-season summer">Summer school</span><span>Germany</span></span>
+<span class="directory-university">RWTH Aachen University</span>
+<h3>Innovative Technologies in Automotive Engineering</h3>
+<span class="directory-facts"><span><span class="directory-fact-label">Programme dates</span><span>21st of June - 11th of July, 2026</span></span><span><span class="directory-fact-label">Listed fee</span><span>3,350 EUR</span></span></span>
+<span class="directory-expand">View programme details <span class="directory-chevron" aria-hidden="true"></span></span>
+</summary>
+<div class="directory-card-body">
+          <p> <strong> RWTH Summer Schools 2026</strong></p>
+          <p> <strong>Duration:</strong> 21st of June - 11th of July, 2026<br></p>
+          <p> <strong>Application Deadline:</strong> 01st of April, 2026</p>
+          <p> <strong>Available Course(s):</strong> Innovative Technologies in Automotive
+            Engineering<br></p>
+          <p> <strong>ECTS Credits:</strong> 4 ECTS<br></p>
+          <p> <strong>Eligibility:</strong> Computer Engineering, Electrical Engineering,
+            Mechatronics Engineering, Robotics, and related technical fields.<br></p>
+          <p> <strong>Scholarship(s):</strong> -<br></p>
+          <p> <strong>Program Fees:</strong> 3,350 EUR<br></p>
+          <p> <strong>What's Included and Excluded in Program Fees?</strong><br></p>
+          <p> <strong>Included:</strong> Tuition, Course Materials, and Socio-cultural
+            Activities<br></p>
+          <p> <strong>Excluded:</strong> Airfares, Accommodation, Insurance, and Visa Fees
+            (if required)<br></p>
+          <p class="directory-host-link"><a href="https://forms.academy-rwth.de/short-term-programs/application-form/" target="_blank" rel="noopener noreferrer">View application page</a></p>
+          <p class="directory-host-link"><a href="https://www.academy.rwth-aachen.de/en/programs/short-courses?utm_source=mailing&amp;utm_medium=hochschule&amp;utm_campaign=summer-schools" target="_blank" rel="noopener noreferrer">Visit the host website</a></p>
+        
+</div>
+</details>
+<details class="directory-card" id="program-06" data-country="Germany" data-season="summer">
+<summary>
+<span class="directory-card-meta"><span class="directory-season summer">Summer school</span><span>Germany</span></span>
+<span class="directory-university">RWTH Aachen University</span>
+<h3>Sustainability, Buildings and Green Cities</h3>
+<span class="directory-facts"><span><span class="directory-fact-label">Programme dates</span><span>05th - 18th of July, 2026</span></span><span><span class="directory-fact-label">Listed fee</span><span>2,250 EUR</span></span></span>
+<span class="directory-expand">View programme details <span class="directory-chevron" aria-hidden="true"></span></span>
+</summary>
+<div class="directory-card-body">
+          <p> <strong> RWTH Summer Schools 2026</strong></p>
+          <p> <strong>Duration:</strong> 05th - 18th of July, 2026<br></p>
+          <p> <strong>Application Deadline:</strong> 01st of April, 2026</p>
+          <p> <strong>Available Course(s):</strong> <br></p>
+          <p> <strong>- Sustainability and Circular Economy in Production</strong></p>
+          <p> <strong>- Sustainable Buildings and Green Cities</strong></p>
+          <p> <strong>ECTS Credits:</strong> 3 ECTS<br></p>
+          <p> <strong>Eligibility:</strong>Engineering, Architecture, Environmental
+            Sciences, Urban Planning, and Business-related fields.<br></p>
+          <p> <strong>Scholarship(s):</strong> -<br></p>
+          <p> <strong>Program Fees:</strong> 2,250 EUR<br></p>
+          <p> <strong>What's Included and Excluded in Program Fees?</strong><br></p>
+          <p> <strong>Included:</strong> Tuition, Course Materials, and Socio-cultural
+            Activities<br></p>
+          <p> <strong>Excluded:</strong> Airfares, Accommodation, Insurance, and Visa Fees
+            (if required)<br></p>
+          <p class="directory-host-link"><a href="https://forms.academy-rwth.de/short-term-programs/application-form/" target="_blank" rel="noopener noreferrer">View application page</a></p>
+          <p class="directory-host-link"><a href="https://www.academy.rwth-aachen.de/en/programs/short-courses?utm_source=mailing&amp;utm_medium=hochschule&amp;utm_campaign=summer-schools" target="_blank" rel="noopener noreferrer">Visit the host website</a></p>
+        
+</div>
+</details>
+<details class="directory-card" id="program-07" data-country="Germany" data-season="summer">
+<summary>
+<span class="directory-card-meta"><span class="directory-season summer">Summer school</span><span>Germany</span></span>
+<span class="directory-university">RWTH Aachen University</span>
+<h3>Artificial Intelligence and Robotics</h3>
+<span class="directory-facts"><span><span class="directory-fact-label">Programme dates</span><span>21st of June - 04th of July, 2026</span></span><span><span class="directory-fact-label">Listed fee</span><span>2,250 EUR</span></span></span>
+<span class="directory-expand">View programme details <span class="directory-chevron" aria-hidden="true"></span></span>
+</summary>
+<div class="directory-card-body">
+          <p> <strong> RWTH Summer Schools 2026</strong></p>
+          <p> <strong>Duration:</strong> 21st of June - 04th of July, 2026<br></p>
+          <p> <strong>Application Deadline:</strong> 01st of April, 2026</p>
+          <p> <strong>Available Course(s):</strong> <br></p>
+          <p> <strong>- Artificial Intelligence in Industrial Applications</strong></p>
+          <p> <strong>- Robot Operating Systems Essentials</strong></p>
+          <p> <strong>ECTS Credits:</strong> 3 ECTS<br></p>
+          <p> <strong>Eligibility:</strong>Computer, Electrical/Electronics, Industrial,
+            Mechanical, Mechatronics, Software Engineering, and related fields with a
+            programming and math background.<br></p>
+          <p> <strong>Scholarship(s):</strong> -<br></p>
+          <p> <strong>Program Fees:</strong> 2,250 EUR<br></p>
+          <p> <strong>What's Included and Excluded in Program Fees?</strong><br></p>
+          <p> <strong>Included:</strong> Tuition, Course Materials, and Socio-cultural
+            Activities<br></p>
+          <p> <strong>Excluded:</strong> Airfares, Accommodation, Insurance, and Visa Fees
+            (if required)<br></p>
+          <p class="directory-host-link"><a href="https://forms.academy-rwth.de/short-term-programs/application-form/" target="_blank" rel="noopener noreferrer">View application page</a></p>
+          <p class="directory-host-link"><a href="https://www.academy.rwth-aachen.de/en/programs/short-courses?utm_source=mailing&amp;utm_medium=hochschule&amp;utm_campaign=summer-schools" target="_blank" rel="noopener noreferrer">Visit the host website</a></p>
+        
+</div>
+</details>
+<details class="directory-card" id="program-08" data-country="Germany" data-season="summer">
+<summary>
+<span class="directory-card-meta"><span class="directory-season summer">Summer school</span><span>Germany</span><span class="directory-online">Online</span></span>
+<span class="directory-university">RWTH Aachen University</span>
+<h3>Artificial Intelligence in Industrial Applications</h3>
+<span class="directory-facts"><span><span class="directory-fact-label">Programme dates</span><span>22nd of June - 03rd of July, 2026</span></span><span><span class="directory-fact-label">Listed fee</span><span>1,350 EUR</span></span></span>
+<span class="directory-expand">View programme details <span class="directory-chevron" aria-hidden="true"></span></span>
+</summary>
+<div class="directory-card-body">
+          <p> <strong>RWTH ONLINE Summer Schools 2026</strong></p>
+          <p> <strong>Duration:</strong> 22nd of June - 03rd of July, 2026<br></p>
+          <p> <strong>Application Deadline:</strong> 01st of May, 2026</p>
+          <p> <strong>Available Course(s):</strong> Artificial Intelligence in Industrial
+            Applications<br></p>
+          <p> <strong>ECTS Credits:</strong> 3 ECTS<br></p>
+          <p> <strong>Eligibility:</strong> Computer, Electrical/Electronics, Industrial,
+            Mechanical, Mechatronics, Software Engineering, and related fields with a
+            programming and math background.<br></p>
+          <p> <strong>Scholarship(s):</strong> -<br></p>
+          <p> <strong>Program Fees:</strong> 1,350 EUR<br></p>
+          <p> <strong>What's Included in Program Fees?</strong><br></p>
+          <p> <strong>Included:</strong> Tuition and Course Materials<br></p>
+          <p class="directory-host-link"><a href="https://forms.academy-rwth.de/short-term-programs/application-form/" target="_blank" rel="noopener noreferrer">View application page</a></p>
+          <p class="directory-host-link"><a href="https://www.academy.rwth-aachen.de/en/programs/short-courses?utm_source=mailing&amp;utm_medium=hochschule&amp;utm_campaign=summer-schools" target="_blank" rel="noopener noreferrer">Visit the host website</a></p>
+        
+</div>
+</details>
+<details class="directory-card" id="program-09" data-country="Indonesia" data-season="short">
+<summary>
+<span class="directory-card-meta"><span class="directory-season short">Short course</span><span>Indonesia</span></span>
+<span class="directory-university">Universitas Airlangga</span>
+<h3>Blue Ecosystem Protection</h3>
+<span class="directory-facts"><span><span class="directory-fact-label">Programme dates</span><span>- Online: 20th - 21st of April, 2026 · - Face-to-face: 26th of April - 06th of May, 2026</span></span><span><span class="directory-fact-label">Listed fee</span><span>200 USD</span></span></span>
+<span class="directory-expand">View programme details <span class="directory-chevron" aria-hidden="true"></span></span>
+</summary>
+<div class="directory-card-body">
+          <p> <strong> AIRVENTURE 2026</strong></p>
+          <p> <strong>Duration:</strong><br></p>
+          <p> - Online: 20th - 21st of April, 2026<br></p>
+          <p> - Face-to-face: 26th of April - 06th of May, 2026</p>
+          <p> <strong>Application Deadline:</strong> 16th of March, 2026</p>
+          <p> <strong>Available Course(s):</strong> Blue Ecosystem Protection<br></p>
+          <p> <strong>ECTS Credits:</strong> -<br></p>
+          <p> <strong>Eligibility:</strong> All Departments<br></p>
+          <p> <strong>Scholarship(s):</strong> -<br></p>
+          <p> <strong>Program Fees:</strong> 200 USD<br></p>
+          <p> <strong>What's Included and Excluded in Program Fees?</strong><br></p>
+          <p> <strong>Included:</strong> Tuition, Course Materials, Accommodation, Meals,
+            Local Transportation, Site Visits, and Socio-cultural Activities<br></p>
+          <p> <strong>Excluded:</strong> Airfares, Insurance, and Visa Fees (if
+            required)<br></p>
+          <p class="directory-host-link"><a href="https://sim.global.unair.ac.id/registrasi-peserta-inbound/AGE_airlangga_141837601" target="_blank" rel="noopener noreferrer">View application page</a></p>
+          <p class="directory-host-link"><a href="contact.html" target="_blank" rel="noopener noreferrer">Ask the office for host details</a></p>
+          <p class="directory-host-link"><a href="https://drive.google.com/file/d/1h3-6ItEQzZ2rRVNz1dq4oC3qNIXrgS5c/view" target="_blank" rel="noopener noreferrer">View programme brochure</a></p>
+        
+</div>
+</details>
+<details class="directory-card" id="program-10" data-country="Lithuania" data-season="summer">
+<summary>
+<span class="directory-card-meta"><span class="directory-season summer">Summer school</span><span>Lithuania</span></span>
+<span class="directory-university">SMK College of Applied Sciences</span>
+<h3>Lithuanian Language and Culture</h3>
+<span class="directory-facts"><span><span class="directory-fact-label">Programme dates</span><span>01st - 30th of July, 2026</span></span><span><span class="directory-fact-label">Listed fee</span><span>Free of Charge</span></span></span>
+<span class="directory-expand">View programme details <span class="directory-chevron" aria-hidden="true"></span></span>
+</summary>
+<div class="directory-card-body">
+          <p> <strong> Lithuanian Language and Culture Summer Course 2026</strong></p>
+          <p> <strong>Duration:</strong> 01st - 30th of July, 2026<br></p>
+          <p> <strong>Application Deadline:</strong> 18th of March, 2026</p>
+          <p> <strong>Available Course(s):</strong> Lithuanian Language and Culture<br></p>
+          <p> <strong>ECTS Credits:</strong> -<br></p>
+          <p> <strong>Eligibility:</strong> All Departments<br></p>
+          <p> <strong>Scholarship(s):</strong> Yes (962 EUR)<br></p>
+          <p> <strong>Program Fees:</strong> Free of Charge<br></p>
+          <p> <strong>What's Included and Excluded in Program Fees?</strong><br></p>
+          <p> <strong>Included:</strong> Tuition, Course Materials, and Socio-cultural
+            Activities<br></p>
+          <p> <strong>Excluded:</strong> Airfares, Accommodation, Insurance, and Visa Fees
+            (if required)<br></p>
+          <p class="directory-host-link"><a href="https://smk.lt/en/naujienos/lithuanian-language-and-culture-course-2026/" target="_blank" rel="noopener noreferrer">Host details and application</a></p>
+        
+</div>
+</details>
+<details class="directory-card" id="program-11" data-country="Brazil" data-season="short">
+<summary>
+<span class="directory-card-meta"><span class="directory-season short">Short course</span><span>Brazil</span></span>
+<span class="directory-university">Pontificia Universidade Católica de Paraná</span>
+<h3>Intensive Portuguese Language and Culture</h3>
+<span class="directory-facts"><span><span class="directory-fact-label">Programme dates</span><span>22th of June- 17th of July, 2026</span></span><span><span class="directory-fact-label">Listed fee</span><span>2,500 USD</span></span></span>
+<span class="directory-expand">View programme details <span class="directory-chevron" aria-hidden="true"></span></span>
+</summary>
+<div class="directory-card-body">
+          <p> <strong>Intensive Portuguese Language &amp; Culture Program</strong></p>
+          <p> <strong>Duration:</strong> 22th of June- 17th of July, 2026<br></p>
+          <p> <strong>Application Deadline:</strong> 17th of April, 2026</p>
+          <p> <strong>Available Course(s):</strong> Brazilian-Portuguese Language<br></p>
+          <p> <strong>ECTS Credits:</strong> 10 ECTS<br></p>
+          <p> <strong>Eligibility:</strong> All Departments<br></p>
+          <p> <strong>Scholarship(s):</strong> -<br></p>
+          <p> <strong>Program Fees:</strong> 2,500 USD<br></p>
+          <p> <strong>What's Included and Excluded in Program Fees?</strong><br></p>
+          <p> <strong>Included:</strong> Tuition, Accommodation, Socio-cultural Activities,
+            and Field Trips<br></p>
+          <p> <strong>Excluded:</strong> Airfares, Insurance, and Visa Fees (if
+            required)<br></p>
+          <p class="directory-host-link"><a href="https://sites.pucpr.br/summerinstitute/en/disciplina/intensive-portuguese-language-culture-program/" target="_blank" rel="noopener noreferrer">Host details and application</a></p>
+          <p class="directory-host-link"><a href="https://sites.pucpr.br/summerinstitute/wp-content/uploads/sites/62/2026/03/INTER_Folder_Intensivo-JUL-26_Portugues.pdf" target="_blank" rel="noopener noreferrer">View programme brochure</a></p>
+        
+</div>
+</details>
+<details class="directory-card" id="program-12" data-country="Czechia" data-season="summer">
+<summary>
+<span class="directory-card-meta"><span class="directory-season summer">Summer school</span><span>Czechia</span></span>
+<span class="directory-university">University of Hradec Králové</span>
+<h3>Czech It Out Summer School</h3>
+<span class="directory-facts"><span><span class="directory-fact-label">Programme dates</span><span>11th of July - 11th of August, 2026</span></span><span><span class="directory-fact-label">Listed fee</span><span>Multiple fee options</span></span></span>
+<span class="directory-expand">View programme details <span class="directory-chevron" aria-hidden="true"></span></span>
+</summary>
+<div class="directory-card-body">
+          <p> <strong> Czech It Out Summer School 2026 </strong><br></p>
+          <p> <strong>Duration:</strong> 11th of July - 11th of August, 2026<br></p>
+          <p> <strong>Application Deadline:</strong> </p>
+          <p> - Early-bird Application Deadline: 10th of April, 2026<br></p>
+          <p> - Regular Application Deadline: 30th of April, 2026</p>
+          <p> <strong>Available Course(s):</strong> <br></p>
+          <p> - Intercultural Studies and Tourism<br></p>
+          <p> - Marketing and Cultural Studies</p>
+          <p> - Data Science</p>
+          <p> - Languages and Culture</p>
+          <p> <strong>ECTS Credits:</strong> 6 ECTS<br></p>
+          <p> <strong>Eligibility:</strong> All Departments<br></p>
+          <p> <strong>Scholarship(s):</strong> -<br></p>
+          <p> <strong>Program Fees:</strong><br></p>
+          <p> - For Early-bird Applications: 1,050 EUR<br></p>
+          <p> - For Regular Applications: 1,150 EUR</p>
+          <p> <strong>What's Included and Excluded in Program Fees?</strong><br></p>
+          <p> <strong>Included:</strong> Tuition, Accommodation, Socio-cultural Activities,
+            and Field Trips<br></p>
+          <p> <strong>Excluded:</strong> Airfares, Meals, Insurance, and Visa Fees (if
+            required)<br></p>
+          <p class="directory-host-link"><a href="https://www.uhk.cz/en/university-of-hradec-kralove/applicant/how-to-apply" target="_blank" rel="noopener noreferrer">View application page</a></p>
+          <p class="directory-host-link"><a href="https://www.uhk.cz/cs/fakulta-informatiky-a-managementu/fim/katedry-a-pracoviste/idv-institut-dalsiho-vzdelavani/summer-school-2026" target="_blank" rel="noopener noreferrer">Visit the host website</a></p>
+          <p class="directory-host-link"><a href="https://drive.google.com/file/d/1e3q98B4JGmLp3YHfTsPExkg1hsVWrbc-/view?usp=sharing" target="_blank" rel="noopener noreferrer">View programme brochure</a></p>
+        
+</div>
+</details>
+<details class="directory-card" id="program-13" data-country="Indonesia" data-season="summer">
+<summary>
+<span class="directory-card-meta"><span class="directory-season summer">Summer school</span><span>Indonesia</span></span>
+<span class="directory-university">Multimedia Nusantara University (UMN)</span>
+<h3>Sustainability Immersive Programme</h3>
+<span class="directory-facts"><span><span class="directory-fact-label">Programme dates</span><span>19th - 25th of July, 2026</span></span><span><span class="directory-fact-label">Listed fee</span><span>255 EUR</span></span></span>
+<span class="directory-expand">View programme details <span class="directory-chevron" aria-hidden="true"></span></span>
+</summary>
+<div class="directory-card-body">
+          <p> <strong>UMN Sustainability Immersive Program 2026</strong><br></p>
+          <p> <strong>Duration:</strong> 19th - 25th of July, 2026<br></p>
+          <p> <strong>Application Deadline:</strong> 12th of June, 2026<br></p>
+          <p> <strong>Available Course(s):</strong> Sustainability Implementation<br></p>
+          <p> <strong>ECTS Credits:</strong> 3 ECTS<br></p>
+          <p> <strong>Eligibility:</strong> All Departments<br></p>
+          <p> <strong>Scholarship(s):</strong> -<br></p>
+          <p> <strong>Program Fees:</strong> 255 EUR<br></p>
+          <p> <strong>What's Included and Excluded in Program Fees?</strong><br></p>
+          <p> <strong>Included:</strong> Tuition, Meals, Airport Pick-up and Drop-off, Local
+            Transportation, Accommodation, and Socio-cultural Activities<br></p>
+          <p> <strong>Excluded:</strong> Airfares, Insurance, and Visa Fees (if
+            required)<br></p>
+          <p class="directory-host-link"><a href="https://docs.google.com/forms/d/e/1FAIpQLSf9TnJv5e1NminW-ehYXkywApmmHsLbcIdd6QHMhsqC_DWxXw/viewform" target="_blank" rel="noopener noreferrer">View application page</a></p>
+          <p class="directory-host-link"><a href="https://www.umn.ac.id/en/home/" target="_blank" rel="noopener noreferrer">Visit the host website</a></p>
+          <p class="directory-host-link"><a href="https://drive.google.com/file/d/1QNd_riYqjbabjIZ9KYOwOupRUhiKW1Uc/view?usp=sharing" target="_blank" rel="noopener noreferrer">View programme brochure</a></p>
+        
+</div>
+</details>
+<details class="directory-card" id="program-14" data-country="South Korea" data-season="summer">
+<summary>
+<span class="directory-card-meta"><span class="directory-season summer">Summer school</span><span>South Korea</span></span>
+<span class="directory-university">University of Seoul (UOS)</span>
+<h3>Seoul International Summer School II</h3>
+<span class="directory-facts"><span><span class="directory-fact-label">Programme dates</span><span>05th - 21st of August, 2026</span></span><span><span class="directory-fact-label">Listed fee</span><span>Multiple fee options</span></span></span>
+<span class="directory-expand">View programme details <span class="directory-chevron" aria-hidden="true"></span></span>
+</summary>
+<div class="directory-card-body">
+          <p> <strong>Seoul International Summer School II (SISS II) 2026</strong><br></p>
+          <p> <strong>Duration:</strong> 05th - 21st of August, 2026<br></p>
+          <p> <strong>Application Deadline:</strong><br></p>
+          <p> - Early-bird Application Deadline: 15th of June, 2026<br></p>
+          <p> - Regular Application Deadline: 15th of July, 2026<br></p>
+          <p> <strong>Available Course(s):</strong><br></p>
+          <p> - Track 1: Business in Korean Perspective<br></p>
+          <p> - Track 2: Korean Studies</p>
+          <p> <strong>ECTS Credits:</strong> 3 ECTS<br></p>
+          <p> <strong>Eligibility:</strong> All Departments<br></p>
+          <p> <strong>Scholarship(s):</strong> -<br></p>
+          <p> <strong>Program Fees:</strong><br></p>
+          <p> For Early-bird Applications: 1,160 USD<br></p>
+          <p> For Regular Applications: 1,300 USD<br></p>
+          <p> <strong>What's Included and Excluded in Program Fees?</strong><br></p>
+          <p> <strong>Included:</strong> Tuition, Welcome &amp; farewell parties,
+            Accommodation, and Socio-cultural Activities<br></p>
+          <p> <strong>Excluded:</strong> Airfares, Meals, Insurance, and Visa Fees (if
+            required)<br></p>
+          <p class="directory-host-link"><a href="https://oia.uos.ac.kr/oia/web/contents/OIA_Studyat_05_03" target="_blank" rel="noopener noreferrer">View application page</a></p>
+          <p class="directory-host-link"><a href="https://oia.uos.ac.kr/oia/web/contents/OIA_Studyat_05_01" target="_blank" rel="noopener noreferrer">Visit the host website</a></p>
+          <p class="directory-host-link"><a href="https://drive.google.com/file/d/1zamKARxssx-0kmqevR70eBD-yjOXo3A4/view?usp=sharing" target="_blank" rel="noopener noreferrer">View programme brochure</a></p>
+        
+</div>
+</details>
+<details class="directory-card" id="program-15" data-country="South Korea" data-season="summer">
+<summary>
+<span class="directory-card-meta"><span class="directory-season summer">Summer school</span><span>South Korea</span></span>
+<span class="directory-university">University of Seoul (UOS)</span>
+<h3>Seoul International Summer School I</h3>
+<span class="directory-facts"><span><span class="directory-fact-label">Programme dates</span><span>01st - 29th of July, 2026</span></span><span><span class="directory-fact-label">Listed fee</span><span>Multiple fee options</span></span></span>
+<span class="directory-expand">View programme details <span class="directory-chevron" aria-hidden="true"></span></span>
+</summary>
+<div class="directory-card-body">
+          <p> <strong>Seoul International Summer School I (SISS I) 2026</strong><br></p>
+          <p> <strong>Duration:</strong> 01st - 29th of July, 2026<br></p>
+          <p> <strong>Application Deadline:</strong><br></p>
+          <p> - Early-bird Application Deadline: 15th of May, 2026<br></p>
+          <p> - Regular Application Deadline: 15th of June, 2026<br></p>
+          <p> <strong>Available Course(s):</strong><br></p>
+          <p> - Track 1: Business in Korean Perspective<br></p>
+          <p> - Track 2: Korean Studies</p>
+          <p> <strong>ECTS Credits:</strong> 3 ECTS<br></p>
+          <p> <strong>Eligibility:</strong> All Departments<br></p>
+          <p> <strong>Scholarship(s):</strong> -<br></p>
+          <p> <strong>Program Fees:</strong><br></p>
+          <p> For Early-bird Applications: 1,450 EUR<br></p>
+          <p> For Regular Applications: 1,680 EUR<br></p>
+          <p> <strong>What's Included and Excluded in Program Fees?</strong><br></p>
+          <p> <strong>Included:</strong> Tuition, Welcome &amp; farewell parties,
+            Accommodation, and Socio-cultural Activities<br></p>
+          <p> <strong>Excluded:</strong> Airfares, Meals, Insurance, and Visa Fees (if
+            required)<br></p>
+          <p class="directory-host-link"><a href="https://wise.uos.ac.kr/nomination" target="_blank" rel="noopener noreferrer">View application page</a></p>
+          <p class="directory-host-link"><a href="https://www.uos.ac.kr/main.do?identified=anonymous&amp;" target="_blank" rel="noopener noreferrer">Visit the host website</a></p>
+          <p class="directory-host-link"><a href="https://drive.google.com/file/d/1x2jxz0y3EuAhmAAXsrkc-PRJGS25W0pk/view?usp=sharing" target="_blank" rel="noopener noreferrer">View programme brochure</a></p>
+        
+</div>
+</details>
+<details class="directory-card" id="program-16" data-country="Croatia" data-season="short">
+<summary>
+<span class="directory-card-meta"><span class="directory-season short">Short course</span><span>Croatia</span></span>
+<span class="directory-university">Zagreb School of Economics and Management (ZSEM)</span>
+<h3>DELTA Applied Mathematics Competition</h3>
+<span class="directory-facts"><span><span class="directory-fact-label">Programme dates</span><span>07th - 12th of April, 2026</span></span><span><span class="directory-fact-label">Listed fee</span><span>Free of Charge</span></span></span>
+<span class="directory-expand">View programme details <span class="directory-chevron" aria-hidden="true"></span></span>
+</summary>
+<div class="directory-card-body">
+          <p> <strong> DELTA 2026 Applied Mathematics Competition</strong></p>
+          <p> <strong>Duration:</strong> 07th - 12th of April, 2026</p>
+          <p> <strong>Application Deadline:</strong> 12th of February, 2026<br></p>
+          <p> <strong>Available Course(s):</strong> Applied Mathematics and Artificial
+            Intelligence<br></p>
+          <p> <strong>ECTS Credits:</strong> -<br></p>
+          <p> <strong>Eligibility:</strong> Mathematics, Computer, Software, Data Science,
+            and AI-related Departments.<br></p>
+          <p> <strong>Scholarship(s):</strong> Yes<br></p>
+          <p> <strong>Program Fees:</strong> Free of Charge<br></p>
+          <p> <strong>What's Included and Excluded in Program Fees?</strong><br></p>
+          <p> <strong>Included:</strong> Tuition, Course Materials, Food, Accommodation for
+            the days (10th - 12th of April, 2026)<br></p>
+          <p> <strong>Excluded:</strong> Airfares, Meals, Insurance, and Visa Fees (if
+            required)<br></p>
+          <p class="directory-host-link"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdUxiMen2xxO8GuXV8SByAGPR70npC64lrEtWLzS49LPCIwDw/viewform" target="_blank" rel="noopener noreferrer">View application page</a></p>
+          <p class="directory-host-link"><a href="https://delta-competition.com/" target="_blank" rel="noopener noreferrer">Host details and application</a></p>
+        
+</div>
+</details>
+<details class="directory-card" id="program-17" data-country="Spain" data-season="summer">
+<summary>
+<span class="directory-card-meta"><span class="directory-season summer">Summer school</span><span>Spain</span></span>
+<span class="directory-university">Universidad Autónoma de Madrid (UAM)</span>
+<h3>Summer School of Economics and Business</h3>
+<span class="directory-facts"><span><span class="directory-fact-label">Programme dates</span><span>29th of June, 2026 - 24th of July, 2026</span></span><span><span class="directory-fact-label">Listed fee</span><span>Multiple fee options</span></span></span>
+<span class="directory-expand">View programme details <span class="directory-chevron" aria-hidden="true"></span></span>
+</summary>
+<div class="directory-card-body">
+          <p> <strong> Summer School of Economics and Business 2026 (SSEB)</strong></p>
+          <p> <strong>Duration:</strong> 29th of June, 2026 - 24th of July, 2026</p>
+          <p> <strong>Application Deadline:</strong><br></p>
+          <p> - Early-bird Application Deadline: 20th of February, 2026<br></p>
+          <p> - Regular Application Deadline: 5th of June, 2026<br></p>
+          <p> <strong>Available Course(s):</strong> <br></p>
+          <p> - Environmental Economics and Policy Analysis<br></p>
+          <p> - International Finance</p>
+          <p> - Global Marketing<br></p>
+          <p> - Doing Business in Spain<br></p>
+          <p> <strong>ECTS Credits:</strong> 6-12 ECTS<br></p>
+          <p> <strong>Eligibility:</strong> Business, International Trade, Finance, and
+            Economics Departments.<br></p>
+          <p> <strong>Scholarship(s):</strong> -<br></p>
+          <p> <strong>Program Fees:</strong><br></p>
+          <p> For Early-bird Applications: 1,199 EUR <strong> <em>(For one-course
+            only)</em></strong><br></p>
+          <p> For Early-bird Applications: 1,649 EUR <strong><em>(For two
+            courses</em></strong><strong><em>)</em></strong><br></p>
+          <p> For Regular Applications: 1,399 EUR <strong><em>(For
+            one-</em></strong><strong><em>course only)</em></strong><br></p>
+          <p> For Regular Applications: 1,924 EUR <strong><em>(For two
+            courses</em></strong><strong><em>)</em></strong><br></p>
+          <p> <strong>What's Included and Excluded in Program Fees?</strong><br></p>
+          <p> <strong>Included:</strong> Tuition, Course Materials, Field Trips, and
+            Socio-cultural Activities (Food &amp; Transportation during the arranged trips
+            &amp; activities are included)<br></p>
+          <p> <strong>Excluded:</strong> Airfares, Meals, Accommodation, Insurance, and Visa
+            Fees (if required)<br></p>
+          <p class="directory-host-link"><a href="https://uamsseb.education/" target="_blank" rel="noopener noreferrer">Host details and application</a></p>
+          <p class="directory-host-link"><a href="https://drive.google.com/file/d/1GXrCRz9g3w80fCR_S49w6WNJoYCAFWRY/view?usp=sharing" target="_blank" rel="noopener noreferrer">View programme brochure</a></p>
+        
+</div>
+</details>
+<details class="directory-card" id="program-18" data-country="Spain" data-season="summer">
+<summary>
+<span class="directory-card-meta"><span class="directory-season summer">Summer school</span><span>Spain</span></span>
+<span class="directory-university">Universidad Autónoma de Madrid (UAM)</span>
+<h3>Tourism, Hospitality and Attractions Management</h3>
+<span class="directory-facts"><span><span class="directory-fact-label">Programme dates</span><span>13th of June, 2026 - 24th of July, 2026</span></span><span><span class="directory-fact-label">Listed fee</span><span>Multiple fee options</span></span></span>
+<span class="directory-expand">View programme details <span class="directory-chevron" aria-hidden="true"></span></span>
+</summary>
+<div class="directory-card-body">
+          <p> <strong> Summer School of Selected Topics in Tourism, International
+            Hospitality and Attractions Management 2026 (STTIHAM)</strong></p>
+          <p> <strong>Duration:</strong> 13th of June, 2026 - 24th of July, 2026</p>
+          <p> <strong>Application Deadline:</strong><br></p>
+          <p> - Early-bird Application Deadline: 20th of February, 2026<br></p>
+          <p> - Regular Application Deadline: 19th of June, 2026</p>
+          <p> <strong>Available Course(s):</strong> <br></p>
+          <p> - Selected Topics in Tourism, International Hospitality and Attractions
+            Management</p>
+          <p> <strong>ECTS Credits:</strong> 6 ECTS<br></p>
+          <p> <strong>Eligibility:</strong> Tourism, Business, and Economics
+            Departments.<br></p>
+          <p> <strong>Scholarship(s):</strong> -<br></p>
+          <p> <strong>Program Fees:</strong><br></p>
+          <p> For Early-bird Applications: 1,199 EUR</p>
+          <p> For Regular Applications: 1,399 EUR</p>
+          <p> <strong>What's Included and Excluded in Program Fees?</strong><br></p>
+          <p> <strong>Included:</strong> Tuition, Course Materials, Field Trips, and
+            Socio-cultural Activities (Food &amp; Transportation during the arranged trips
+            &amp; activities are included)<br></p>
+          <p> <strong>Excluded:</strong> Airfares, Meals, Accommodation, Insurance, and Visa
+            Fees (if required)<br></p>
+          <p class="directory-host-link"><a href="https://uamsseb.education/tourism/" target="_blank" rel="noopener noreferrer">Host details and application</a></p>
+          <p class="directory-host-link"><a href="https://drive.google.com/file/d/1zJE1bksTZ6LzMSATHK9XsLCyy2Xe19m9/view?usp=sharing" target="_blank" rel="noopener noreferrer">View programme brochure</a></p>
+        
+</div>
+</details>
+<details class="directory-card" id="program-19" data-country="Germany" data-season="short">
+<summary>
+<span class="directory-card-meta"><span class="directory-season short">Short course</span><span>Germany</span></span>
+<span class="directory-university">CBS International Business School</span>
+<h3>Business, Smart Cities and Sustainable Transformation</h3>
+<span class="directory-facts"><span><span class="directory-fact-label">Programme dates</span><span>06th of July, 2026 - 31th of July, 2026</span></span><span><span class="directory-fact-label">Listed fee</span><span>Multiple fee options</span></span></span>
+<span class="directory-expand">View programme details <span class="directory-chevron" aria-hidden="true"></span></span>
+</summary>
+<div class="directory-card-body">
+          <p> <strong> CBS International Business School in Cologne 2026<br></strong></p>
+          <p> <strong>Duration:</strong> 06th of July, 2026 - 31th of July, 2026</p>
+          <p> <strong>Application Deadline:</strong> 01st of April, 2026</p>
+          <p> <strong>Available Course(s):</strong> </p>
+          <p> - Sustainable Transformation</p>
+          <p> - Fundamentals for Smart Cities<br></p>
+          <p> - The European Union – Policies, Decisions and Economy in a Global Context</p>
+          <p> <strong>ECTS Credits:</strong> 6-12 ECTS<br></p>
+          <p> <strong>Eligibility:</strong> Business, Management, and Engineering
+            Departments.<br></p>
+          <p> <strong>Scholarship(s):</strong> -<br></p>
+          <p> <strong>Program Fees:</strong><br></p>
+          <p> For one course: 990 EUR <br></p>
+          <p> For two courses: 1,750 EUR </p>
+          <p> <strong>What's Included and Excluded in Program Fees?</strong><br></p>
+          <p> <strong>Included:</strong> Tuition, Course Materials, Company Visits, and
+            Socio-cultural Activities <br></p>
+          <p> <strong>Excluded:</strong> Airfares, Meals, Accommodation, Insurance, and Visa
+            Fees (if required)<br></p>
+          <p> <strong>Accomm</strong><strong>odation:</strong><br></p>
+          <p> Participants can book a room in CBS student residence for approximately €500
+            for four weeks.</p>
+          <p class="directory-host-link"><a href="https://www.cbs.de/en/international/summer-programmes" target="_blank" rel="noopener noreferrer">Host details and application</a></p>
+<p class="directory-host-link"><a href="https://www.service4mobility.com/europe/BewerbungServlet?identifier=KOLN12&amp;kz_bew_pers=S&amp;kz_bew_art=IN&amp;aust_prog=SUMMER&amp;sprache=en" target="_blank" rel="noopener noreferrer">Click
+            Here</a></p>
+          <p class="directory-host-link"><a href="https://drive.google.com/file/d/1gRBKeEFWu9gQWGazNYHClNUg1Y5QisKz/view?usp=sharing" target="_blank" rel="noopener noreferrer">View programme brochure</a></p>
+<p class="directory-host-link"><a href="https://drive.google.com/file/d/1Zp9dQG7rUgDGgj1VtJTgQGudrlTUWVI_/view?usp=sharing">Click
+            Here</a></p>
+        
+</div>
+</details>
+<details class="directory-card" id="program-20" data-country="United Kingdom" data-season="summer">
+<summary>
+<span class="directory-card-meta"><span class="directory-season summer">Summer school</span><span>United Kingdom</span></span>
+<span class="directory-university">University of Worcester</span>
+<h3>Language, Culture and Business</h3>
+<span class="directory-facts"><span><span class="directory-fact-label">Programme dates</span><span>03rd - 16th of August, 2026</span></span><span><span class="directory-fact-label">Listed fee</span><span>2,500 EUR</span></span></span>
+<span class="directory-expand">View programme details <span class="directory-chevron" aria-hidden="true"></span></span>
+</summary>
+<div class="directory-card-body">
+          <p> <strong> Summer School 2026<br></strong></p>
+          <p> <strong>Duration:</strong>  03rd - 16th of August, 2026</p>
+          <p> <strong>Application Deadline:</strong> 30th of April, 2026</p>
+          <p> <strong>Available Course(s):</strong> Study Language, Culture, and
+            Business</p>
+          <p> <strong>ECTS Credits:</strong> -<br></p>
+          <p> <strong>Eligibility:</strong> All Departments.<br></p>
+          <p> <strong>Scholarship(s):</strong> -<br></p>
+          <p> <strong>Program Fees:</strong> 2,500 EUR</p>
+          <p> <strong>What's Included and Excluded in Program Fees?</strong><br></p>
+          <p> <strong>Included:</strong> Tuition, Accommodation, Meals, Airport pick-up from
+            Birmingham International Airport, trips, and Socio-cultural Activities</p>
+          <p> <strong>Excluded:</strong> Airfares, Insurance, and Visa Fees (if
+            required)</p>
+          <p class="directory-host-link"><a href="https://www.worcester.ac.uk/" target="_blank" rel="noopener noreferrer">Host details and application</a></p>
+          <p class="directory-host-link"><a href="https://drive.google.com/file/d/1oLy5Q9amFSyMk4s0G0DNHF5Cj9knT0Rj/view" target="_blank" rel="noopener noreferrer">View programme brochure</a></p>
+        
+</div>
+</details>
+<details class="directory-card" id="program-21" data-country="Greece" data-season="summer">
+<summary>
+<span class="directory-card-meta"><span class="directory-season summer">Summer school</span><span>Greece</span></span>
+<span class="directory-university">Aristotle University of Thessaloniki</span>
+<h3>Financial Crime, Corruption and Money Laundering</h3>
+<span class="directory-facts"><span><span class="directory-fact-label">Programme dates</span><span>Dates need confirmation</span></span><span><span class="directory-fact-label">Listed fee</span><span>Multiple fee options</span></span></span>
+<span class="directory-expand">View programme details <span class="directory-chevron" aria-hidden="true"></span></span>
+</summary>
+<div class="directory-card-body">
+<p class="directory-date-note">The saved duration is unclear. Confirm the dates with the host before planning travel.</p>
+          <p> <strong> Summer School 2026</strong></p>
+          <p> Duration: 03rd - 16th, 2026 - 21st of November, 2026</p>
+          <p> <strong>Application Deadline:</strong></p>
+          <p> - Early-bird Application Deadline: 31st of March, 2026</p>
+          <p> - Regular Application Deadline: 30th of April, 2026</p>
+          <br>
+          <p> <strong>Available Course(s):</strong> Recent Developments on Financial Crime,
+            Corruption and Money Laundering: European and International Perspectives
+            2026</p>
+          <p class="directory-host-link"><a href="https://drive.google.com/file/d/1io3i--QDKrIfSIBrvGpLk8NDichYLxjx/view" target="_blank" rel="noopener noreferrer">View course information</a></p>
+          <p> <strong>ECTS Credits:</strong> 5 ECTS<br></p>
+          <p> <strong>Eligibility:</strong> Law Departments<br></p>
+          <p> <strong>Scholarship(s):</strong> -<br></p>
+          <p> <strong>Program Fees:</strong> </p>
+          <p> <strong>- In-person course:</strong></p>
+          <p> <strong> - </strong>For Early-bird Applications: 320 EUR</p>
+          <p> - For Regular Applications: 400 EUR<br></p>
+          <p> - Online course:</p>
+          <p> - For Early-bird Applications: 280 EUR</p>
+          <p> - For Regular Applications: 340 EUR</p>
+          <p> <strong>What's Included and Excluded in Program Fees?</strong><br></p>
+          <p> <strong>Included:</strong> Tuition, Course materials, Certificate of
+            Attendance, Breakfast Snacks, and Light Lunch During Lecture Breaks, and
+            Socio-cultural Activities</p>
+          <p> <strong>Excluded:</strong> Airfares, Accommodation, Insurance, and Visa Fees
+            (if required)</p>
+          <p class="directory-host-link"><a href="https://oauth2.it.auth.gr/auth/realms/kedivim/protocol/openid-connect/auth?redirect_uri=https://portal.kedivim.auth.gr/register/auth/callback/index.html&amp;response_type=token&amp;client_id=universis-register&amp;scope=candidates&amp;state=53616c7465645f5fb3cffbd62ad535d7a9dd66be30fdb7f1b261b0fc2349d51d" target="_blank" rel="noopener noreferrer">View application page</a></p>
+          <p class="directory-host-link"><a href="https://websites.auth.gr/anticorruptionlab/en/" target="_blank" rel="noopener noreferrer">Visit the host website</a></p>
+          <p class="directory-host-link"><a href="https://drive.google.com/file/d/1aU63lEgdFR_LohEYj1hGJ2t8mavk0Zty/view?usp=sharing">View programme brochure</a></p>
+        
+</div>
+</details>
+<details class="directory-card" id="program-22" data-country="Russia" data-season="winter">
+<summary>
+<span class="directory-card-meta"><span class="directory-season winter">Winter school</span><span>Russia</span></span>
+<span class="directory-university">ITMO University</span>
+<h3>Machine Learning and Malware Analysis</h3>
+<span class="directory-facts"><span><span class="directory-fact-label">Programme dates</span><span>19th of January, 2026 - 31st of January, 2026</span></span><span><span class="directory-fact-label">Listed fee</span><span>450 EUR</span></span></span>
+<span class="directory-expand">View programme details <span class="directory-chevron" aria-hidden="true"></span></span>
+</summary>
+<div class="directory-card-body">
+          <p> <strong> School of Computer Sciences 2026</strong></p>
+          <p> <strong>Duration:</strong> 19th of January, 2026 - 31st of January, 2026</p>
+          <p> <strong>Application Deadline:</strong> 15th of November, 2025</p>
+          <p> <strong>Available Course(s):</strong> </p>
+          <p> - Machine Learning</p>
+          <p> - Malware Analysis</p>
+          <p> <strong>ECTS Credits:</strong> 4 ECTS<br></p>
+          <p> <strong>Eligibility:</strong> Computer Science, Software Engineering,
+            Cybersecurity, or related disciplines with programming knowledge.<br></p>
+          <p> <strong>Scholarship(s):</strong> -<br></p>
+          <p> <strong>Program Fees:</strong> 450 EUR</p>
+          <p> <strong>What's Included and Excluded in Program Fees?</strong><br></p>
+          <p> <strong>Included:</strong> Tuition, Course Materials, and Socio-cultural
+            Activities</p>
+          <p> <strong>Excluded:</strong> Airfares, Accommodation, Transportation, Insurance,
+            and Visa Fees (if required)</p>
+          <p class="directory-host-link"><a href="https://schools.itmo.ru/#%21/tab/562514479-2" target="_blank" rel="noopener noreferrer">Host details and application</a></p>
+        
+</div>
+</details>
+<details class="directory-card" id="program-23" data-country="South Korea" data-season="summer">
+<summary>
+<span class="directory-card-meta"><span class="directory-season summer">Summer school</span><span>South Korea</span></span>
+<span class="directory-university">Hanyang University (ERICA)</span>
+<h3>Hanyang ERICA Summer School</h3>
+<span class="directory-facts"><span><span class="directory-fact-label">Programme dates</span><span>Multiple sessions in 2026</span></span><span><span class="directory-fact-label">Listed fee</span><span>Multiple fee options</span></span></span>
+<span class="directory-expand">View programme details <span class="directory-chevron" aria-hidden="true"></span></span>
+</summary>
+<div class="directory-card-body">
+          <p> <strong> Hanyang ERICA Summer School (HESS) 2026</strong></p>
+          <p> <strong>Duration:</strong> </p>
+          <p> 2-Week Program (choose either session 1 or 2)</p>
+          <p> - Session 1: 18th of July, 2026 - 2nd of August, 2026 </p>
+          <p> - Session 2: 3rd of August, 2026 - 18th of August, 2026 </p>
+          <p> 4-Week Program (participate in both sessions) </p>
+          <p> - Session 1+2: 18th of July, 2026 - 18th of August, 2026 </p>
+          <p> <strong>Application Deadline:</strong></p>
+          <p> <strong> - Early-bird Application Deadline:</strong> 30thof<strong> April,
+            2026</strong></p>
+          <p> - Regular Application Deadline: 31st of May, 2026<br></p>
+          <p> <strong>Available Course(s):</strong> </p>
+          <p> - Academic Course Track:</p>
+          <p> Understanding K-Pop Business, Designing the Future: Creativity with Generative
+            AI, and Robotics Understanding AI.</p>
+          <p> - Cultural Course Track:</p>
+          <p> Korean Language and Culture, K-Beauty and Makeup, and K-pop Dance.</p>
+          <p> <strong>ECTS Credits:</strong></p>
+          <p> Academic Course Track: Earn up to 4 credits for one session (2 weeks) or 8
+            credits for two sessions (4 weeks).</p>
+          <p> Cultural Course Track: Earn up to 2 credits for one session (2 weeks) or 4
+            credits for two sessions (4 weeks).<br></p>
+          <p> <strong>Eligibility:</strong> All departments.<br></p>
+          <p> <strong>Scholarship(s):</strong> -<br></p>
+          <p> <strong>Program Fees:</strong> </p>
+          <p> <strong> - Academic Course Track: <br></strong></p>
+          <p> For 1 Session: 1030 EUR</p>
+          <p> For 2 Sessions: 1820 EUR</p>
+          <p> <strong> - Cultural Course Track:</strong></p>
+          <p> For 1 Session: 910 EUR</p>
+          <p> For 2 Sessions: 1575 EUR</p>
+          <p> <strong>What's Included and Excluded in Program Fees?</strong><br></p>
+          <p> <strong>Included:</strong> Tuition, Course Materials, Accommodation, and
+            Socio-cultural Activities</p>
+          <p> <strong>Excluded:</strong> Airfares, Transportation, Food, Insurance, and Visa
+            Fees (if required)</p>
+          <p class="directory-host-link"><a href="https://portal.hanyang.ac.kr/haksa/gryu/gryuLogin38.do" target="_blank" rel="noopener noreferrer">View application page</a></p>
+          <p class="directory-host-link"><a href="https://drive.google.com/file/d/11sKTxaqvkeE6PqYRDf2cDy2jfKoO6YKt/view?usp=sharing" target="_blank" rel="noopener noreferrer">View programme brochure</a></p>
+        
+</div>
+</details>
+<details class="directory-card" id="program-24" data-country="Hungary" data-season="summer">
+<summary>
+<span class="directory-card-meta"><span class="directory-season summer">Summer school</span><span>Hungary</span></span>
+<span class="directory-university">University of Pécs</span>
+<h3>Pécs Summer School</h3>
+<span class="directory-facts"><span><span class="directory-fact-label">Programme dates</span><span>Multiple sessions in 2026</span></span><span><span class="directory-fact-label">Listed fee</span><span>Multiple fee options</span></span></span>
+<span class="directory-expand">View programme details <span class="directory-chevron" aria-hidden="true"></span></span>
+</summary>
+<div class="directory-card-body">
+          <p> <strong> Pécs Summer School 2026</strong></p>
+          <p> <strong>Duration:</strong> </p>
+          <p> 2-Week Program: 4th of July, 2026 - 18th of July, 2026 </p>
+          <p> 4-Week Program: 4th of July, 2026 - 2nd of August, 2026 </p>
+          <p> <strong>Application Deadline:</strong>1stof<strong> April, 2026</strong></p>
+          <p> <strong>Available Course(s):</strong> </p>
+          <p> - European Studies</p>
+          <p> - Leadership Skills</p>
+          <p> - Sustainability – Social Ecology<br></p>
+          <p> - International Human Rights Law<br></p>
+          <p> - Public Speaking and Debate Academy</p>
+          <p> <strong>ECTS Credits:</strong> 6-12</p>
+          <p> <strong>Eligibility:</strong> Undergraduate, graduate, and PHD Law
+            students.<br></p>
+          <p> <strong>Scholarship(s):</strong> -<br></p>
+          <p> <strong>Program Fees:</strong> </p>
+          <p> 2-Week Program: 1050 EUR</p>
+          <p> 4-Week Program: 2100-2500 EUR</p>
+          <p> <strong>What's Included and Excluded in Program Fees?</strong><br></p>
+          <p> <strong>Included:</strong> Tuition, Accommodation, lunch on teaching days, 4
+            diners, and Socio-cultural Activities</p>
+          <p> <strong>Excluded:</strong> Airfares, Transportation, Food, Insurance, and Visa
+            Fees (if required)</p>
+          <p class="directory-host-link"><a href="https://summerschool.pte.hu/programs" target="_blank" rel="noopener noreferrer">Host details and application</a></p>
+        
+</div>
+</details>
+</div>
+</section>
+<aside class="directory-support" aria-labelledby="directory-help-title">
+<div><h2 id="directory-help-title">Found something that interests you?</h2><p>The Short-Term Study Programs Office can help you check the next steps and who to contact.</p></div>
+<a class="directory-button" href="contact.html">Contact the office</a>
+</aside>
+</article>
+</div>
+
+```
+
+## 14. CSS Styles (Summer & Winter Programmes Directory)
+
+The following styles ensure proper rendering for the programme directory hero, search and filtering toolbar, card grid layout, and interactive disclosures. Add these to the site's stylesheet, or include them within a `<style>` block in the `<head>` of the target page.
+
+```css
+@font-face {
+  font-family: "IAU Directory Sans";
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("../fonts/open-sans-latin.woff2") format("woff2");
+}
+#study-programs-site .bgGrey .container .row #sag-ana.directory-content { padding: 0 !important; background: transparent !important; box-shadow: none; }
+#study-programs-site .programme-directory {
+  --directory-ink: #16364d;
+  --directory-muted: #4d6372;
+  --directory-line: #d8e3e9;
+  --directory-gold: #f3bd6c;
+  font: 400 16px/1.65 "IAU Directory Sans", "Segoe UI", Arial, sans-serif;
+  text-align: left;
+  color: var(--directory-ink);
+  overflow-wrap: break-word;
+}
+.programme-directory *, .programme-directory *::before, .programme-directory *::after { box-sizing: border-box; }
+#study-programs-site .programme-directory [hidden] { display: none !important; }
+.programme-directory [id] { scroll-margin-top: 24px; }
+#study-programs-site .programme-directory :is(h1,h2,h3,p,figure) { margin: 0; color: inherit; font-family: inherit; }
+#study-programs-site .programme-directory :is(h1,h2,h3) { font-weight: 750; letter-spacing: -.035em; line-height: 1.15; }
+#study-programs-site .programme-directory h1 { font-size: clamp(38px,4.1vw,58px); }
+#study-programs-site .programme-directory h2 { font-size: clamp(27px,2.6vw,35px); }
+#study-programs-site .programme-directory a { color: #155474; text-decoration: underline; text-underline-offset: 4px; }
+#study-programs-site .programme-directory :is(a,button,summary,input,select):focus-visible { outline: 3px solid #b57425; outline-offset: 3px; }
+#study-programs-site .programme-directory :is(input,select,button) { font: inherit; }
+.directory-hero { display: grid; grid-template-columns: 1.12fr 1fr; overflow: hidden; border-radius: 12px; background: #11334c; color: #fff; }
+.directory-hero-copy { padding: clamp(24px,3vw,40px); align-self: center; }
+#study-programs-site .programme-directory .directory-eyebrow { margin-bottom: 16px; font-size: 13px; color: #c6dce9; font-weight: 700; }
+#study-programs-site .programme-directory .directory-hero-copy > p:last-of-type { margin-top: 18px; color: #e2edf4; max-width: 37ch; }
+#study-programs-site .programme-directory a.directory-button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; margin-top: 24px; padding: 11px 18px; border-radius: 6px; background: var(--directory-gold); color: #153044; font-size: 15px; font-weight: 750; text-decoration: none; }
+#study-programs-site .programme-directory a.directory-button:hover { background: #ffd295; }
+.directory-hero-visual { min-width: 0; position: relative; min-height: 340px; }
+.directory-hero-visual img { position: absolute; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 60% center; }
+.directory-hero-visual::after { content: ""; position: absolute; inset: 40% 0 0; background: linear-gradient(transparent, #0a263dba); }
+.directory-hero-visual figcaption { position: absolute; z-index: 1; bottom: 24px; left: 24px; right: 24px; font-size: 17px; font-weight: 650; }
+.directory-browse { margin-top: 32px; }
+#study-programs-site .programme-directory .directory-heading p { margin-top: 9px; color: var(--directory-muted); }
+.directory-filters { display: grid; grid-template-columns: minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr) auto; align-items: end; gap: 12px; margin-top: 23px; padding: 20px; border-radius: 10px; background: #edf3f7; border: 1px solid var(--directory-line); }
+.directory-filters label { display: block; margin: 0; min-width: 0; font-size: 14px; font-weight: 700; }
+.directory-filters :is(input,select) { display: block; width: 100%; min-width: 0; height: 46px; padding: 8px 11px; margin-top: 7px; background-color: white; color: var(--directory-ink); border: 1px solid #aebfcb; border-radius: 5px; box-shadow: none; }
+.directory-filters input::placeholder { color: #687b88; opacity: 1; }
+.directory-filters select {
+  appearance: none;
+  padding-right: 29px;
+  background-image: linear-gradient(45deg, transparent 50%, #315268 50%),linear-gradient(135deg, #315268 50%, transparent 50%);
+  background-position: calc(100% - 17px) 20px, calc(100% - 12px) 20px;
+  background-size: 5px 5px;
+  background-repeat: no-repeat;
+}
+.programme-directory button { cursor: pointer; }
+.directory-reset { height: 46px; padding: 8px 12px; color: #22485e; background: #fff; border: 1px solid #b8c9d3; border-radius: 5px; font-size: 14px !important; font-weight: 700 !important; }
+.directory-reset:hover { background: #f8fbfd; }
+.directory-results-bar { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 18px; margin: 19px 0 14px; font-size: 14px; color: var(--directory-muted); }
+#directory-count { font-weight: 750; color: var(--directory-ink); }
+.directory-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; align-items: start; }
+.directory-card { min-width: 0; border: 1px solid #d4e0e8; background: #fff; border-radius: 10px; overflow: hidden; }
+.directory-card > summary { display: block; padding: 24px; cursor: pointer; list-style: none; }
+.directory-card > summary::-webkit-details-marker { display: none; }
+#study-programs-site .programme-directory .directory-card > summary:focus-visible { outline-offset: -4px; }
+.directory-card > summary:hover { background: #fafdff; }
+.directory-card-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 7px 10px; font-size: 14px; color: var(--directory-muted); }
+.directory-season { display: inline-block; padding: 3px 8px; border-radius: 4px; background: #fff1d9; color: #745018; font-size: 13px; font-weight: 700; }
+.directory-season.winter { background: #e6f1fb; color: #235e85; }
+.directory-season.short { background: #e6f4eb; color: #28613f; }
+.directory-online { color: #2c655b; font-weight: 700; }
+.directory-university { display: block; margin-top: 18px; color: var(--directory-muted); font-size: 14px; line-height: 1.5; }
+#study-programs-site .programme-directory .directory-card h3 { margin-top: 7px; font-size: 24px; min-height: 2.3em; }
+.directory-facts { display: grid; grid-template-columns: 1.6fr 1fr; gap: 15px; margin-top: 22px; font-size: 14px; line-height: 1.55; }
+.directory-facts > span > span { display: block; }
+.directory-fact-label { color: var(--directory-muted); font-size: 13px; margin-bottom: 4px; }
+.directory-facts > span > span:last-child { font-weight: 650; }
+.directory-expand { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 22px; border-top: 1px solid #e0e8ed; padding-top: 15px; color: #155474; font-size: 14px; font-weight: 700; }
+.directory-chevron { width: 8px; height: 8px; flex: 0 0 8px; margin: 0 3px 4px 0; border: solid currentColor; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.directory-card[open] .directory-chevron { transform: rotate(225deg); margin-top: 7px; }
+.directory-card[open] > summary { border-bottom: 1px solid var(--directory-line); }
+.directory-card-body { padding: 22px 24px; border-top: 3px solid #cbe0ed; background: #f8fbfd; }
+#study-programs-site .programme-directory .directory-card-body p { margin: 0 0 13px; font-size: 16px; }
+.directory-card-body strong { font-weight: 650; }
+.directory-card-body > strong { display: block; margin-bottom: 13px; }
+#study-programs-site .programme-directory .directory-date-note { padding: 12px; background: #fff3dc; border-radius: 6px; color: #73531e; }
+.directory-empty { padding: 36px 24px; background: white; border-radius: 10px; }
+#study-programs-site .programme-directory .directory-empty p { margin: 10px 0 16px; }
+.directory-empty button { padding: 10px 16px; background: #163b54; color: white; border: none; border-radius: 6px; }
+.directory-support { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 30px; background: #e9f2f7; border: 1px solid var(--directory-line); border-radius: 10px; margin: 34px 0 22px; }
+#study-programs-site .programme-directory .directory-support h2 { font-size: 25px; }
+#study-programs-site .programme-directory .directory-support p { margin-top: 10px; color: var(--directory-muted); max-width: 55ch; }
+#study-programs-site .programme-directory .directory-support .directory-button { flex-shrink: 0; margin: 0; background: #173c55; color: #fff; }
+@media(max-width:1199px) {
+  .directory-filters { grid-template-columns: 1fr 1fr; }
+  .directory-hero { grid-template-columns: 1.2fr 1fr; }
+}
+@media(max-width:767px) {
+  .directory-hero { grid-template-columns: minmax(0,1fr); }
+  .directory-hero-visual { min-height: 200px; }
+  .directory-grid { grid-template-columns: minmax(0,1fr); }
+  .directory-support { display: block; padding: 24px; }
+  #study-programs-site .programme-directory .directory-support .directory-button { margin-top: 20px; }
+  #study-programs-site .programme-directory .directory-card h3 { min-height: 0; }
+}
+@media(max-width:420px) {
+  .directory-filters { gap: 14px; padding: 16px; }
+  .directory-search { grid-column: 1/-1; }
+  .directory-reset { grid-column: 1/-1; }
+  .directory-card > summary, .directory-card-body { padding: 20px; }
+  .directory-facts { grid-template-columns: 1fr; gap: 12px; }
+}
+
+#study-programs-site .programme-directory .directory-host-link { display: inline-block; margin: 2px 12px 12px 0; font-size: 14px; font-weight: 700; }
+.directory-host-link a { overflow-wrap: anywhere; }
 
 ```
